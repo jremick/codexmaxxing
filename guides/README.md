@@ -5,6 +5,7 @@ These are the longer notes. Not a course. Not a framework. More like: "here is t
 ## The Main Loop
 
 - [The Codexmaxxing Loop](codexmaxxing-loop.md)
+- [Thinking Altitude](thinking-altitude.md)
 - [Task Framing For Agents](task-framing.md)
 - [Verification Before Completion](verification-before-completion.md)
 

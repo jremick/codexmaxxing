@@ -9,6 +9,12 @@
       "status": "ready"
     },
     {
+      "title": "Thinking Altitude",
+      "type": "guide",
+      "path": "guides/thinking-altitude.md",
+      "status": "ready"
+    },
+    {
       "title": "Task Framing For Agents",
       "type": "guide",
       "path": "guides/task-framing.md",
@@ -57,7 +63,7 @@
       "status": "usable"
     },
     {
-      "title": "Task Contract Template",
+      "title": "Mission Brief Template",
       "type": "template",
       "path": "resources/task-contract-template.md",
       "status": "usable"

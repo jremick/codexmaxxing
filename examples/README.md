@@ -1,6 +1,35 @@
 # Example Missions
 
-Codexmaxxing makes more sense when it is attached to a real mission. These are example shapes I would actually hand to Codex.
+Codexmaxxing makes more sense when it is attached to a real mission.
+
+The point is not to pre-chew every task. Give Codex altitude, success criteria, and the right context. Let it design the plan underneath.
+
+## 0. Broad Goal: Let Codex Build The Harness
+
+```markdown
+Goal:
+Turn this rough repo into a public-facing project that people can understand, explore, and reuse.
+
+Success criteria:
+- the README has a clear point of view,
+- the first-click paths are obvious,
+- examples include technical and non-technical work,
+- related repos are linked,
+- internal maintenance notes are not part of the public surface,
+- validation still passes.
+
+Constraints:
+- keep the voice casual, practical, and technical,
+- avoid work-presentation energy,
+- keep private details out.
+
+Context:
+Start with README, docs, guides, resources, examples, and the related repos.
+
+Before editing, choose the right thinking altitude and derive the task contract, delivery harness, verification plan, and stop conditions.
+```
+
+Good for: repo shaping, product positioning, docs overhaul, public launch prep.
 
 ## 1. Product Repo: Make It Runnable
 
@@ -74,11 +103,12 @@ Good for: writing, research, trip planning, comparison shopping, strategy notes,
 
 ```mermaid
 flowchart LR
-  A["Messy request"] --> B["Mission"]
-  B --> C["Context"]
-  C --> D["Action"]
-  D --> E["Check"]
-  E --> F["Reusable bit"]
+  A["High-level goal"] --> B["Success criteria"]
+  B --> C["Codex derives harness"]
+  C --> D["Context + tools"]
+  D --> E["Execution"]
+  E --> F["Verification"]
+  F --> G["Reusable bit"]
 ```
 
 The domain changes. The loop mostly does not.

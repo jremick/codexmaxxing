@@ -4,11 +4,17 @@ Codex has a bunch of ways to get more capable. The trap is adding every shiny th
 
 Use the smallest thing that changes behavior reliably.
 
+At higher thinking altitude, tools and skills matter more. You are no longer asking Codex to do one edit. You are asking it to design and run a mini operating system around the goal.
+
 ## The Ladder
 
 ### Instructions
 
 Use project instructions for local rules that should always apply in a repo: test commands, privacy boundaries, coding conventions, browser routes, release gates.
+
+### Mission briefs
+
+Use a mission brief when you know the goal and success criteria but want Codex to derive the task contract, plan, and checks.
 
 ### Templates and checklists
 
@@ -39,6 +45,7 @@ Ask:
 - Is this a recurring workflow? Use a skill.
 - Does Codex need a real system? Use MCP or a connector.
 - Does it need to happen on a schedule? Use an automation.
+- Is the goal clear but the path unclear? Use a mission brief and let Codex derive the harness.
 
 ## Tool Safety
 

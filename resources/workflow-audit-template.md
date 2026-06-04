@@ -8,6 +8,7 @@ Current owner:
 Current trigger:
 Current inputs:
 Current output:
+Thinking altitude:
 
 Pain:
 Frequency:
@@ -28,6 +29,7 @@ Candidate Codex pattern:
 - tool-connected workflow
 - repeatable playbook
 - operating redesign
+- agentic operating system
 
 Reusable artifacts to create:
 

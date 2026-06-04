@@ -4,6 +4,8 @@ Subagents are great when the split is real.
 
 They are annoying when they create three summaries of the same problem and now you have to manage a tiny meeting.
 
+Thinking altitude changes delegation. At high altitude, Codex may first design the work breakdown, then decide whether subagents are useful. You do not always need to specify the subagent plan up front.
+
 ## Delegate When
 
 - Independent questions can be answered in parallel.
@@ -23,13 +25,23 @@ They are annoying when they create three summaries of the same problem and now y
 ## Good Delegation Brief
 
 ```markdown
-Task:
+Mission:
 Source of truth:
 Allowed files or systems:
 Do not touch:
 Expected output:
 Verification:
 Stop condition:
+```
+
+Or, one level higher:
+
+```markdown
+Goal:
+Success criteria:
+Constraints:
+
+Decide whether delegation helps. If it does, define the subtask boundaries and verification checks before spawning or assigning work.
 ```
 
 For code edits, give clear file ownership and remind agents not to revert unrelated work.

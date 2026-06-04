@@ -4,6 +4,17 @@ These are the patterns that keep showing up when I use Codex on actual work inst
 
 The examples are generalized, but the shape is real: product repos, live systems, hardware, docs, research, and work that is not code at all.
 
+The biggest pattern is altitude. The more capable the model, the less I need to drive every step myself. I can give Codex a goal, success criteria, constraints, and context, then let it derive the project harness and delivery path.
+
+```mermaid
+flowchart TD
+  A["Human chooses altitude"] --> B["Goal + success criteria"]
+  B --> C["Codex derives contract"]
+  C --> D["Codex designs harness"]
+  D --> E["Codex executes"]
+  E --> F["Human or system verifies"]
+```
+
 ## Live Systems: Read First, Then Touch Things
 
 The most useful Codex loop for ops work is boring in the best way:
@@ -40,6 +51,8 @@ That usually means:
 - and docs that explain the happy path before the architecture tour.
 
 [Moodarr](https://github.com/jremick/moodarr) is the cleanest example of this pattern right now.
+
+AI Workbench and AI Skills Share are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
 
 ## Hardware: The Board Gets A Vote
 
@@ -80,6 +93,7 @@ The same rules apply. Name the outcome, load the right context, do the work, che
 
 Most Codex wins look like this:
 
+- right thinking altitude,
 - better task shape,
 - narrower context,
 - real tool access,

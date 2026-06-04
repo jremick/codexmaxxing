@@ -5,17 +5,43 @@ These are not magic. They are just better starting shapes.
 ## Turn A Vague Task Into A Workable One
 
 ```markdown
-Help me turn this into a Codex-ready task.
+Help me turn this into a Codex-ready mission.
 
 What I want:
 <messy version>
 
 Ask me only the questions that would materially change the work. Otherwise make reasonable assumptions and give me:
+- thinking altitude
 - goal
-- source of truth
+- success criteria
 - constraints
-- allowed writes
-- verification
+- source-of-truth map
+- delivery harness
+- verification plan
+- stop conditions
+```
+
+## Start High, Then Derive The Harness
+
+```markdown
+Goal:
+<what I want to be true>
+
+Success criteria:
+<what would make this good>
+
+Constraints:
+<scope, style, safety, time, privacy, compatibility>
+
+Context:
+<where to look first>
+
+Before editing, choose the right thinking altitude and derive:
+- task contract
+- source-of-truth map
+- project harness
+- delivery harness
+- verification plan
 - stop conditions
 ```
 
@@ -31,7 +57,7 @@ Look for:
 - missing fixture/demo path
 - places where deterministic checks should replace manual judgment
 
-Do not edit yet. Return the smallest useful improvement plan.
+Do not edit yet. First decide whether this should be handled as a narrow task or a higher-altitude repo improvement mission. Then return the smallest useful improvement plan.
 ```
 
 ## Debug A Real Thing Without Guessing

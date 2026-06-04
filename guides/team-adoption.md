@@ -4,6 +4,8 @@ Codex adoption is not a tool rollout. It is work redesign.
 
 Teams get value when they turn recurring work into clearer inputs, better tool access, reviewable outputs, and feedback loops that actually show whether anything improved.
 
+The altitude shift matters for teams too. The goal is not to train everyone to write tiny perfect prompts. The goal is to help people state outcomes, constraints, and success criteria so Codex can design a good path.
+
 ## Start With Workflows
 
 Pick a workflow that already happens:
@@ -24,6 +26,7 @@ Then wrap the Codex loop around that workflow.
 Ask:
 
 - Can people frame the task as an outcome with proof?
+- Can people choose the right thinking altitude?
 - Does Codex have access to the right source of truth?
 - Are writes gated at the right points?
 - Is there a deterministic check?
@@ -52,6 +55,10 @@ The team maintains `AGENTS.md`, templates, validators, and examples for recurrin
 ### 5. Operating redesign
 
 The team changes how work enters, flows, gets reviewed, and gets measured because Codex can now execute parts of it.
+
+### 6. Agentic operating system
+
+The team can hand over broad goals with clear success criteria, and Codex can derive the project harness, delivery harness, work slices, and checks.
 
 ## What To Measure
 

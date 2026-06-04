@@ -1,6 +1,12 @@
 # Codex Operating Checklist
 
-Use this before giving Codex a non-trivial task.
+Use this before giving Codex a non-trivial mission.
+
+## Altitude
+
+- The ask is at the right level: exact edit, task, outcome, or broad goal.
+- Success criteria are clearer than the step list.
+- Codex can derive the task contract when the path is not obvious.
 
 ## Frame
 
@@ -24,6 +30,7 @@ Use this before giving Codex a non-trivial task.
 - Reads happen before writes.
 - Secrets will not be printed or stored.
 - External writes have approval or a clear allowed boundary.
+- Codex has enough tool access to inspect before planning deeply.
 
 ## Verification
 

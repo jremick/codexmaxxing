@@ -4,12 +4,28 @@ Codexmaxxing is the field guide. These are some of the nearby projects where the
 
 ## AI Workbench
 
-AI Workbench is the sibling project for reusable AI artifacts: skills, harnesses, memory patterns, context tools, and other bits that make agents easier to steer.
+[AI Workbench](https://github.com/jremick/ai-workbench) is the sibling project for reusable AI artifacts: skills, harnesses, memory patterns, context tools, and other bits that make agents easier to steer.
 
-It is still being shaped separately, but the relationship is simple:
+The relationship is simple:
 
 - Codexmaxxing explains the operating patterns.
 - AI Workbench packages some of the reusable tools.
+
+Why it belongs here:
+
+- it is where the reusable side of Codexmaxxing lives,
+- it turns repeated workflows into skills and harnesses,
+- it is a good example of moving from "I prompted well once" to "I built a reusable operating layer."
+
+## AI Skills Share
+
+[AI Skills Share](https://github.com/jremick/ai-skills-share) is a registry/product surface for publishing, reviewing, discovering, installing, and using AI agent skills across web, API, CLI, and MCP interfaces.
+
+Why it belongs here:
+
+- it treats skills as shareable infrastructure,
+- it connects the human web surface with agent-facing APIs and MCP,
+- it is a natural next step after building useful personal skills and wanting a better way to distribute them.
 
 ## Moodarr
 
@@ -47,12 +63,12 @@ Why it belongs here:
 
 ```mermaid
 flowchart TD
-  A["Real project"] --> B["Messy surface"]
-  B --> C["Codex gets tools and context"]
-  C --> D["Small change"]
-  D --> E["Real check"]
-  E --> F["Reusable pattern"]
-  F --> G["Next project gets easier"]
+  A["High-level goal"] --> B["Success criteria"]
+  B --> C["Codex designs harness"]
+  C --> D["Real project surface"]
+  D --> E["Execution"]
+  E --> F["Real check"]
+  F --> G["Reusable pattern"]
 ```
 
-The pattern is portable: pick a real workflow, give Codex the actual surface, verify the outcome, then save the bit that will help next time.
+The pattern is portable: pick a real workflow, define success, give Codex the actual surface, verify the outcome, then save the bit that will help next time.

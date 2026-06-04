@@ -4,6 +4,8 @@ This is the source-backed side of Codexmaxxing: what the current docs and agent 
 
 Short version: the good stuff happens when you stop treating the model as a magic brain and start giving it a decent operating environment.
 
+The newer unlock is thinking altitude. Stronger models can often take a broad goal with clear success criteria and derive the task contract, project harness, delivery harness, and checks themselves. That changes what the human needs to be good at.
+
 ## Sources Worth Reading
 
 Official OpenAI/Codex docs:
@@ -30,6 +32,17 @@ Broader agent/workflow references:
 - [SWE-bench Verified](https://www.swebench.com/)
 
 ## What I Take From It
+
+### The Human Moves Up A Level
+
+The useful human contribution is shifting upward:
+
+- less manual decomposition of every tiny task,
+- more clarity on goals, constraints, taste, and success criteria,
+- more attention to context, tools, safety, and verification,
+- more reuse of skills, harnesses, and operating patterns.
+
+That does not mean vague prompts work. It means high-level goals work when the success criteria and operating boundaries are clear.
 
 ### Codex Is A Work Surface
 
@@ -69,11 +82,12 @@ For Codex, that usually means:
 
 ```mermaid
 flowchart TD
-  A["Clear task"] --> B["Right context"]
-  B --> C["Tool access"]
-  C --> D["Small action"]
-  D --> E["Real check"]
-  E --> F["Iteration"]
+  A["Broad goal"] --> B["Success criteria"]
+  B --> C["Derived harness"]
+  C --> D["Right context"]
+  D --> E["Tool access"]
+  E --> F["Execution"]
+  F --> G["Real check"]
 ```
 
 That is not glamorous. It just works.
