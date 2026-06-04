@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Codexmaxxing loop</title>
+  <desc id="desc">A visual workflow showing mission, context, tools, verification, and reusable learning.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="50%" stop-color="#172033"/>
+      <stop offset="100%" stop-color="#15110d"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2a3d"/>
+      <stop offset="100%" stop-color="#221f18"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="url(#bg)"/>
+  <g fill="none" stroke="#f4c95d" stroke-width="3" opacity="0.8">
+    <path d="M288 250 C330 104 526 72 642 156"/>
+    <path d="M642 156 C764 246 754 395 610 424"/>
+    <path d="M610 424 C448 456 286 398 288 250"/>
+  </g>
+  <g fill="#f4c95d">
+    <path d="M642 156 l-38 -4 l20 33 z"/>
+    <path d="M610 424 l26 -30 l-39 -8 z"/>
+    <path d="M288 250 l27 29 l8 -39 z"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="66" y="70" width="280" height="130" rx="18" fill="url(#card)" stroke="#6ee7b7" stroke-width="2"/>
+    <rect x="460" y="42" width="280" height="130" rx="18" fill="url(#card)" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="840" y="196" width="280" height="130" rx="18" fill="url(#card)" stroke="#f9a8d4" stroke-width="2"/>
+    <rect x="460" y="350" width="280" height="130" rx="18" fill="url(#card)" stroke="#f4c95d" stroke-width="2"/>
+    <rect x="66" y="300" width="280" height="130" rx="18" fill="url(#card)" stroke="#c4b5fd" stroke-width="2"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="96" y="122" fill="#f8fafc" font-size="31" font-weight="800">Name the mission</text>
+    <text x="96" y="158" fill="#cbd5e1" font-size="20">What should be true?</text>
+    <text x="490" y="94" fill="#f8fafc" font-size="31" font-weight="800">Load context</text>
+    <text x="490" y="130" fill="#cbd5e1" font-size="20">Only what changes the call.</text>
+    <text x="870" y="248" fill="#f8fafc" font-size="31" font-weight="800">Let Codex cook</text>
+    <text x="870" y="284" fill="#cbd5e1" font-size="20">Tools, files, docs, systems.</text>
+    <text x="490" y="402" fill="#f8fafc" font-size="31" font-weight="800">Check the surface</text>
+    <text x="490" y="438" fill="#cbd5e1" font-size="20">Tests, screenshots, read-backs.</text>
+    <text x="96" y="352" fill="#f8fafc" font-size="31" font-weight="800">Save the trick</text>
+    <text x="96" y="388" fill="#cbd5e1" font-size="20">Turn repeats into tools.</text>
+    <text x="420" y="260" fill="#f8fafc" font-size="58" font-weight="900">CODEXMAXXING</text>
+    <text x="472" y="302" fill="#e2e8f0" font-size="22">not magic, just a better workbench</text>
+  </g>
+</svg>

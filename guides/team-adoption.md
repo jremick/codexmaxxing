@@ -1,15 +1,8 @@
----
-title: Team Adoption
-status: draft
-audience: technical leads and operators introducing Codex-style agentic work
-updated: 2026-06-04
----
-
 # Team Adoption
 
-Codex adoption is not a tool rollout. It is execution redesign.
+Codex adoption is not a tool rollout. It is work redesign.
 
-Teams get value when they turn recurring work into clearer inputs, better tool access, reviewable outputs, and measurable feedback loops.
+Teams get value when they turn recurring work into clearer inputs, better tool access, reviewable outputs, and feedback loops that actually show whether anything improved.
 
 ## Start With Workflows
 
@@ -24,7 +17,7 @@ Pick a workflow that already happens:
 - incident review,
 - internal tool cleanup.
 
-Then define the Codex operating loop around that workflow.
+Then wrap the Codex loop around that workflow.
 
 ## Capability Questions
 
@@ -80,4 +73,4 @@ The team changes how work enters, flows, gets reviewed, and gets measured becaus
 
 ## Verification
 
-A team adoption effort is working when the same workflow can be repeated by different people with similar inputs, similar checks, and a defensible completion standard.
+A team adoption effort is working when different people can run the same kind of workflow with similar inputs, similar checks, and a completion standard that does not depend on trusting the most confident person in the room.

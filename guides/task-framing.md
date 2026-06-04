@@ -1,17 +1,12 @@
----
-title: Task Framing For Agents
-status: draft
-audience: people handing ambiguous work to Codex
-updated: 2026-06-04
----
-
 # Task Framing For Agents
 
-Good agent work starts with a task that can be proven done. The point is not to write a perfect prompt. The point is to give Codex enough operating shape to choose the right actions and stop at the right time.
+Good agent work starts with a task that can be proven done.
+
+The goal is not to write a perfect prompt. The goal is to give Codex enough shape to choose useful actions and stop at the right time.
 
 ## The Frame
 
-Use this compact frame for non-trivial work:
+For non-trivial work, I usually want this shape:
 
 ```markdown
 Goal: <what should be true at the end>
@@ -31,7 +26,7 @@ Name the proof. The strongest proof is deterministic: a test, diff, validator, A
 
 ## What To Avoid
 
-Avoid task frames that only describe effort:
+Try not to give Codex tasks that only describe effort:
 
 - "Investigate this."
 - "Clean it up."

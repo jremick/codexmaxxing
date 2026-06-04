@@ -1,60 +1,78 @@
 # Codexmaxxing
 
-Codexmaxxing is a practical resource for getting more value from Codex in AI-assisted and agentic work.
+Using Codex less like a chatbot and more like a slightly chaotic power tool.
 
-The point is not clever prompts. The point is engineering the work surface around Codex: clear task contracts, trusted context, useful instructions, tool access, verification loops, delegation boundaries, and durable learning.
+Codexmaxxing is my field guide for getting real work done with Codex: apps, firmware, docs, ops, writing, research, repo cleanup, weird little side quests, and the occasional "why is this thing broken at 11pm?" investigation.
+
+The trick is not finding the perfect magic prompt. It is giving Codex a decent workbench: the right context, the right tools, a clear finish line, and a way to prove it did the thing.
+
+![Codexmaxxing loop](assets/codexmaxxing-loop.svg)
 
 ## Start Here
 
-- [Guides index](guides/README.md): narrative guides and durable working patterns.
-- [Resources index](resources/README.md): checklists, templates, and reusable field notes.
-- [Research synthesis](docs/research-synthesis.md): current source-backed findings behind the repo.
-- [Field synthesis](docs/field-synthesis.md): public-safe patterns from personal and work usage.
-- [Publishing plan](docs/publishing-plan.md): scope, audience, and release shape.
-- [Project instructions](AGENTS.md): how Codex should work in this repo.
+- [The Codexmaxxing Loop](guides/codexmaxxing-loop.md): the basic loop I keep coming back to.
+- [Task Framing For Agents](guides/task-framing.md): how to stop asking vague stuff and start getting useful work back.
+- [Context Control](guides/context-control.md): how to stop drowning Codex in the wrong information.
+- [Verification Before Completion](guides/verification-before-completion.md): the part that turns "seems fine" into "actually done."
+- [Example Missions](examples/README.md): a few shapes for real work, including non-code work.
+- [Related Projects](docs/related-projects.md): real repos where these ideas show up.
 
-## Core Framework
+## The Shape Of It
 
-Codexmaxxing treats Codex as an operating loop:
-
-1. Frame the task as an outcome with proof.
-2. Load the smallest authoritative context set.
-3. Give Codex the right instructions, tools, and boundaries.
-4. Let it act in the real work surface.
-5. Verify against the outcome, not against vibes.
-6. Preserve reusable learning without leaking private detail.
-
-That loop applies to code, docs, research, ops, hardware, internal enablement, and public artifact work.
-
-## Content Principles
-
-- Make claims operational: every guide should help someone do a task better.
-- Prefer examples that are portable across teams, machines, and repos.
-- Separate current product behavior from durable agentic-working principles.
-- Keep private systems, client details, local paths, secrets, and auth flows out of publishable material.
-- Add verification steps wherever a reader would otherwise rely on trust.
-- Verify current Codex product claims against official OpenAI documentation before publishing.
-
-## Repo Layout
-
-```text
-guides/       Long-form guides and playbooks.
-resources/    Checklists, templates, and reference material.
-docs/         Project planning and publishing notes.
-scripts/      Local validation utilities.
-.github/      Repository validation workflow.
+```mermaid
+flowchart LR
+  A["Name the mission"] --> B["Load the right context"]
+  B --> C["Let Codex operate"]
+  C --> D["Check the real surface"]
+  D --> E{"Done?"}
+  E -- "nope" --> B
+  E -- "ship it" --> F["Save the useful lesson"]
 ```
 
-## Local Validation
+That loop works for code, but it is not just a coding thing.
 
-Run the content checks before committing:
+I use the same pattern for:
 
-```bash
-python3 scripts/validate_content.py
-```
+- building product-shaped side projects,
+- debugging live systems,
+- turning messy notes into useful docs,
+- researching gear or APIs,
+- shaping open-source repos,
+- reviewing UI,
+- making tiny scripts that replace annoying repeated thinking,
+- and generally moving more work out of my head and into a repeatable loop.
 
-The validator checks internal Markdown links, catalog paths, required guide metadata, and obvious private-path leakage.
+## The Fun Part
 
-## Status
+The fun bit is when Codex stops being a novelty and starts becoming part of the bench:
 
-This repo is private while the first content set is shaped. Licensing, public release packaging, and site shape are intentionally undecided until the publication surface is clearer.
+- a repo has instructions that actually help,
+- a task has a finish line,
+- a tool call reads the live thing instead of guessing,
+- a test or screenshot catches the dumb mistake,
+- a repeated workflow turns into a reusable playbook,
+- and suddenly the agent can do more than autocomplete code.
+
+This repo is a mix of notes, patterns, templates, and examples for that.
+
+## Grab A Thing
+
+| If you want to... | Start with |
+| --- | --- |
+| get better answers from Codex | [Task Framing For Agents](guides/task-framing.md) |
+| stop context chaos | [Context Control](guides/context-control.md) |
+| build a repeatable setup around a repo | [Build A Codex Operating System](guides/build-a-codex-operating-system.md) |
+| use tools, skills, and MCP without making a mess | [Tools, Skills, And MCP](guides/tools-skills-and-mcp.md) |
+| split work across agents without making it worse | [Delegation And Subagents](guides/delegation-and-subagents.md) |
+| bring this into a team | [Team Adoption](guides/team-adoption.md) |
+| copy a template and go | [Copy-Paste Bits](resources/README.md) |
+| see what this looks like in practice | [Example Missions](examples/README.md) |
+
+## Real-World-ish Examples
+
+- [Moodarr](https://github.com/jremick/moodarr): a Plex + Seerr companion app shaped around fixture mode, request safety, and release checks.
+- [DragyDash](https://github.com/jremick/dragy-dash): an iOS telemetry dashboard where Codex had to deal with BLE, simulator UI, and physical-device proof.
+- [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32): firmware for a tiny display, where "it compiles" is nowhere near enough.
+- AI Workbench: sibling repo for skills, harnesses, memory patterns, and reusable agentic-work artifacts. It is still being shaped separately.
+
+More notes on those are in [Related Projects](docs/related-projects.md).

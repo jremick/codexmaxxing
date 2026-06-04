@@ -6,49 +6,49 @@
       "title": "The Codexmaxxing Loop",
       "type": "guide",
       "path": "guides/codexmaxxing-loop.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Task Framing For Agents",
       "type": "guide",
       "path": "guides/task-framing.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Verification Before Completion",
       "type": "guide",
       "path": "guides/verification-before-completion.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Build A Codex Operating System",
       "type": "guide",
       "path": "guides/build-a-codex-operating-system.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Context Control",
       "type": "guide",
       "path": "guides/context-control.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Tools, Skills, And MCP",
       "type": "guide",
       "path": "guides/tools-skills-and-mcp.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Delegation And Subagents",
       "type": "guide",
       "path": "guides/delegation-and-subagents.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Team Adoption",
       "type": "guide",
       "path": "guides/team-adoption.md",
-      "status": "draft"
+      "status": "ready"
     },
     {
       "title": "Codex Operating Checklist",
@@ -81,15 +81,9 @@
       "status": "usable"
     },
     {
-      "title": "Guide Review Checklist",
-      "type": "checklist",
-      "path": "resources/guide-review-checklist.md",
-      "status": "usable"
-    },
-    {
-      "title": "Publication Safety Checklist",
-      "type": "checklist",
-      "path": "resources/publication-safety-checklist.md",
+      "title": "Playground Prompts",
+      "type": "template",
+      "path": "resources/playground-prompts.md",
       "status": "usable"
     }
   ]

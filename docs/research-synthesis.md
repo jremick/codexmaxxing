@@ -1,12 +1,12 @@
-# Research Synthesis
+# Research Notes
 
-Updated: 2026-06-04
+This is the source-backed side of Codexmaxxing: what the current docs and agent research seem to agree on.
 
-This note records the source-backed spine for Codexmaxxing. It separates current product behavior from durable operating principles so public guides can stay accurate as Codex changes.
+Short version: the good stuff happens when you stop treating the model as a magic brain and start giving it a decent operating environment.
 
-## Source Set
+## Sources Worth Reading
 
-Current Codex/OpenAI product claims should be verified against official OpenAI sources before publication:
+Official OpenAI/Codex docs:
 
 - [OpenAI Codex overview](https://openai.com/codex/)
 - [Codex developer docs](https://developers.openai.com/codex/)
@@ -23,82 +23,57 @@ Current Codex/OpenAI product claims should be verified against official OpenAI s
 - [Codex use cases](https://developers.openai.com/codex/use-cases)
 - [OpenAI Cookbook agent improvement loop](https://cookbook.openai.com/examples/agents_sdk/agent_improvement_loop)
 
-Relevant broader research and practice references:
+Broader agent/workflow references:
 
 - [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
 - [METR: Measuring AI ability to complete long tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)
 - [SWE-bench Verified](https://www.swebench.com/)
 
-## Findings
+## What I Take From It
 
-### 1. Codex is a work surface, not a chat box
+### Codex Is A Work Surface
 
-Current Codex surfaces span local CLI workflows, IDE use, cloud/web work, code review, GitHub integration, MCP tools, skills, AGENTS.md instructions, long-running use cases, automations, and subagents. The practical implication is that maximizing Codex is less about one prompt and more about designing the environment it operates in.
+Codex is not just a box that answers questions. The current product surface spans local CLI work, cloud/web work, GitHub integration, code review, MCP tools, skills, automations, project instructions, and subagents.
 
-The durable public lesson: teach people to shape the work surface around the agent.
+That means the leverage is in the setup around the model: the repo, the tools, the docs, the task shape, and the checks.
 
-### 2. Instructions need structure and locality
+### Context Is A Design Problem
 
-OpenAI's Codex documentation centers `AGENTS.md` as a way to give project-specific instructions. In practice, the strongest pattern is layered locality:
+More context is not automatically better. Useful context is the stuff that changes the decision.
 
-- Global rules for cross-project defaults.
-- Project rules for repo conventions and verification.
-- Skill or guide rules for repeatable workflows.
-- Task contracts for the current objective.
+The common failure mode is feeding the agent a giant pile of "maybe relevant" information and then acting surprised when it grabs the wrong piece. Better context design says what is authoritative, what is volatile, what is background, and what should be ignored.
 
-The failure mode is broad instruction bloat. The fix is to put guidance at the narrowest level where it will still be found.
+### Tools Are Where Things Get Real
 
-### 3. Context quality beats context volume
+MCP and connectors let Codex do real work: inspect repos, read docs, open browsers, call APIs, use GitHub, query databases, and interact with systems.
 
-Codex performs best when it can see the authoritative files, docs, and live surfaces that actually decide the task. Long pasted context can hide the source of truth. Better context design names:
+That is where the fun starts. It is also where bad assumptions become more expensive, so the tool story needs read-only exploration, write boundaries, and read-back.
 
-- what is authoritative,
-- what is volatile and must be rechecked,
-- what is background only,
-- what should be ignored,
-- where completion evidence will come from.
+### Verification Is The Multiplier
 
-### 4. Tool access creates leverage and risk
+The agent improvement loop in the OpenAI Cookbook is basically the grown-up version of what works day to day: traces, evals, checks, and iteration.
 
-MCP and connector tools let Codex use real systems: GitHub, browsers, databases, docs, issue trackers, local files, and APIs. This is where Codex becomes materially useful, but it also raises the cost of wrong assumptions.
+In normal work, that means tests, screenshots, builds, link checks, API read-backs, simulator runs, device launches, and whatever else proves the task instead of narrating it.
 
-The public pattern should be: give tools intentionally, start read-only when state matters, and gate risky writes with explicit proof and approval.
+### Subagents Are A Knife, Not A Lifestyle
 
-### 5. Verification is the main quality multiplier
+Subagents are useful when the work genuinely splits: separate files, separate research questions, separate verification surface, separate role.
 
-The OpenAI Cookbook agent-improvement loop emphasizes traces, evals, and iterative improvement. The same principle applies to day-to-day Codex work: each task needs the smallest proof that would catch the likely wrong result.
+They are not automatically better. Sometimes one focused loop beats a whole little committee.
 
-Useful verification examples:
+### Simple Systems Win First
 
-- tests and typechecks for code,
-- link checks and private-detail scans for content,
-- browser screenshots for UI,
-- live API read-backs for operations,
-- simulator plus physical-device checks for hardware-adjacent apps,
-- before/after logs for incident response.
+The broader agent guidance keeps pointing back to the same thing: start simple, compose small pieces, add complexity only when it earns its keep.
 
-### 6. Subagents are useful only when the split is real
+For Codex, that usually means:
 
-Subagents help when work can be partitioned by research question, file set, verification surface, or role. They add drag when the task requires a tight single judgment loop.
+```mermaid
+flowchart TD
+  A["Clear task"] --> B["Right context"]
+  B --> C["Tool access"]
+  C --> D["Small action"]
+  D --> E["Real check"]
+  E --> F["Iteration"]
+```
 
-The durable guidance is not "always delegate." It is "delegate independent work with clear ownership, expected output, and integration review."
-
-### 7. Effective agents are usually simple systems first
-
-Anthropic's agent guidance argues for simple, composable patterns before complex multi-agent frameworks. This matches the observed Codex pattern: the most reliable setup is often a clear prompt, local repo instructions, a validator, a tool read-back, and a short completion note.
-
-Complex orchestration is justified when durability, parallelism, auditability, or human gates are actually needed.
-
-### 8. Team value depends on workflow redesign
-
-Work-environment notes point to the same conclusion from a different angle: AI adoption is not "AI for the sake of AI." The value comes when teams redesign execution workflows, measure gains, build repeatable capability, and move work into higher-agency operating loops.
-
-Codexmaxxing should therefore cover individual craft and team operating design.
-
-## Implications For The Repo
-
-- Keep the root README useful and direct.
-- Keep product-specific docs source-backed and dated.
-- Build public guides around operating patterns, not internal examples.
-- Provide templates that let readers reproduce the loop in their own repos.
-- Include publication-safety and verification gates so the repo can become public without leaking private context.
+That is not glamorous. It just works.

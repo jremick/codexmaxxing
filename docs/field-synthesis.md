@@ -1,81 +1,89 @@
-# Field Synthesis
+# Field Notes
 
-Updated: 2026-06-04
+These are the patterns that keep showing up when I use Codex on actual work instead of toy prompts.
 
-This is a public-safe synthesis of observed Codex usage across personal and work contexts. It intentionally avoids private systems, client details, local paths, credentials, hostnames, and raw internal notes.
+The examples are generalized, but the shape is real: product repos, live systems, hardware, docs, research, and work that is not code at all.
 
-## Personal Usage Patterns
+## Live Systems: Read First, Then Touch Things
 
-### Live systems need read-back, not guesses
+The most useful Codex loop for ops work is boring in the best way:
 
-The strongest personal workflows use Codex against real systems while keeping the first pass read-only:
+1. prove which layer is failing,
+2. avoid making random changes,
+3. make the smallest reversible move,
+4. read the system back after.
 
-- home infrastructure triage,
-- media-library recommendations,
-- live service configuration,
-- network and controller state,
-- physical devices,
-- deployed apps.
+```mermaid
+flowchart LR
+  A["Symptom"] --> B["Network?"]
+  B --> C["Host/runtime?"]
+  C --> D["App integration?"]
+  D --> E["Config/schema?"]
+  E --> F["Data or UI?"]
+  F --> G["Small fix"]
+  G --> H["Read-back"]
+```
 
-The recurring pattern is to prove which layer is failing before changing anything: network, host, runtime, app integration, schema, auth, data, or UI.
+This works for homelab stuff, production-ish apps, local containers, routers, media services, and all the little systems that lie to you in slightly different ways.
 
-### Product repos need contributor-safe defaults
+## Product Repos: Give People A Way To Play
 
-Open-source-oriented projects work best when Codex keeps examples generic, fixtures first-class, secrets server-side, generated files ignored, and release gates deterministic. Fixture mode is especially useful because it lets contributors and CI validate behavior without access to private services.
+The best Codex-shaped product repos have a way to run without private infrastructure.
 
-### Hardware and UI work needs real-device proof
+That usually means:
 
-For iOS, firmware, and UI-heavy work, code inspection is not enough. The effective loop is:
+- fixture mode,
+- fake data,
+- a local demo path,
+- a single verification command,
+- secrets that never leave the backend,
+- and docs that explain the happy path before the architecture tour.
 
-1. implement,
-2. run focused tests or builds,
-3. inspect simulator or browser output,
-4. verify on the physical device when that is the real target,
-5. record what was actually proven.
+[Moodarr](https://github.com/jremick/moodarr) is the cleanest example of this pattern right now.
 
-### Publishing requires a separate safety pass
+## Hardware: The Board Gets A Vote
 
-Material shaped from private work should not be copied directly into public repos. It needs a conceptual rewrite, generic examples, secret/path scans, and a review for local or work-specific fingerprints.
+Firmware and device work is a useful antidote to agent overconfidence.
 
-## Work Usage Patterns
+If the app talks to a phone, a BLE device, a display, or a board, then "the code looks right" is not enough. The loop has to reach the actual thing:
 
-### Agentic work is execution design
+```mermaid
+sequenceDiagram
+  participant Codex
+  participant Repo
+  participant Simulator
+  participant Device
 
-The useful work framing is not "use AI more." It is "redesign the work so AI can safely accelerate execution." That means clearer task intake, measurable outcomes, tool access, review gates, and feedback loops.
+  Codex->>Repo: make the smallest change
+  Repo->>Simulator: build and inspect
+  Simulator-->>Codex: layout or test evidence
+  Codex->>Device: install, flash, or launch
+  Device-->>Codex: runtime proof
+```
 
-### Teams need capability pathways
+[DragyDash](https://github.com/jremick/dragy-dash) and [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32) are both examples of that loop.
 
-Work adoption depends on repeatable capability:
+## Non-Code Work Counts
 
-- who can frame tasks well,
-- who can review agent output,
-- which workflows are safe to automate,
-- which systems expose trusted tools,
-- how gains are measured,
-- how learning is captured.
+Codex is also useful for things like:
 
-### Internal examples must become original public artifacts
+- shaping messy notes,
+- comparing options,
+- planning a trip,
+- writing a better update,
+- turning a vague idea into a concrete task,
+- checking whether a decision is actually supported by evidence.
 
-Public material should preserve the operating principle while changing the visible example, terminology, and framing. If a guide reads like an internal artifact with names scrubbed, it is not public-ready.
+The same rules apply. Name the outcome, load the right context, do the work, check the result.
 
-## Cross-Context Patterns
+## The Pattern Underneath
 
-### 1. Source of truth first
+Most Codex wins look like this:
 
-Codex should know which source wins: repo docs, live API, production surface, issue, current user instruction, official vendor docs, or local memory.
+- better task shape,
+- narrower context,
+- real tool access,
+- deterministic checks,
+- reusable learning.
 
-### 2. Narrow writes
-
-Approvals should grant the exact operation, not permission to improvise adjacent changes.
-
-### 3. Deterministic checks over confidence
-
-A passing validator, build, API read-back, screenshot, or device launch is worth more than a fluent completion note.
-
-### 4. Durable learning belongs in the right layer
-
-Repeated patterns should become instructions, skills, helper scripts, templates, or validators. One-off details should not become permanent rules.
-
-### 5. The best resource is portable
-
-Codexmaxxing should teach a loop that readers can apply to their own repos and systems without inheriting private setup assumptions.
+When those pieces are missing, Codex is still impressive, but it is much more likely to produce confident sludge.

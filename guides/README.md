@@ -1,27 +1,21 @@
 # Guides
 
-Guides are the durable narrative layer of Codexmaxxing. Each guide should explain an operating pattern, show how to use it, and define how to know it worked.
+These are the longer notes. Not a course. Not a framework. More like: "here is the pattern I keep using because it keeps working."
 
-## Core Guides
+## The Main Loop
 
 - [The Codexmaxxing Loop](codexmaxxing-loop.md)
 - [Task Framing For Agents](task-framing.md)
 - [Verification Before Completion](verification-before-completion.md)
+
+## Workbench Patterns
+
 - [Build A Codex Operating System](build-a-codex-operating-system.md)
 - [Context Control](context-control.md)
 - [Tools, Skills, And MCP](tools-skills-and-mcp.md)
 - [Delegation And Subagents](delegation-and-subagents.md)
 - [Team Adoption](team-adoption.md)
 
-## Guide Template
+## How To Read These
 
-Each guide should include:
-
-- Who it is for.
-- The problem it solves.
-- The pattern.
-- A concrete workflow.
-- Failure modes.
-- Verification checks.
-
-For product-specific claims, add a "Verified against" note with source links and a date.
+Pick the one that matches the kind of failure you are seeing. If Codex is wandering, read task framing. If it is confidently wrong, read context control. If it says it is done and you do not believe it, read verification.

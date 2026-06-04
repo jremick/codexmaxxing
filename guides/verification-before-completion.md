@@ -1,19 +1,14 @@
----
-title: Verification Before Completion
-status: draft
-audience: Codex users who want defensible completion claims
-updated: 2026-06-04
----
-
 # Verification Before Completion
 
-The final answer should not be the first time a task becomes precise. Verification turns completion from a claim into evidence.
+The final answer should not be the first time a task becomes precise.
+
+Verification is where Codex stops being a confident narrator and starts being useful.
 
 ## Principle
 
 Choose the check that would catch the most likely wrong-but-plausible result.
 
-For a code change, that might be a focused test or build. For a UI change, it might be a browser screenshot across viewports. For documentation, it might be a link check and a private-detail scan.
+For a code change, that might be a focused test or build. For a UI change, it might be a browser screenshot across viewports. For documentation, it might be a link check and a quick secret/path scan.
 
 ## Verification Ladder
 
@@ -29,10 +24,10 @@ Higher is not always better. A live check can be overkill for a typo fix. A stat
 
 ## Completion Language
 
-Be precise:
+Be boringly precise here:
 
 - "Implemented and verified with `npm test`."
-- "Content scaffold created; local validator passes."
+- "Content scaffold created; link check passes."
 - "Could not run the production check because credentials were unavailable."
 
 Avoid unsupported claims like "should work" when a relevant check was available but skipped.
@@ -46,4 +41,4 @@ Avoid unsupported claims like "should work" when a relevant check was available 
 
 ## Verification
 
-A completion note is defensible when it states what was changed, what was checked, what failed or was skipped, and what remains.
+A completion note is defensible when it states what changed, what was checked, what failed or was skipped, and what remains.

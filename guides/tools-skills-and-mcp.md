@@ -1,20 +1,14 @@
----
-title: Tools, Skills, And MCP
-status: draft
-audience: Codex users deciding how to expose capabilities to the agent
-updated: 2026-06-04
-verified_against: OpenAI Codex docs on 2026-06-04
----
-
 # Tools, Skills, And MCP
 
-Codex has several ways to become more capable. Use the smallest one that changes behavior reliably.
+Codex has a bunch of ways to get more capable. The trap is adding every shiny thing at once.
+
+Use the smallest thing that changes behavior reliably.
 
 ## The Ladder
 
 ### Instructions
 
-Use `AGENTS.md` for local rules that should always apply in a repo: test commands, privacy boundaries, coding conventions, browser routes, release gates.
+Use project instructions for local rules that should always apply in a repo: test commands, privacy boundaries, coding conventions, browser routes, release gates.
 
 ### Templates and checklists
 
@@ -22,7 +16,7 @@ Use Markdown resources when the workflow needs human judgment but not automation
 
 ### Scripts and validators
 
-Use code when the check is deterministic: link validation, private-detail scans, schema checks, formatting, package parity, release gates.
+Use code when the check is deterministic: link validation, schema checks, formatting, package parity, release gates.
 
 ### Skills
 

@@ -1,18 +1,16 @@
-# Resources
+# Copy-Paste Bits
 
-Resources are reusable tools: checklists, templates, and reference material that make Codexmaxxing easier to apply.
+Small reusable pieces for making Codex work less like "please vibe at this" and more like a useful operator.
 
-## Available Resources
+## Templates And Checklists
 
 - [Codex Operating Checklist](codex-operating-checklist.md)
 - [Task Contract Template](task-contract-template.md)
 - [AGENTS.md Template](agents-md-template.md)
 - [Source Of Truth Map](source-of-truth-map.md)
 - [Workflow Audit Template](workflow-audit-template.md)
-- [Guide Review Checklist](guide-review-checklist.md)
-- [Publication Safety Checklist](publication-safety-checklist.md)
-- [Content Catalog](catalog.json)
+- [Playground Prompts](playground-prompts.md)
 
-## Resource Standard
+## How To Use Them
 
-Resources should be short, portable, and directly usable. If a resource needs private setup to make sense, rewrite it or keep it out of the publishable set.
+Copy the smallest thing that helps. Do not turn every tiny task into a paperwork exercise. The point is to give Codex enough shape to do the work, not to build a tiny bureaucracy around your prompt.

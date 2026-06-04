@@ -1,23 +1,18 @@
----
-title: The Codexmaxxing Loop
-status: draft
-audience: Codex users building repeatable AI-assisted workflows
-updated: 2026-06-04
----
-
 # The Codexmaxxing Loop
 
-Codex gets more useful when the work is shaped into a loop instead of a prompt. The loop is simple:
+Codex gets much more useful when the work is shaped into a loop instead of a wish.
+
+The loop is simple:
 
 1. Name the outcome.
 2. Load the right context.
-3. Make the smallest useful change.
-4. Verify the result.
-5. Preserve reusable learning.
+3. Let Codex make the smallest useful move.
+4. Check the real surface.
+5. Save the part that will help next time.
 
 ## Why It Matters
 
-Agentic work fails when it looks busy but does not move the real system. A loop gives the agent a target, constrains the blast radius, and makes completion claims testable.
+Agentic work fails when it looks busy but does not move the real system. The loop gives Codex a target, keeps the blast radius sane, and makes "done" mean something.
 
 ## Pattern
 
@@ -31,13 +26,29 @@ Treat every non-trivial request as an operating contract:
 
 ## Workflow
 
-Start by translating the request into an observable result. For code, that might be a passing test, a clean diff, or a browser screenshot. For writing, it might be a reviewed outline, a publish-safe scan, or a source-backed claim list.
+Start by translating the request into an observable result. For code, that might be a passing test, a clean diff, or a browser screenshot. For writing, it might be a sharp outline, a source-backed claim list, or a draft that actually sounds like you.
 
 Then gather only the context needed to act. Read the files, docs, or live surfaces that can change the decision. Skip broad research unless the outcome depends on it.
 
 Make the smallest change that can satisfy the outcome. After that, run the check that would catch the most likely failure.
 
-Close by capturing only reusable learning. A one-off note does not belong in durable instructions. A repeated failure mode does.
+Close by capturing only reusable learning. A one-off detail does not need to become a permanent rule. A repeated failure mode probably does.
+
+## Tiny Example
+
+Bad shape:
+
+```markdown
+Make this repo better.
+```
+
+Better shape:
+
+```markdown
+Review this repo for the three highest-leverage changes that would make it easier for a new contributor to run locally.
+
+Do not edit yet. Check the README, package scripts, tests, and any fixture/demo path. Return a short plan with the exact files you would change and how you would verify it.
+```
 
 ## Failure Modes
 
@@ -49,7 +60,7 @@ Close by capturing only reusable learning. A one-off note does not belong in dur
 
 ## Verification
 
-A Codexmaxxing loop worked when a future reader can answer:
+A good loop leaves you able to answer:
 
 - What changed?
 - Why was that the right scope?

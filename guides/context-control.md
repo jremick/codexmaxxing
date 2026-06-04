@@ -1,24 +1,19 @@
----
-title: Context Control
-status: draft
-audience: Codex users working across repos, docs, live systems, and memory
-updated: 2026-06-04
----
-
 # Context Control
 
-Context is not everything the agent can see. Useful context is the evidence that can change the decision.
+Context is not everything the agent can see.
+
+Useful context is the stuff that can change the decision.
 
 ## Source Hierarchy
 
 When sources conflict, choose deliberately. A good default order is:
 
-1. Current user instruction.
+1. What you just asked for.
 2. Local project instructions.
 3. Current repo files and tests.
-4. Live system read-backs when the task is about live state.
-5. Official vendor docs for current product behavior.
-6. Prior memory and historical notes.
+4. Live read-backs when the task is about live state.
+5. Official docs when current product behavior matters.
+6. Prior memory and old notes.
 
 Prior memory is useful for routing and preferences, but live state and current docs win when the fact can drift.
 
@@ -41,7 +36,7 @@ Tell Codex:
 - "Do not touch adjacent modules."
 - "Stop before live writes."
 
-Explicit context rules prevent the agent from blending sources that should remain separate.
+Explicit context rules stop Codex from blending sources that should stay separate.
 
 ## Failure Modes
 
@@ -53,4 +48,4 @@ Explicit context rules prevent the agent from blending sources that should remai
 
 ## Verification
 
-Context control worked when the final answer can state which source decided the task and what evidence was checked.
+Context control worked when the final answer can say which source decided the task and what evidence was checked.

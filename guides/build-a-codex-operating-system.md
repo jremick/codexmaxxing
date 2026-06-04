@@ -1,13 +1,8 @@
----
-title: Build A Codex Operating System
-status: draft
-audience: Codex users turning repeated AI work into a reliable workflow
-updated: 2026-06-04
----
-
 # Build A Codex Operating System
 
-Codex gets stronger when the surrounding system tells it what matters. That system does not need to be heavy. It needs to answer a few questions consistently.
+Codex gets stronger when the surrounding setup tells it what matters.
+
+That setup does not need to be heavy. Most of the time it is just a few files, a few habits, and one or two checks that stop the agent from wandering off into the bushes.
 
 ## The Six Layers
 
@@ -30,7 +25,7 @@ Also name what does not matter. Excluding stale or adjacent context is part of t
 
 ### 3. Local instructions
 
-Use `AGENTS.md` for repo-level defaults: coding style, validation commands, privacy rules, browser routes, and release gates. Keep it practical. If a rule applies to only one workflow, make it a checklist or skill instead.
+Use project instructions for repo-level defaults: coding style, useful commands, privacy boundaries, browser routes, and release gates. Keep them practical. If a rule applies to only one workflow, make it a checklist or skill instead.
 
 ### 4. Tool surface
 
@@ -59,12 +54,12 @@ Do not preserve private one-off detail as a global rule.
 Start with:
 
 1. `README.md` that names the project and start paths.
-2. `AGENTS.md` with local conventions and checks.
-3. One validator command.
-4. A task contract template.
-5. A publication or release checklist if the work will be shared.
+2. project instructions with local conventions and checks.
+3. one obvious verification command.
+4. a task contract template.
+5. a fixture, demo, or tiny example if other people need to try it.
 
-That is enough for many projects. Add CI, skills, MCP, and subagents only when they remove real friction.
+That is enough for many projects. Add CI, skills, MCP, and subagents when they remove real friction.
 
 ## Failure Modes
 
@@ -76,4 +71,4 @@ That is enough for many projects. Add CI, skills, MCP, and subagents only when t
 
 ## Verification
 
-The operating system is working when a new task can start with less explanation, touch fewer unrelated files, and finish with better proof.
+The operating system is working when a new task starts with less explanation, touches fewer unrelated files, and finishes with better proof.

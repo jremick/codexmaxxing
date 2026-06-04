@@ -1,0 +1,83 @@
+# Playground Prompts
+
+These are not magic. They are just better starting shapes.
+
+## Turn A Vague Task Into A Workable One
+
+```markdown
+Help me turn this into a Codex-ready task.
+
+What I want:
+<messy version>
+
+Ask me only the questions that would materially change the work. Otherwise make reasonable assumptions and give me:
+- goal
+- source of truth
+- constraints
+- allowed writes
+- verification
+- stop conditions
+```
+
+## Make A Repo Less Annoying To Work In
+
+```markdown
+Review this repo as a Codex workbench.
+
+Look for:
+- missing start paths
+- unclear validation commands
+- stale or conflicting instructions
+- missing fixture/demo path
+- places where deterministic checks should replace manual judgment
+
+Do not edit yet. Return the smallest useful improvement plan.
+```
+
+## Debug A Real Thing Without Guessing
+
+```markdown
+Help me debug this live issue.
+
+Symptom:
+<what I see>
+
+Before proposing fixes, separate likely failure layers:
+- network or access
+- host/runtime
+- app integration
+- config/schema
+- auth
+- data
+- UI/presentation
+
+Start read-only. Tell me what evidence would distinguish the layers.
+```
+
+## Use Codex For Non-Code Work
+
+```markdown
+I want to use Codex to get this non-code work done:
+<describe the work>
+
+Turn it into a workflow with:
+- inputs
+- useful context
+- tool/read-back opportunities
+- draft/check loop
+- final output
+- what should stay human-only
+```
+
+## Make The Completion Note Honest
+
+```markdown
+Rewrite this completion note so it is precise and not overclaiming:
+<draft completion note>
+
+Include:
+- what changed
+- what was verified
+- what was not verified
+- what remains
+```

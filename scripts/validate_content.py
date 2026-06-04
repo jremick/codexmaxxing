@@ -10,7 +10,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "resources" / "catalog.json"
-REQUIRED_GUIDE_FIELDS = {"title", "status", "audience", "updated"}
 CATALOGED_DIRS = {"guides", "resources"}
 PRIVATE_PATTERNS = [
     re.compile(r"/Users/[A-Za-z0-9._-]+"),
@@ -18,7 +17,6 @@ PRIVATE_PATTERNS = [
     re.compile(r"(?<![A-Za-z0-9])gh[opsu]_[A-Za-z0-9_]{20,}"),
 ]
 LINK_PATTERN = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
-FRONT_MATTER_PATTERN = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
 
 def fail(message: str) -> None:
@@ -33,20 +31,6 @@ def markdown_files() -> list[Path]:
             continue
         files.append(path)
     return sorted(files)
-
-
-def parse_front_matter(path: Path) -> dict[str, str]:
-    text = path.read_text(encoding="utf-8")
-    match = FRONT_MATTER_PATTERN.match(text)
-    if not match:
-        return {}
-    fields: dict[str, str] = {}
-    for line in match.group(1).splitlines():
-        if ":" not in line:
-            continue
-        key, value = line.split(":", 1)
-        fields[key.strip()] = value.strip()
-    return fields
 
 
 def validate_catalog(errors: list[str]) -> None:
@@ -88,15 +72,13 @@ def validate_catalog(errors: list[str]) -> None:
                 errors.append(f"{rel} is missing from resources/catalog.json")
 
 
-def validate_guide_metadata(errors: list[str]) -> None:
+def validate_guide_headings(errors: list[str]) -> None:
     for path in sorted((ROOT / "guides").glob("*.md")):
         if path.name == "README.md":
             continue
-        fields = parse_front_matter(path)
-        missing = REQUIRED_GUIDE_FIELDS.difference(fields)
-        if missing:
-            rel = path.relative_to(ROOT)
-            errors.append(f"{rel} missing front matter fields: {', '.join(sorted(missing))}")
+        first_line = path.read_text(encoding="utf-8").splitlines()[0]
+        if not first_line.startswith("# "):
+            errors.append(f"{path.relative_to(ROOT)} must start with an H1")
 
 
 def is_external_link(target: str) -> bool:
@@ -152,7 +134,7 @@ def validate_code_fences(errors: list[str]) -> None:
 def main() -> int:
     errors: list[str] = []
     validate_catalog(errors)
-    validate_guide_metadata(errors)
+    validate_guide_headings(errors)
     validate_markdown_links(errors)
     validate_private_patterns(errors)
     validate_code_fences(errors)

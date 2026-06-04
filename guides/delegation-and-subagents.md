@@ -1,14 +1,8 @@
----
-title: Delegation And Subagents
-status: draft
-audience: Codex users deciding when to split work across agents
-updated: 2026-06-04
-verified_against: OpenAI Codex docs on 2026-06-04
----
-
 # Delegation And Subagents
 
-Subagents help when the split is real. They hurt when they duplicate the main agent's judgment loop.
+Subagents are great when the split is real.
+
+They are annoying when they create three summaries of the same problem and now you have to manage a tiny meeting.
 
 ## Delegate When
 
@@ -42,7 +36,7 @@ For code edits, give clear file ownership and remind agents not to revert unrela
 
 ## Integration Is The Parent's Job
 
-Delegation does not remove responsibility. The parent agent must review results, resolve conflicts, verify the integrated state, and write the final answer.
+Delegation does not remove responsibility. The main thread still has to review results, resolve conflicts, verify the integrated state, and explain what happened.
 
 ## Failure Modes
 
@@ -54,4 +48,4 @@ Delegation does not remove responsibility. The parent agent must review results,
 
 ## Verification
 
-Delegation worked when it shortened the path to evidence or improved review quality without increasing merge risk.
+Delegation worked when it shortened the path to evidence or improved review quality without making integration worse.
