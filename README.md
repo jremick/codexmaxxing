@@ -6,9 +6,7 @@ Codexmaxxing is my field guide for getting real work done with Codex: apps, firm
 
 The big unlock is altitude. With a strong enough model, the useful move is often not "write a better tiny task." It is "hold the goal at the right level, make success clear, and let Codex design the harness underneath it."
 
-![Codexmaxxing loop](assets/codexmaxxing-loop.svg)
-
-![Thinking altitude ladder](assets/thinking-altitude.svg)
+![Codexmaxxing agentic operating system workbench](assets/codexmaxxing-hero.webp)
 
 ## Start Here
 
