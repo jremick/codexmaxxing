@@ -1,50 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
-  <title id="title">Codexmaxxing loop</title>
-  <desc id="desc">A visual workflow showing mission, context, tools, verification, and reusable learning.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Codexmaxxing operating loop</title>
+  <desc id="desc">A six-step Codexmaxxing workflow: set altitude, derive the harness, load tools and context, execute, verify, and capture the reusable pattern.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b1020"/>
-      <stop offset="50%" stop-color="#172033"/>
-      <stop offset="100%" stop-color="#15110d"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1c2a3d"/>
-      <stop offset="100%" stop-color="#221f18"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2933"/>
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1f2933" flood-opacity="0.10"/>
     </filter>
+    <style>
+      .bg { fill: #f7f2e8; }
+      .ink { fill: #171717; }
+      .muted { fill: #5f615e; }
+      .hairline { stroke: #242424; stroke-width: 2; fill: none; }
+      .flow { stroke: #1f2933; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .return { stroke: #6d6559; stroke-width: 2.5; fill: none; stroke-dasharray: 8 8; marker-end: url(#arrow); }
+      .card { fill: #fffdf7; stroke-width: 2.5; filter: url(#soft-shadow); }
+      .stage { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .title { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 44px; font-weight: 900; letter-spacing: 0; fill: #171717; }
+      .subtitle { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 19px; fill: #494b48; }
+      .card-title { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 22px; font-weight: 850; fill: #171717; }
+      .card-copy { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; fill: #555853; }
+      .small-label { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 800; fill: #5f615e; letter-spacing: 0; }
+      .caption { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; fill: #4c4e4b; }
+    </style>
   </defs>
-  <rect width="1200" height="520" rx="28" fill="url(#bg)"/>
-  <g fill="none" stroke="#f4c95d" stroke-width="3" opacity="0.8">
-    <path d="M288 250 C330 104 526 72 642 156"/>
-    <path d="M642 156 C764 246 754 395 610 424"/>
-    <path d="M610 424 C448 456 286 398 288 250"/>
+
+  <rect class="bg" width="1200" height="760" rx="28"/>
+
+  <g>
+    <text x="66" y="76" class="title">Codexmaxxing</text>
+    <text x="66" y="110" class="subtitle">Use Codex like an agentic operating system: clear altitude in, verified work out.</text>
+    <rect x="855" y="54" width="278" height="52" rx="26" fill="#171717"/>
+    <text x="994" y="86" fill="#fffdf7" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="850" text-anchor="middle">goal -> harness -> proof</text>
   </g>
-  <g fill="#f4c95d">
-    <path d="M642 156 l-38 -4 l20 33 z"/>
-    <path d="M610 424 l26 -30 l-39 -8 z"/>
-    <path d="M288 250 l27 29 l8 -39 z"/>
+
+  <g opacity="0.55">
+    <path d="M66 150 H1134" class="hairline"/>
   </g>
-  <g filter="url(#shadow)">
-    <rect x="66" y="70" width="280" height="130" rx="18" fill="url(#card)" stroke="#6ee7b7" stroke-width="2"/>
-    <rect x="460" y="42" width="280" height="130" rx="18" fill="url(#card)" stroke="#93c5fd" stroke-width="2"/>
-    <rect x="840" y="196" width="280" height="130" rx="18" fill="url(#card)" stroke="#f9a8d4" stroke-width="2"/>
-    <rect x="460" y="350" width="280" height="130" rx="18" fill="url(#card)" stroke="#f4c95d" stroke-width="2"/>
-    <rect x="66" y="300" width="280" height="130" rx="18" fill="url(#card)" stroke="#c4b5fd" stroke-width="2"/>
+
+  <g>
+    <path class="flow" d="M370 270 H438"/>
+    <path class="flow" d="M742 270 H810"/>
+    <path class="flow" d="M965 338 V418"/>
+    <path class="flow" d="M810 520 H742"/>
+    <path class="flow" d="M438 520 H370"/>
+    <path class="return" d="M214 438 C132 392 118 276 190 224"/>
   </g>
-  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
-    <text x="96" y="122" fill="#f8fafc" font-size="31" font-weight="800">Name the mission</text>
-    <text x="96" y="158" fill="#cbd5e1" font-size="20">What should be true?</text>
-    <text x="490" y="94" fill="#f8fafc" font-size="31" font-weight="800">Load context</text>
-    <text x="490" y="130" fill="#cbd5e1" font-size="20">Only what changes the call.</text>
-    <text x="870" y="248" fill="#f8fafc" font-size="31" font-weight="800">Let Codex cook</text>
-    <text x="870" y="284" fill="#cbd5e1" font-size="20">Tools, files, docs, systems.</text>
-    <text x="490" y="402" fill="#f8fafc" font-size="31" font-weight="800">Check the surface</text>
-    <text x="490" y="438" fill="#cbd5e1" font-size="20">Tests, screenshots, read-backs.</text>
-    <text x="96" y="352" fill="#f8fafc" font-size="31" font-weight="800">Save the trick</text>
-    <text x="96" y="388" fill="#cbd5e1" font-size="20">Turn repeats into tools.</text>
-    <text x="420" y="260" fill="#f8fafc" font-size="58" font-weight="900">CODEXMAXXING</text>
-    <text x="445" y="302" fill="#e2e8f0" font-size="22">think higher, then let the harness form</text>
+
+  <g>
+    <rect class="card" x="66" y="196" width="304" height="148" rx="12" stroke="#2f6f73"/>
+    <circle cx="104" cy="236" r="22" fill="#2f6f73"/>
+    <text x="104" y="236" class="stage">01</text>
+    <text x="136" y="229" class="small-label">HUMAN ALTITUDE</text>
+    <text x="104" y="272" class="card-title">Set the mission</text>
+    <text x="104" y="303" class="card-copy">
+      <tspan x="104" dy="0">Goal, success criteria, constraints,</tspan>
+      <tspan x="104" dy="22">and the altitude Codex should own.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect class="card" x="438" y="196" width="304" height="148" rx="12" stroke="#6f78b8"/>
+    <circle cx="476" cy="236" r="22" fill="#6f78b8"/>
+    <text x="476" y="236" class="stage">02</text>
+    <text x="508" y="229" class="small-label">AGENTIC HARNESS</text>
+    <text x="476" y="272" class="card-title">Derive the system</text>
+    <text x="476" y="303" class="card-copy">
+      <tspan x="476" dy="0">Task contract, context map, topology,</tspan>
+      <tspan x="476" dy="22">delivery path, checks, and stop rules.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect class="card" x="810" y="196" width="304" height="148" rx="12" stroke="#d4942f"/>
+    <circle cx="848" cy="236" r="22" fill="#d4942f"/>
+    <text x="848" y="236" class="stage">03</text>
+    <text x="880" y="229" class="small-label">WORKBENCH</text>
+    <text x="848" y="272" class="card-title">Load the surface</text>
+    <text x="848" y="303" class="card-copy">
+      <tspan x="848" dy="0">Repo files, docs, browser, MCP, APIs,</tspan>
+      <tspan x="848" dy="22">live systems, examples, and memory.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect class="card" x="810" y="446" width="304" height="148" rx="12" stroke="#3f7f5f"/>
+    <circle cx="848" cy="486" r="22" fill="#3f7f5f"/>
+    <text x="848" y="486" class="stage">04</text>
+    <text x="880" y="479" class="small-label">EXECUTION</text>
+    <text x="848" y="522" class="card-title">Let Codex operate</text>
+    <text x="848" y="553" class="card-copy">
+      <tspan x="848" dy="0">Make bounded changes, ask focused</tspan>
+      <tspan x="848" dy="22">questions, and use tools for real state.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect class="card" x="438" y="446" width="304" height="148" rx="12" stroke="#c85d4f"/>
+    <circle cx="476" cy="486" r="22" fill="#c85d4f"/>
+    <text x="476" y="486" class="stage">05</text>
+    <text x="508" y="479" class="small-label">REAL PROOF</text>
+    <text x="476" y="522" class="card-title">Verify the thing</text>
+    <text x="476" y="553" class="card-copy">
+      <tspan x="476" dy="0">Tests, screenshots, builds, read-backs,</tspan>
+      <tspan x="476" dy="22">review passes, or device behavior.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect class="card" x="66" y="446" width="304" height="148" rx="12" stroke="#7d64ad"/>
+    <circle cx="104" cy="486" r="22" fill="#7d64ad"/>
+    <text x="104" y="486" class="stage">06</text>
+    <text x="136" y="479" class="small-label">REUSABLE LIFT</text>
+    <text x="104" y="522" class="card-title">Capture the pattern</text>
+    <text x="104" y="553" class="card-copy">
+      <tspan x="104" dy="0">Turn repeats into prompts, skills,</tspan>
+      <tspan x="104" dy="22">checks, docs, agents, or automations.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="414" y="362" width="352" height="58" rx="29" fill="#171717"/>
+    <text x="590" y="386" fill="#fffdf7" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="850" text-anchor="middle">the maxxing move</text>
+    <text x="590" y="407" fill="#d9d3c8" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" text-anchor="middle">delegate the harness, not just the tiny edit</text>
+  </g>
+
+  <g>
+    <text x="66" y="672" class="caption">The loop gets better when each pass leaves behind a sharper harness: better context, better checks, better tools, better delegation.</text>
+    <path d="M66 696 H1134" class="hairline" opacity="0.35"/>
   </g>
 </svg>
