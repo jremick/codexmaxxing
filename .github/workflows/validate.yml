@@ -1,0 +1,15 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: python3 scripts/validate_content.py

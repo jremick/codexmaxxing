@@ -21,9 +21,69 @@
       "status": "draft"
     },
     {
+      "title": "Build A Codex Operating System",
+      "type": "guide",
+      "path": "guides/build-a-codex-operating-system.md",
+      "status": "draft"
+    },
+    {
+      "title": "Context Control",
+      "type": "guide",
+      "path": "guides/context-control.md",
+      "status": "draft"
+    },
+    {
+      "title": "Tools, Skills, And MCP",
+      "type": "guide",
+      "path": "guides/tools-skills-and-mcp.md",
+      "status": "draft"
+    },
+    {
+      "title": "Delegation And Subagents",
+      "type": "guide",
+      "path": "guides/delegation-and-subagents.md",
+      "status": "draft"
+    },
+    {
+      "title": "Team Adoption",
+      "type": "guide",
+      "path": "guides/team-adoption.md",
+      "status": "draft"
+    },
+    {
+      "title": "Codex Operating Checklist",
+      "type": "checklist",
+      "path": "resources/codex-operating-checklist.md",
+      "status": "usable"
+    },
+    {
       "title": "Task Contract Template",
       "type": "template",
       "path": "resources/task-contract-template.md",
+      "status": "usable"
+    },
+    {
+      "title": "AGENTS.md Template",
+      "type": "template",
+      "path": "resources/agents-md-template.md",
+      "status": "usable"
+    },
+    {
+      "title": "Source Of Truth Map",
+      "type": "template",
+      "path": "resources/source-of-truth-map.md",
+      "status": "usable"
+    },
+    {
+      "title": "Workflow Audit Template",
+      "type": "template",
+      "path": "resources/workflow-audit-template.md",
+      "status": "usable"
+    },
+    {
+      "title": "Guide Review Checklist",
+      "type": "checklist",
+      "path": "resources/guide-review-checklist.md",
       "status": "usable"
     },
     {

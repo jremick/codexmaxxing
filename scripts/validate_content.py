@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "resources" / "catalog.json"
 REQUIRED_GUIDE_FIELDS = {"title", "status", "audience", "updated"}
+CATALOGED_DIRS = {"guides", "resources"}
 PRIVATE_PATTERNS = [
     re.compile(r"/Users/[A-Za-z0-9._-]+"),
     re.compile(r"(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{12,}"),
@@ -64,6 +65,7 @@ def validate_catalog(errors: list[str]) -> None:
         errors.append("resources/catalog.json must contain a non-empty items list")
         return
 
+    catalog_paths: set[str] = set()
     for index, item in enumerate(items):
         if not isinstance(item, dict):
             errors.append(f"catalog item {index} must be an object")
@@ -72,9 +74,18 @@ def validate_catalog(errors: list[str]) -> None:
         if not rel_path:
             errors.append(f"catalog item {index} is missing path")
             continue
+        catalog_paths.add(rel_path)
         target = ROOT / rel_path
         if not target.exists():
             errors.append(f"catalog path does not exist: {rel_path}")
+
+    for dirname in CATALOGED_DIRS:
+        for path in sorted((ROOT / dirname).glob("*.md")):
+            if path.name == "README.md":
+                continue
+            rel = str(path.relative_to(ROOT))
+            if rel not in catalog_paths:
+                errors.append(f"{rel} is missing from resources/catalog.json")
 
 
 def validate_guide_metadata(errors: list[str]) -> None:
@@ -127,12 +138,24 @@ def validate_private_patterns(errors: list[str]) -> None:
                 errors.append(f"{path.relative_to(ROOT)} contains private-looking value: {pattern.pattern}")
 
 
+def validate_code_fences(errors: list[str]) -> None:
+    fence_pattern = re.compile(r"^`{3,}")
+    for path in markdown_files():
+        fence_count = 0
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if fence_pattern.match(line):
+                fence_count += 1
+        if fence_count % 2:
+            errors.append(f"{path.relative_to(ROOT)} has an unbalanced code fence")
+
+
 def main() -> int:
     errors: list[str] = []
     validate_catalog(errors)
     validate_guide_metadata(errors)
     validate_markdown_links(errors)
     validate_private_patterns(errors)
+    validate_code_fences(errors)
 
     if errors:
         for error in errors:

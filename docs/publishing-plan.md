@@ -22,6 +22,7 @@ Codexmaxxing should feel practical, opinionated, and field-tested. It should avo
 4. Verification loops: making completion claims defensible.
 5. Delegation patterns: when sub-agents help and when they add drag.
 6. Publish-safe examples: how to sanitize local workflows into reusable guidance.
+7. Team adoption: moving from individual tool usage to measurable workflow capability.
 
 ## Release Shape
 
@@ -29,8 +30,9 @@ The first public release should include:
 
 - A direct README with a clear thesis.
 - Three polished guides.
-- A compact resource set with checklists and templates.
+- A compact resource set with checklists, templates, and review gates.
 - A publication review note confirming private details have been removed.
+- A source-backed research note that separates current product behavior from durable operating principles.
 
 ## Non-Goals
 

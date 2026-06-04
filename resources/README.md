@@ -4,7 +4,12 @@ Resources are reusable tools: checklists, templates, and reference material that
 
 ## Available Resources
 
+- [Codex Operating Checklist](codex-operating-checklist.md)
 - [Task Contract Template](task-contract-template.md)
+- [AGENTS.md Template](agents-md-template.md)
+- [Source Of Truth Map](source-of-truth-map.md)
+- [Workflow Audit Template](workflow-audit-template.md)
+- [Guide Review Checklist](guide-review-checklist.md)
 - [Publication Safety Checklist](publication-safety-checklist.md)
 - [Content Catalog](catalog.json)
 
