@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-06-04",
+  "items": [
+    {
+      "title": "The Codexmaxxing Loop",
+      "type": "guide",
+      "path": "guides/codexmaxxing-loop.md",
+      "status": "draft"
+    },
+    {
+      "title": "Task Framing For Agents",
+      "type": "guide",
+      "path": "guides/task-framing.md",
+      "status": "draft"
+    },
+    {
+      "title": "Verification Before Completion",
+      "type": "guide",
+      "path": "guides/verification-before-completion.md",
+      "status": "draft"
+    },
+    {
+      "title": "Task Contract Template",
+      "type": "template",
+      "path": "resources/task-contract-template.md",
+      "status": "usable"
+    },
+    {
+      "title": "Publication Safety Checklist",
+      "type": "checklist",
+      "path": "resources/publication-safety-checklist.md",
+      "status": "usable"
+    }
+  ]
+}
