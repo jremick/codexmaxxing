@@ -52,7 +52,7 @@ That usually means:
 
 [Moodarr](https://github.com/jremick/moodarr) is the cleanest example of this pattern right now.
 
-AI Workbench and AI Skills Share are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
+[AI Workbench](https://github.com/jremick/ai-workbench) and [AI Skills Share](https://github.com/jremick/ai-skills-share) are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
 
 ## Hardware: The Board Gets A Vote
 

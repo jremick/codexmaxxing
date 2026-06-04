@@ -75,10 +75,10 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 
 ## Real-World-ish Examples
 
-- [Moodarr](https://github.com/jremick/moodarr): a Plex + Seerr companion app shaped around fixture mode, request safety, and release checks.
-- [DragyDash](https://github.com/jremick/dragy-dash): an iOS telemetry dashboard where Codex had to deal with BLE, simulator UI, and physical-device proof.
-- [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32): firmware for a tiny display, where "it compiles" is nowhere near enough.
-- [AI Workbench](https://github.com/jremick/ai-workbench): sibling repo for skills, harnesses, memory patterns, and reusable agentic-work artifacts.
-- [AI Skills Share](https://github.com/jremick/ai-skills-share): a registry/product surface for publishing, reviewing, discovering, installing, and using agent skills.
+- [Moodarr](https://github.com/jremick/moodarr): helps Plex + Seerr/Jellyseerr users find something to watch from moods, vibes, and loose natural-language ideas.
+- [DragyDash](https://github.com/jremick/dragy-dash): turns Dragy Pro GNSS data into a live iPhone dashboard for speed runs, GPS quality, and session telemetry.
+- [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32): puts Dragy Pro speed and GPS quality on a tiny LilyGO display so the useful telemetry is glanceable.
+- [AI Workbench](https://github.com/jremick/ai-workbench): a workbench of reusable AI skills, prompts, harnesses, memory patterns, and agent workflow bits.
+- [AI Skills Share](https://github.com/jremick/ai-skills-share): a place to publish, review, discover, install, and use agent skills across web, API, CLI, and MCP.
 
 More notes on those are in [Related Projects](docs/related-projects.md).

@@ -9,7 +9,7 @@ Codexmaxxing is the field guide. These are some of the nearby projects where the
 The relationship is simple:
 
 - Codexmaxxing explains the operating patterns.
-- AI Workbench packages some of the reusable tools.
+- [AI Workbench](https://github.com/jremick/ai-workbench) packages some of the reusable tools.
 
 Why it belongs here:
 
