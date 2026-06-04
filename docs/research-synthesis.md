@@ -74,6 +74,20 @@ Subagents are useful when the work genuinely splits: separate files, separate re
 
 They are not automatically better. Sometimes one focused loop beats a whole little committee.
 
+### Parallelism Needs Topology
+
+The same applies one level up. Multiple agents, custom agents, automations, and parallel project threads only help when the harness topology is clear.
+
+That means:
+
+- each stream has a source of truth,
+- write boundaries do not overlap accidentally,
+- status comes back in a reusable shape,
+- the parent owns integration,
+- every stream has a proof path.
+
+Without that, "agent team" is just a more expensive way to make context chaos.
+
 ### Simple Systems Win First
 
 The broader agent guidance keeps pointing back to the same thing: start simple, compose small pieces, add complexity only when it earns its keep.

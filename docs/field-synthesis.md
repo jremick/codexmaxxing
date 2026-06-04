@@ -54,6 +54,20 @@ That usually means:
 
 [AI Workbench](https://github.com/jremick/ai-workbench) and [AI Skills Share](https://github.com/jremick/ai-skills-share) are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
 
+## Parallel Work: Topology Before Swarm
+
+Running multiple Codex threads gets useful when each stream has a harness, not when everything becomes a background tab.
+
+The pattern that holds up is:
+
+- choose the topology,
+- split by ownership boundary,
+- give every stream a status contract,
+- keep the parent responsible for integration,
+- verify each result before treating it as real progress.
+
+That can be subagents inside one task, custom agents for recurring roles, or whole projects moving in parallel. The useful part is not the number of agents. It is the shape of the handoffs.
+
 ## Hardware: The Board Gets A Vote
 
 Firmware and device work is a useful antidote to agent overconfidence.

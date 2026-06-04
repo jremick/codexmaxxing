@@ -6,6 +6,8 @@ They are annoying when they create three summaries of the same problem and now y
 
 Thinking altitude changes delegation. At high altitude, Codex may first design the work breakdown, then decide whether subagents are useful. You do not always need to specify the subagent plan up front.
 
+For larger parallel setups, treat this as an [agentic harness topology](parallel-projects-and-agent-teams.md) problem: choose the shape, define the status contracts, then delegate.
+
 ## Delegate When
 
 - Independent questions can be answered in parallel.

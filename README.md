@@ -16,6 +16,7 @@ The big unlock is altitude. With a strong enough model, the useful move is often
 - [Thinking Altitude](guides/thinking-altitude.md): the biggest unlock: giving Codex bigger goals at the right level.
 - [Task Framing For Agents](guides/task-framing.md): how to stop asking vague stuff and start getting useful work back.
 - [Context Control](guides/context-control.md): how to stop drowning Codex in the wrong information.
+- [Parallel Projects And Agent Teams](guides/parallel-projects-and-agent-teams.md): how to run multiple threads without losing the plot.
 - [Verification Before Completion](guides/verification-before-completion.md): the part that turns "seems fine" into "actually done."
 - [Example Missions](examples/README.md): a few shapes for real work, including non-code work.
 - [Related Projects](docs/related-projects.md): real repos where these ideas show up.
@@ -52,6 +53,7 @@ The fun bit is when Codex stops being a novelty and starts becoming part of the 
 - a repo has instructions that actually help,
 - a goal has success criteria,
 - Codex can derive the task contract instead of waiting for me to handwrite every field,
+- parallel projects have status contracts instead of vibes,
 - a tool call reads the live thing instead of guessing,
 - a test or screenshot catches the dumb mistake,
 - a repeated workflow turns into a reusable playbook,
@@ -67,6 +69,7 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 | get better answers from Codex | [Task Framing For Agents](guides/task-framing.md) |
 | stop context chaos | [Context Control](guides/context-control.md) |
 | build a repeatable setup around a repo | [Build A Codex Operating System](guides/build-a-codex-operating-system.md) |
+| run multiple projects or agents at once | [Parallel Projects And Agent Teams](guides/parallel-projects-and-agent-teams.md) |
 | use tools, skills, and MCP without making a mess | [Tools, Skills, And MCP](guides/tools-skills-and-mcp.md) |
 | split work across agents without making it worse | [Delegation And Subagents](guides/delegation-and-subagents.md) |
 | bring this into a team | [Team Adoption](guides/team-adoption.md) |

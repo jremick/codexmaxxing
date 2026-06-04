@@ -40,9 +40,35 @@ Before editing, choose the right thinking altitude and derive:
 - task contract
 - source-of-truth map
 - project harness
+- agentic harness topology
 - delivery harness
 - verification plan
 - stop conditions
+```
+
+## Run Parallel Projects Without Losing The Plot
+
+```markdown
+I have multiple active projects or workstreams:
+<list them>
+
+Goal:
+<what should be true across the portfolio>
+
+Success criteria:
+<what would prove the parallel work is actually moving>
+
+Constraints:
+<scope, privacy, time, write boundaries, live-system safety>
+
+Design an agentic harness topology for this. Include:
+- which work should stay serial,
+- which streams can run in parallel,
+- subagent or custom-agent roles,
+- a status contract for each stream,
+- integration checkpoints,
+- verification for each stream,
+- what should become an automation, skill, or reusable agent later.
 ```
 
 ## Make A Repo Less Annoying To Work In

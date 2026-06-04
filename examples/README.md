@@ -99,6 +99,29 @@ Turn this into:
 
 Good for: writing, research, trip planning, comparison shopping, strategy notes, meeting follow-up.
 
+## 5. Parallel Portfolio: Keep Multiple Threads Moving
+
+```markdown
+I have these active projects:
+- <project 1>
+- <project 2>
+- <project 3>
+
+Goal:
+Keep useful progress moving without mixing context, losing blockers, or over-delegating.
+
+Success criteria:
+- each project has a current state,
+- the next useful action is visible,
+- parallelizable work is separated from serial work,
+- every delegated stream has a proof path,
+- the parent thread has clear integration checkpoints.
+
+Design the agentic harness topology first. Then recommend which work should stay with the parent, which should go to subagents or custom agents, and what status contract each stream should use.
+```
+
+Good for: side-project portfolios, multi-repo cleanup, launch prep, research plus implementation, and "I have five things open and somehow none of them are done."
+
 ## The Common Shape
 
 ```mermaid

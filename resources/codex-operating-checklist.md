@@ -32,6 +32,13 @@ Use this before giving Codex a non-trivial mission.
 - External writes have approval or a clear allowed boundary.
 - Codex has enough tool access to inspect before planning deeply.
 
+## Parallel Work
+
+- The harness topology is named: single-thread, hub-and-spoke, pipeline, specialist team, or portfolio.
+- Each agent or project stream has one owner and one source of truth.
+- Write boundaries do not overlap unless the parent owns integration.
+- Every stream has a status contract and proof path.
+
 ## Verification
 
 - The primary check is named before completion.

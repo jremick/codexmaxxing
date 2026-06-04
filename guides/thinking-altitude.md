@@ -66,6 +66,7 @@ Then ask Codex to derive:
 - the task contract,
 - the source-of-truth map,
 - the project harness,
+- the agentic harness topology,
 - the delivery harness,
 - the verification plan,
 - the stop conditions.
@@ -97,7 +98,7 @@ Stay lower when:
 | Exact edit | File, line, change | The edit and maybe a quick check |
 | Framed task | Outcome, source, constraints | The steps and verification |
 | Mission | Goal, success criteria, context | Task contract, plan, implementation, checks |
-| System | Direction, boundaries, learning loop | Harness, decomposition, delegation, delivery path |
+| System | Direction, boundaries, learning loop | Harness topology, decomposition, delegation, delivery path |
 
 More altitude does not mean less clarity. It means clarity moves from steps to success criteria.
 

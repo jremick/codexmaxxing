@@ -45,6 +45,12 @@
       "status": "ready"
     },
     {
+      "title": "Parallel Projects And Agent Teams",
+      "type": "guide",
+      "path": "guides/parallel-projects-and-agent-teams.md",
+      "status": "ready"
+    },
+    {
       "title": "Delegation And Subagents",
       "type": "guide",
       "path": "guides/delegation-and-subagents.md",

@@ -4,7 +4,7 @@ Codex gets stronger when the surrounding setup tells it what matters and gives i
 
 That setup does not need to be heavy. Most of the time it is just a few files, a few habits, and one or two checks that stop the agent from wandering off into the bushes.
 
-## The Six Layers
+## The Eight Layers
 
 ### 1. Altitude
 
@@ -37,11 +37,17 @@ Use project instructions for repo-level defaults: coding style, useful commands,
 
 Give Codex the tools needed for the work: shell, git, browser, GitHub, docs, database, or MCP servers. Start read-only when the state is uncertain. Allow writes only when the source of truth and rollback boundary are clear.
 
-### 6. Verification loop
+### 6. Harness topology
+
+Name the shape of the work. Is this a single-thread task, hub-and-spoke delegation, a delivery pipeline, a specialist agent team, or a portfolio of parallel projects?
+
+Do not automate a topology you cannot explain. Each stream needs a source of truth, write boundary, status contract, and integration point.
+
+### 7. Verification loop
 
 Define the check before claiming completion. The right check is the one most likely to catch the wrong plausible result.
 
-### 7. Learning layer
+### 8. Learning layer
 
 Repeated lessons should become reusable artifacts:
 
@@ -71,6 +77,7 @@ That is enough for many projects. Add CI, skills, MCP, and subagents when they r
 
 - Treating Codex like a generic chatbot instead of an agentic operating system.
 - Staying at tiny-task altitude when the model could design the harness.
+- Spawning agents without an agentic harness topology.
 - Adding broad instructions that never get used.
 - Giving tool access without source-of-truth clarity.
 - Verifying with a command unrelated to the change.
