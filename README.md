@@ -83,3 +83,7 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 - [AI Skills Share](https://github.com/jremick/ai-skills-share): a place to publish, review, discover, install, and use agent skills across web, API, CLI, and MCP.
 
 More notes on those are in [Related Projects](docs/related-projects.md).
+
+## License
+
+[Apache License 2.0](LICENSE) - Copyright 2026 Jarel Remick.
