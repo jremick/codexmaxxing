@@ -17,9 +17,9 @@ Why it belongs here:
 - it turns repeated workflows into skills and harnesses,
 - it is a good example of moving from "I prompted well once" to "I built a reusable operating layer."
 
-## AI Skills Share
+## MySkills
 
-[AI Skills Share](https://github.com/jremick/ai-skills-share) is a registry/product surface for publishing, reviewing, discovering, installing, and using AI agent skills across web, API, CLI, and MCP interfaces.
+[MySkills](https://github.com/jremick/myskills) is a registry/product surface for publishing, reviewing, discovering, installing, and using AI agent skills across web, API, CLI, and MCP interfaces.
 
 Why it belongs here:
 

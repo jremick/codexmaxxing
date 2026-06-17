@@ -80,7 +80,7 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 - [DragyDash](https://github.com/jremick/dragy-dash): turns Dragy Pro GNSS data into a live iPhone dashboard for speed runs, GPS quality, and session telemetry.
 - [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32): puts Dragy Pro speed and GPS quality on a tiny LilyGO display so the useful telemetry is glanceable.
 - [AI Workbench](https://github.com/jremick/ai-workbench): a workbench of reusable AI skills, prompts, harnesses, memory patterns, and agent workflow bits.
-- [AI Skills Share](https://github.com/jremick/ai-skills-share): a place to publish, review, discover, install, and use agent skills across web, API, CLI, and MCP.
+- [MySkills](https://github.com/jremick/myskills): a place to publish, review, discover, install, and use agent skills across web, API, CLI, and MCP.
 
 More notes on those are in [Related Projects](docs/related-projects.md).
 

@@ -52,7 +52,7 @@ That usually means:
 
 [Moodarr](https://github.com/jremick/moodarr) is the cleanest example of this pattern right now.
 
-[AI Workbench](https://github.com/jremick/ai-workbench) and [AI Skills Share](https://github.com/jremick/ai-skills-share) are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
+[AI Workbench](https://github.com/jremick/ai-workbench) and [MySkills](https://github.com/jremick/myskills) are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
 
 ## Parallel Work: Topology Before Swarm
 
