@@ -21,7 +21,7 @@
       "status": "ready"
     },
     {
-      "title": "Graph And Ontology-Engineered Harnesses",
+      "title": "Workflow Graphs, Shared Vocabulary, And Harnesses",
       "type": "guide",
       "path": "guides/graph-and-ontology-engineered-harnesses.md",
       "status": "ready"
@@ -159,7 +159,7 @@
       "status": "usable"
     },
     {
-      "title": "Mission Brief Template",
+      "title": "Mission Brief",
       "type": "template",
       "path": "resources/task-contract-template.md",
       "status": "usable"
@@ -195,7 +195,7 @@
       "status": "usable"
     },
     {
-      "title": "Harness Graph Template",
+      "title": "Workflow Graph Template",
       "type": "template",
       "path": "resources/harness-graph-template.md",
       "status": "usable"

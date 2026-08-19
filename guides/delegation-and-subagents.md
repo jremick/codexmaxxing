@@ -6,7 +6,7 @@ They are annoying when they create three summaries of the same problem and now y
 
 Abstraction level changes delegation. At a high abstraction level, Codex may first design the work breakdown, then decide whether subagents are useful. The subagent plan does not always need to be specified in advance.
 
-For larger parallel setups, treat this as an [agentic harness topology](parallel-projects-and-agent-teams.md) problem: choose the shape, define the status contracts, then delegate.
+For larger parallel setups, choose the [shape of the work](parallel-projects-and-agent-teams.md), decide how each stream will report back, then delegate.
 
 Model choice, reasoning effort, and delegation are separate decisions. See [Models, Reasoning, And Delegation](models-reasoning-and-delegation.md).
 
@@ -16,7 +16,7 @@ Model choice, reasoning effort, and delegation are separate decisions. See [Mode
 - Different agents can own disjoint files or modules.
 - A verifier can review while implementation continues.
 - A research thread can gather sources while the main thread builds.
-- A specialist can summarize a large surface into a bounded result.
+- A specialist can summarize a large body of material into a bounded result.
 
 ## Keep It Local When
 
@@ -57,7 +57,7 @@ Delegation does not remove responsibility. The main thread still has to review r
 ## Failure Modes
 
 - Delegating the immediate blocker and waiting anyway.
-- Asking two agents to inspect the same surface.
+- Asking two agents to inspect the same thing without a reason.
 - Accepting a subagent summary without checking fit.
 - Splitting work by role name instead of by ownership boundary.
 - Letting delegated agents write overlapping files.

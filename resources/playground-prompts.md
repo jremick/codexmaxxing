@@ -10,18 +10,10 @@ Help me turn this into a Codex-ready mission.
 What I want:
 <messy version>
 
-Ask me only the questions that would materially change the work. Otherwise make reasonable assumptions and give me:
-- abstraction level
-- goal
-- success criteria
-- constraints
-- source-of-truth map
-- delivery harness
-- verification plan
-- stop conditions
+Ask me only the questions that would materially change the work. Otherwise make reasonable assumptions and give me a clear outcome, boundaries, plan, checks, and stop conditions.
 ```
 
-## Start High, Then Derive The Harness
+## Start High, Then Let Codex Plan
 
 ```markdown
 Goal:
@@ -36,14 +28,7 @@ Constraints:
 Context:
 <where to look first>
 
-Before editing, choose the appropriate abstraction level and derive only what the work needs:
-- task contract
-- source-of-truth map
-- project harness
-- agentic harness topology
-- delivery harness
-- verification plan
-- stop conditions
+Before editing, work out only what the job needs: the plan, the sources that matter, the checks, and any stop conditions. If the work is likely to repeat, point out anything worth making reusable.
 ```
 
 ## Run Parallel Projects Without Losing The Plot
@@ -61,11 +46,11 @@ Success criteria:
 Constraints:
 <scope, privacy, time, write boundaries, live-system safety>
 
-Design an agentic harness topology for this. Include:
+Recommend a sensible way to divide the work. Include:
 - which work should stay serial,
 - which streams can run in parallel,
 - subagent or custom-agent roles,
-- a status contract for each stream,
+- a simple update format for each stream,
 - integration checkpoints,
 - verification for each stream,
 - what should become an automation, skill, or reusable agent later.
@@ -137,22 +122,14 @@ Include:
 ## Turn A Repeated Workflow Into A Compounding System
 
 ```markdown
-Recurring workflow:
-<synthetic workflow>
+I do this workflow regularly and the same problem keeps coming back:
+<synthetic workflow and observable failure>
 
-Current failure or constraint:
-<observable evidence, not a theory>
+Review the current approach and help me turn the useful parts into the smallest reusable system that will make later runs more reliable.
 
-Design the smallest system that can make later runs more reliable. Include:
-- the harness contract,
-- the minimum state and semantic model,
-- the execution graph only if order, branching, or recovery matters,
-- the evidence packet,
-- one regression eval,
-- candidate-versus-promoted version handling,
-- promotion and rollback gates,
-- counter-metrics,
-- privacy, privilege, and feedback-poisoning risks.
+Tell me what should stay in the prompt, what belongs in instructions, a skill, a script, or a check, and where human approval still matters. Add a workflow graph or shared schema only if order, branching, recovery, or inconsistent language is causing a real problem.
 
-Distinguish native Codex capabilities from architecture built around them. Keep the design general and synthetic. Do not implement autonomous self-modification or broaden tool authority without separate approval.
+Turn the recurring failure into a regression case. Compare any proposed workflow change with the current version before adopting it, keep a rollback path, and check for privacy, broader permissions, bad feedback, and self-confirming tests.
+
+Distinguish native Codex capabilities from architecture built around them. Keep the design general and synthetic. Do not implement autonomous self-modification or broaden tool permissions without separate approval.
 ```

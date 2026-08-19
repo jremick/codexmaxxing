@@ -1,6 +1,6 @@
 # Thinking Abstraction Level
 
-Abstraction level is one of the most useful controls in agentic work.
+Abstraction level is one of the most useful choices in agentic work: how much of the path are you giving Codex to work out?
 
 With older or weaker tooling, you had to drive close to the ground: exact prompts, exact steps, exact files, exact plan. That still works, but it leaves a lot of the value on the table.
 
@@ -11,11 +11,11 @@ flowchart TD
   A["Tiny task"] --> B["Framed task"]
   B --> C["Outcome with success criteria"]
   C --> D["Broad goal with clear constraints"]
-  D --> E["Codex derives the project harness"]
-  E --> F["Codex executes and verifies"]
+  D --> E["Codex works out the path"]
+  E --> F["Codex executes and checks"]
 ```
 
-The human job shifts from "write every step" to "choose the right abstraction level."
+The human job shifts from writing every step to choosing the right level and making the outcome clear.
 
 ## What Abstraction Level Means
 
@@ -41,25 +41,25 @@ The automations broke after an upgrade. Diagnose the likely failure layer, make 
 
 All three can be right. The useful judgment is knowing when Codex can take the higher-abstraction version and derive the work underneath it.
 
-## Abstraction Is One Axis
+## Abstraction Is Not The Whole System
 
 Abstraction level describes the request, not the maturity of the system receiving it.
 
-Three independent dimensions matter:
+Three separate questions matter:
 
-| Dimension | Question | Progression |
+| Question | What It Means | Progression |
 | --- | --- | --- |
-| Intent abstraction | How much implementation is specified by the operator? | edit → task → outcome → system objective |
-| System embodiment | Where does the operating method live? | prompt → reusable workflow → harness → orchestration system |
-| Improvement closure | What changes future runs? | nothing → captured lesson → eval → governed promotion |
+| What are you asking Codex to own? | How much of the implementation path is already specified? | edit → task → outcome → system objective |
+| Where does the method live? | Is it in this prompt or in reusable instructions, tools, and checks? | prompt → reusable workflow → harness → orchestration system |
+| Does the learning improve the next run? | What happens when the workflow finds a better way? | nothing → captured lesson → eval → reviewed change |
 
-A broad prompt sent to a disposable agent is high in intent abstraction but low in system embodiment. A short request can initialize a mature system when its semantics, state, tools, checks, and authority boundaries already exist.
+A broad prompt sent to a disposable agent is still a one-off run. A short request can start a mature system when the definitions, state, tools, checks, and permission boundaries already exist.
 
 See [From Prompts To Compounding Systems](from-prompts-to-compounding-systems.md) for the complete model.
 
 ## The New Default
 
-For bigger work, do not start by writing the task contract yourself.
+For bigger work, do not start by writing the whole plan yourself.
 
 Start with:
 
@@ -77,17 +77,15 @@ Context:
 <what matters, or where to look first>
 ```
 
-Then ask Codex to derive only the artifacts the work needs, such as:
+Then ask Codex to work out only what the job needs, such as:
 
-- the task contract,
-- the source-of-truth map,
-- the project harness,
-- the agentic harness topology,
-- the delivery harness,
+- a short plan,
+- the sources that matter,
+- how the work should be split,
 - the verification plan,
 - the stop conditions.
 
-That is the difference between using Codex as a task executor and using it as an agentic operating system.
+For recurring work, those pieces may eventually become a reusable harness. For one-off work, they can stay as a small plan in the task.
 
 ## When To Go Higher
 
@@ -113,12 +111,12 @@ Stay lower when:
 | --- | --- | --- |
 | Exact edit | File, line, change | The edit and maybe a quick check |
 | Framed task | Outcome, source, constraints | The steps and verification |
-| Mission | Goal, success criteria, context | Task contract, plan, implementation, checks |
-| System objective | Direction, policies, boundaries, invariants | Harness selection, orchestration, execution, evidence, change proposal |
+| Mission | Goal, success criteria, context | Plan, implementation, and checks |
+| System objective | Direction, policies, boundaries, rules that must hold | Reusable workflow, coordination, execution, evidence, and proposed improvements |
 
 A higher abstraction level does not mean less clarity. It means clarity moves from steps to outcomes, boundaries, and success criteria.
 
-It also delegates more discretion. As abstraction rises, make scope, permissions, verification, and stop conditions more explicit. A broader goal never grants broader authority by itself.
+It also delegates more discretion. As abstraction rises, make scope, permissions, verification, and stop conditions more explicit. A broader goal never grants broader permission by itself.
 
 ## The Failure Mode
 
@@ -143,11 +141,11 @@ Success criteria:
 - validation still passes.
 ```
 
-Codex can turn that into a task contract, plan, file edits, and checks.
+Codex can turn that into a sensible plan, file edits, and checks.
 
 ## Why This Matters
 
-The ceiling moves when the model can reason well enough to design the harness.
+The ceiling moves when the model can reason well enough to design more of the path.
 
 You stop spending all your energy decomposing work into tiny tickets and start spending more of it on:
 
@@ -159,4 +157,4 @@ You stop spending all your energy decomposing work into tiny tickets and start s
 
 That is where Codex starts to feel less like autocomplete and more like a real operating layer for work.
 
-The next ceiling is not a still-higher prompt. It is an environment in which a prompt initializes a versioned harness, verified evidence can improve future behavior, and authority remains explicit throughout the loop.
+For work that repeats, the next ceiling is not a still-higher prompt. It is an environment where a short request starts a known workflow, evidence can improve later runs, and permission remains explicit throughout.

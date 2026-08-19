@@ -58,11 +58,11 @@ The team changes how work enters, flows, gets reviewed, and gets measured becaus
 
 ### 6. Agentic operating system
 
-The team can hand over broad goals with clear success criteria, and Codex can derive the project harness, delivery harness, work slices, and checks.
+The team can hand over broad goals with clear success criteria, and Codex can work out the plan, work slices, tools, and checks.
 
 ### 7. Compounding system
 
-Recurring workflows emit privacy-safe evidence, failures become regression checks, and reviewed harness changes improve later runs without silently expanding authority. Versions, promotion decisions, and rollback paths remain inspectable.
+Recurring workflows produce privacy-safe evidence, failures become regression checks, and reviewed workflow changes improve later runs without silently expanding permission. Versions, adoption decisions, and rollback paths remain inspectable.
 
 ## What To Measure
 
@@ -74,7 +74,7 @@ Recurring workflows emit privacy-safe evidence, failures become regression check
 - workflows converted into playbooks,
 - recurring failures converted into regression checks,
 - candidate changes rejected or rolled back before causing wider regression,
-- performance of promoted versions against a stable baseline,
+- performance of adopted versions against a stable baseline,
 - tasks that still require human-only judgment.
 
 ## Failure Modes
@@ -84,7 +84,7 @@ Recurring workflows emit privacy-safe evidence, failures become regression check
 - Giving broad tool access without review gates.
 - Publishing internal examples without rewriting them.
 - Training people on prompts but not on verification.
-- Automating self-modification before evaluation validity, authority, and rollback are trustworthy.
+- Automating self-modification before the checks, permissions, and rollback path are trustworthy.
 
 ## Verification
 

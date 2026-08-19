@@ -20,9 +20,9 @@ These instructions apply to this repository. Higher-level system and user instru
 ## Source Of Truth
 
 - Canonical docs:
-- Runtime surface:
+- Runtime environment:
 - Test or validation command:
-- Deployment or release surface:
+- Deployment or release target:
 
 ## Editing Rules
 

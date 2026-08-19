@@ -1,21 +1,21 @@
 # Guides
 
-These are practical operating notes rather than a course or a prescriptive framework. Each guide captures a reusable pattern and its limits.
+These are practical operating notes, not a course or a framework that every task must follow. Start with the problem you have.
 
-## The Main Loop
+## Use Codex Better Today
 
 - [The Codexmaxxing Loop](codexmaxxing-loop.md)
 - [Thinking Abstraction Level](thinking-abstraction-level.md)
 - [Task Framing For Agents](task-framing.md)
 - [Verification Before Completion](verification-before-completion.md)
 
-## Compounding Systems Engineering
+## Turn Repeated Work Into A System
 
 - [From Prompts To Compounding Systems](from-prompts-to-compounding-systems.md)
-- [Graph And Ontology-Engineered Harnesses](graph-and-ontology-engineered-harnesses.md)
+- [Workflow Graphs, Shared Vocabulary, And Harnesses](graph-and-ontology-engineered-harnesses.md)
 - [Verified Improvement Loops](verified-improvement-loops.md)
 
-## Workbench Patterns
+## Build A Reusable Codex Setup
 
 - [Build A Codex Operating System](build-a-codex-operating-system.md)
 - [Context Control](context-control.md)
@@ -25,7 +25,7 @@ These are practical operating notes rather than a course or a prescriptive frame
 - [Delegation And Subagents](delegation-and-subagents.md)
 - [Team Adoption](team-adoption.md)
 
-## Current Product Surfaces
+## Understand Current Codex Capabilities
 
 - [Projects, Chats, Goals, And Scheduled Tasks](projects-chats-goals-and-schedules.md)
 - [Local, Worktree, And Cloud Environments](environments-worktrees-and-cloud.md)

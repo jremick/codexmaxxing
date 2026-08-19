@@ -47,9 +47,13 @@ class ValidatorSafeguardTests(unittest.TestCase):
         )
         self.assertFalse(validator.is_pinned_action_reference("actions/checkout@v5"))
 
-    def test_fenced_prompt_voice_is_excluded_from_editorial_prose(self) -> None:
-        text = "Neutral introduction.\n\n```text\nI want a synthetic example.\n```\n"
-        self.assertEqual(validator.without_fenced_code(text), "Neutral introduction.\n")
+    def test_first_person_editorial_voice_is_not_a_privacy_finding(self) -> None:
+        self.assertEqual(
+            validator.private_pattern_names(
+                "I think this pattern is useful, but the example should stay synthetic."
+            ),
+            [],
+        )
 
     def test_svg_active_content_is_detected(self) -> None:
         self.assertEqual(

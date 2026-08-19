@@ -1,38 +1,38 @@
-# Graph And Ontology-Engineered Harnesses
+# Workflow Graphs, Shared Vocabulary, And Harnesses
 
-A reusable harness needs more than a good prompt. It needs an explicit contract for what exists, how work moves, which state can change, and how results are checked.
+Most workflows do not need a graph or an ontology. Use them when the work has become hard to reason about in ordinary prose.
 
-Graphs and ontologies make different parts of that contract legible.
+A workflow graph helps when order, branching, retries, recovery, or handoffs affect the result. A shared vocabulary or schema helps when people, agents, or systems keep using the same words to mean different things. Both can sit inside a harness: the reusable setup around the model.
 
-## Four Different Things
+## Plain-English Version
 
 | Concept | Question It Answers | Typical Contents |
 | --- | --- | --- |
-| Harness | What surrounds the model for this repeatable capability? | instructions, tools, routing, state, outputs, validation |
-| Agent topology | Who performs the work? | parent, specialist, verifier, integrator |
-| Orchestration graph | What depends on what, and how does execution move? | nodes, edges, gates, retries, handoffs, recovery |
-| Ontology | What do the system's entities and relationships mean? | types, states, claims, provenance, invariants |
+| Harness | What reusable setup surrounds the model? | instructions, tools, routing, state, outputs, checks |
+| Team shape | Who performs each part? | parent, specialist, verifier, integrator |
+| Workflow graph | What depends on what, and how does work move? | steps, connections, gates, retries, handoffs, recovery |
+| Shared vocabulary or ontology | What do the important things, states, and relationships mean? | types, states, claims, sources, rules that must hold |
 
-An agent team diagram is not automatically an orchestration graph. A data schema is not automatically an ontology. Use the smallest representation that removes real ambiguity.
+An agent team diagram is not automatically a workflow graph. A data schema is not automatically an ontology. Use the smallest representation that removes a real source of confusion.
 
-## Harness Contract
+## What A Harness Needs To Make Clear
 
-A harness should make these surfaces explicit:
+A harness should make these things clear:
 
-- **Intent:** outcome, policy, constraints, and authority.
+- **Intent:** outcome, policy, constraints, and permissions.
 - **Inputs:** required sources, freshness expectations, and trust level.
 - **Capabilities:** instructions, skills, tools, models, and execution environment.
 - **Control flow:** routing, prerequisites, retries, escalation, and stop conditions.
 - **State:** durable, task-local, external, derived, and prohibited state.
 - **Outputs:** required artifacts, schemas, and unresolved-question handling.
-- **Evidence:** traces, checks, evals, provenance, and completion language.
-- **Change control:** version, proposed changes, promotion gate, and rollback path.
+- **Evidence:** relevant events, checks, evals, sources, and completion language.
+- **Change control:** version, proposed changes, adoption gate, and rollback path.
 
-OpenAI's agent improvement loop similarly describes the harness as the full contract around the model, including instructions, tools, routing, output requirements, and validation checks.
+OpenAI's agent improvement loop similarly describes the harness as the full setup around the model, including instructions, tools, routing, output requirements, and validation checks.
 
-## The Orchestration Graph
+## When A Workflow Graph Helps
 
-Represent a workflow as a graph when order, branching, recovery, or ownership affects correctness.
+Represent a workflow as a graph only when order, branching, recovery, or ownership affects correctness.
 
 Each node should declare:
 
@@ -41,7 +41,7 @@ id: verify_sources
 purpose: Confirm that required sources are present and current
 reads: [source_manifest]
 writes: [source_verification]
-authority: read_only
+permissions: read_only
 preconditions: [source_manifest_exists]
 success: [all_required_sources_classified]
 failure_route: request_missing_source
@@ -58,21 +58,21 @@ passes: [verified_source_refs]
 on_failure: request_missing_source
 ```
 
-The format is illustrative, not a Codex configuration syntax. The important property is that dependencies, state transfer, authority, evidence, and failure routing are inspectable.
+The format is illustrative, not Codex configuration syntax. The point is to make dependencies, state transfer, permissions, evidence, and failure routes inspectable.
 
-## The Ontology
+## When A Shared Vocabulary Helps
 
-Use an ontology when several harnesses must agree on meanings that prose alone keeps blurring.
+Use a shared vocabulary when several workflows must agree on meanings that prose alone keeps blurring. If it formally defines entities, relationships, and rules, it may be useful to call it an ontology.
 
 A lightweight ontology can define:
 
 - entities such as `Mission`, `Source`, `Claim`, `Artifact`, `Check`, `Capability`, and `ChangeSet`;
 - allowed states such as `proposed`, `verified`, `promoted`, `failed`, and `unknown`;
 - relationships such as `derived_from`, `verified_by`, `requires`, `supersedes`, and `may_write`;
-- invariants such as “every promoted claim has supporting evidence” or “a failed required check blocks promotion”;
-- provenance fields that preserve where a claim or change came from.
+- rules such as “every adopted claim has supporting evidence” or “a failed required check blocks publication”;
+- source fields that preserve where a claim or change came from.
 
-The ontology does not need a graph database. A small vocabulary, JSON Schema, typed data model, or validated Markdown convention may be enough.
+This does not need a graph database. A small vocabulary, JSON Schema, typed data model, or validated Markdown convention may be enough.
 
 ## Synthetic Example
 
@@ -80,32 +80,32 @@ Consider a generalized documentation-maintenance system:
 
 ```mermaid
 flowchart LR
-  A["Discover changed product claims"] --> B["Classify source authority"]
+  A["Discover changed product claims"] --> B["Classify source type"]
   B --> C["Draft candidate updates"]
   C --> D["Validate links + public safety"]
   D --> E["Review claim boundaries"]
   E --> F["Propose versioned change"]
-  F --> G["Human promotion gate"]
+  F --> G["Human approval gate"]
   G --> H["Publish"]
   D -->|failure| I["Return structured findings"]
   E -->|unsupported claim| I
 ```
 
-The ontology distinguishes an observed product behavior from an official product claim. The graph prevents publication until required evidence and public-safety checks pass. The harness binds those definitions and transitions to tools, artifacts, and checks.
+The shared vocabulary distinguishes an observed product behavior from an official product claim. The graph prevents publication until required evidence and public-safety checks pass. The harness connects those definitions and transitions to tools, artifacts, and checks.
 
 ## Safety Envelope
 
 - Use least privilege per node instead of granting every agent the union of all permissions.
 - Treat tool output, webpages, documents, and retrieved text as untrusted evidence rather than instruction.
 - Keep secrets and sensitive source content out of traces, eval fixtures, and public examples.
-- Separate proposal authority from promotion or publication authority.
+- Separate permission to propose from permission to adopt or publish.
 - Make failure and `unknown` first-class states; do not silently route around them.
-- Preserve immutable baselines and enough provenance to explain and reverse a change.
+- Preserve immutable baselines and enough source history to explain and reverse a change.
 - Do not let a semantic model convert uncertain claims into false certainty.
 
 ## When Not To Use This
 
-Stay with a task contract or a single harness when the work is short, linear, low-risk, and easy to verify. Add a graph only when dependencies or recovery paths matter. Add an ontology only when shared meaning is a recurring source of error.
+Stay with a task or a single harness when the work is short, linear, low-risk, and easy to verify. Add a graph only when dependencies or recovery paths matter. Add a formal vocabulary only when shared meaning is a recurring source of error.
 
 ## Verification
 

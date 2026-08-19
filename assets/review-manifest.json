@@ -4,7 +4,7 @@
   "assets": [
     {
       "path": "assets/agentic-harness-topologies.svg",
-      "sha256": "0c560e4cc19b56bb80386056332b12c73960a6e5e714c31adf87561042d51256",
+      "sha256": "83f0b4fc0d091f3f93c6f5b7ffb8c0ec32286479d581bc98ede376e781ffda49",
       "checks": ["metadata", "privacy", "visual"]
     },
     {
@@ -14,7 +14,7 @@
     },
     {
       "path": "assets/codexmaxxing-loop.svg",
-      "sha256": "ca66bfac49c1fc4d4ea39953f33cf3c8d3389d2b268c6749e05ae4d08d59e098",
+      "sha256": "db29af52ce6782f9920932c76ddbd4c52becb34ca422ea746698156f6fa96a53",
       "checks": ["metadata", "privacy", "visual"]
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "path": "assets/thinking-abstraction-level.svg",
-      "sha256": "9d06aa9d702511392c247e1a4f00406b4ccf0f739e7209a8dff84a81204d10ee",
+      "sha256": "a2fa3757dedfe6f90d5491f56f2d1f87f405c776f18c88fa7bd94f0b04e7ef33",
       "checks": ["metadata", "privacy", "visual"]
     }
   ]

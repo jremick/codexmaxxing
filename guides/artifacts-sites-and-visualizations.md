@@ -36,7 +36,7 @@ Every Sites deployment URL is a production deployment. Save a version without de
 
 Treat deployment as an external write. Verify the intended content, data boundary, authentication assumptions, and production URL after publication.
 
-## Review Contract
+## Review Requirements
 
 ```markdown
 Output type:
