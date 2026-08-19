@@ -187,16 +187,41 @@ State the visual checks, deterministic checks, privacy boundary, and whether dep
 
 Good for: artifact production, interactive explanations, dashboards, and hosted experiences.
 
+## 9. Engineer A Compounding Workflow
+
+```markdown
+Recurring workflow:
+<synthetic workflow description>
+
+Observed recurring failure:
+<what repeatedly goes wrong and what evidence supports it>
+
+Goal:
+Turn the workflow into the smallest reliable, versioned harness that can improve through reviewed evidence.
+
+Before implementing:
+1. define the harness contract: instructions, tools, routing, state, outputs, and validation,
+2. model only the dependencies and shared terms that affect correctness,
+3. separate the execution, verification, and evolution loops,
+4. define one regression case for the recurring failure,
+5. define candidate, promotion, and rollback states,
+6. identify privacy, privilege-expansion, feedback-poisoning, and self-confirmation risks.
+
+Keep examples synthetic. Do not expose actual environment inventories, traces, credentials, private documents, or security controls.
+```
+
+Good for: recurring delivery, review, documentation, operations, research, and maintenance workflows that already have observable inputs and outcomes.
+
 ## The Common Shape
 
 ```mermaid
 flowchart LR
-  A["High-level goal"] --> B["Success criteria"]
-  B --> C["Codex derives harness"]
-  C --> D["Context + tools"]
-  D --> E["Execution"]
-  E --> F["Verification"]
-  F --> G["Reusable bit"]
+  A["Intent"] --> B["Versioned harness"]
+  B --> C["Execution"]
+  C --> D["Evidence"]
+  D --> E["Verification"]
+  E --> F["Reviewed improvement"]
+  F --> B
 ```
 
 The domain changes. The loop mostly does not.

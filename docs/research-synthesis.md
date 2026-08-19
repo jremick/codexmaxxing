@@ -25,7 +25,9 @@ Official OpenAI/Codex docs:
 - [Models](https://learn.chatgpt.com/docs/models)
 - [Permissions](https://learn.chatgpt.com/docs/permission-modes), [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules), and [Hooks](https://learn.chatgpt.com/docs/hooks)
 - [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-- [OpenAI Cookbook agent improvement loop](https://cookbook.openai.com/examples/agents_sdk/agent_improvement_loop)
+- [OpenAI Cookbook agent improvement loop](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop)
+- [OpenAI: Harness engineering](https://openai.com/index/harness-engineering/)
+- [OpenAI: Trustworthy third-party evaluations](https://openai.com/index/trustworthy-third-party-evaluations-foundations/)
 
 Broader agent/workflow references:
 
@@ -70,6 +72,28 @@ The agent improvement loop in the OpenAI Cookbook is basically the grown-up vers
 
 In normal work, that means tests, screenshots, builds, link checks, API read-backs, simulator runs, device launches, and whatever else proves the task instead of narrating it.
 
+### The Harness Is The System Contract
+
+The OpenAI Cookbook defines the harness around the model as instructions, tools, routing, output requirements, and validation. That is a larger design surface than prompt wording.
+
+The useful progression is:
+
+```mermaid
+flowchart LR
+  A["Prompt"] --> B["Task contract"]
+  B --> C["Versioned harness"]
+  C --> D["Orchestration graph"]
+  D --> E["Verified improvement loop"]
+```
+
+Codex primitives can support this architecture, but the graph, ontology, eval suite, promotion policy, and rollback path remain system-engineering responsibilities.
+
+### Compounding Needs A Closed Loop
+
+Traces preserve what happened. Feedback explains what mattered. Evals make expectations reusable. Candidate harness changes can then be implemented and tested before promotion.
+
+The closure matters. Capturing a lesson is not compounding unless it changes future behavior through a versioned, reviewable, and reversible path. The evaluation claim must also remain bound to the tested model, harness, tools, budget, and environment.
+
 ### Subagents Are A Knife, Not A Lifestyle
 
 Subagents are useful when the work genuinely splits: separate files, separate research questions, separate verification surface, separate role.
@@ -107,3 +131,5 @@ flowchart TD
 ```
 
 That is not glamorous. It just works.
+
+The same simplicity rule applies at the next level. Start with one recurring workflow, one explicit harness, and one valuable regression case. Add graph and ontology structure only when dependencies or shared meanings repeatedly cause failures.

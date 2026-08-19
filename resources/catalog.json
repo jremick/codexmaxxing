@@ -15,6 +15,24 @@
       "status": "ready"
     },
     {
+      "title": "From Prompts To Compounding Systems",
+      "type": "guide",
+      "path": "guides/from-prompts-to-compounding-systems.md",
+      "status": "ready"
+    },
+    {
+      "title": "Graph And Ontology-Engineered Harnesses",
+      "type": "guide",
+      "path": "guides/graph-and-ontology-engineered-harnesses.md",
+      "status": "ready"
+    },
+    {
+      "title": "Verified Improvement Loops",
+      "type": "guide",
+      "path": "guides/verified-improvement-loops.md",
+      "status": "ready"
+    },
+    {
       "title": "Task Framing For Agents",
       "type": "guide",
       "path": "guides/task-framing.md",
@@ -168,6 +186,24 @@
       "title": "Playground Prompts",
       "type": "template",
       "path": "resources/playground-prompts.md",
+      "status": "usable"
+    },
+    {
+      "title": "Compounding System Canvas",
+      "type": "template",
+      "path": "resources/compounding-system-canvas.md",
+      "status": "usable"
+    },
+    {
+      "title": "Harness Graph Template",
+      "type": "template",
+      "path": "resources/harness-graph-template.md",
+      "status": "usable"
+    },
+    {
+      "title": "Improvement Loop Checklist",
+      "type": "checklist",
+      "path": "resources/improvement-loop-checklist.md",
       "status": "usable"
     }
   ]

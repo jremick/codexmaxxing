@@ -60,6 +60,10 @@ The team changes how work enters, flows, gets reviewed, and gets measured becaus
 
 The team can hand over broad goals with clear success criteria, and Codex can derive the project harness, delivery harness, work slices, and checks.
 
+### 7. Compounding system
+
+Recurring workflows emit privacy-safe evidence, failures become regression checks, and reviewed harness changes improve later runs without silently expanding authority. Versions, promotion decisions, and rollback paths remain inspectable.
+
 ## What To Measure
 
 - time to first useful draft,
@@ -68,6 +72,9 @@ The team can hand over broad goals with clear success criteria, and Codex can de
 - review findings caught before merge,
 - repeated questions eliminated by instructions or templates,
 - workflows converted into playbooks,
+- recurring failures converted into regression checks,
+- candidate changes rejected or rolled back before causing wider regression,
+- performance of promoted versions against a stable baseline,
 - tasks that still require human-only judgment.
 
 ## Failure Modes
@@ -77,6 +84,7 @@ The team can hand over broad goals with clear success criteria, and Codex can de
 - Giving broad tool access without review gates.
 - Publishing internal examples without rewriting them.
 - Training people on prompts but not on verification.
+- Automating self-modification before evaluation validity, authority, and rollback are trustworthy.
 
 ## Verification
 

@@ -133,3 +133,26 @@ Include:
 - what was not verified
 - what remains
 ```
+
+## Turn A Repeated Workflow Into A Compounding System
+
+```markdown
+Recurring workflow:
+<synthetic workflow>
+
+Current failure or constraint:
+<observable evidence, not a theory>
+
+Design the smallest system that can make later runs more reliable. Include:
+- the harness contract,
+- the minimum state and semantic model,
+- the execution graph only if order, branching, or recovery matters,
+- the evidence packet,
+- one regression eval,
+- candidate-versus-promoted version handling,
+- promotion and rollback gates,
+- counter-metrics,
+- privacy, privilege, and feedback-poisoning risks.
+
+Distinguish native Codex capabilities from architecture built around them. Keep the design general and synthetic. Do not implement autonomous self-modification or broaden tool authority without separate approval.
+```

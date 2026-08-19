@@ -26,6 +26,14 @@ class ValidatorSafeguardTests(unittest.TestCase):
         self.assertIsNone(
             validator.external_url_issue("https://learn.chatgpt.com/docs/models")
         )
+        self.assertIsNone(
+            validator.external_url_issue(
+                "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop"
+            )
+        )
+        self.assertIsNone(
+            validator.external_url_issue("https://openai.com/index/harness-engineering/")
+        )
         self.assertEqual(
             validator.external_url_issue("https://example.com/profile"),
             "uses a host outside the reviewed allowlist",

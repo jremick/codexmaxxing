@@ -9,6 +9,12 @@ These are practical operating notes rather than a course or a prescriptive frame
 - [Task Framing For Agents](task-framing.md)
 - [Verification Before Completion](verification-before-completion.md)
 
+## Compounding Systems Engineering
+
+- [From Prompts To Compounding Systems](from-prompts-to-compounding-systems.md)
+- [Graph And Ontology-Engineered Harnesses](graph-and-ontology-engineered-harnesses.md)
+- [Verified Improvement Loops](verified-improvement-loops.md)
+
 ## Workbench Patterns
 
 - [Build A Codex Operating System](build-a-codex-operating-system.md)
@@ -32,4 +38,4 @@ Current-product guides include a verification date and official sources. Read [P
 
 ## How To Read These
 
-Pick the one that matches the kind of failure you are seeing. If Codex is wandering, read task framing. If it is confidently wrong, read context control. If it says it is done and you do not believe it, read verification.
+Pick the one that matches the kind of failure you are seeing. If Codex is wandering, read task framing. If it is confidently wrong, read context control. If it says it is done and you do not believe it, read verification. If the same workflow or failure keeps returning, move into compounding systems engineering.

@@ -1,10 +1,10 @@
 # Codexmaxxing
 
-Using Codex less like a chatbot and more like an agentic operating system.
+Using Codex less like a chatbot and more like a substrate for engineered, compounding systems.
 
 Codexmaxxing is a field guide for getting real work done with Codex: software, devices, documentation, operations, writing, research, repository maintenance, and the occasional difficult investigation.
 
-The central idea is abstraction level. The useful move is often not "write a better tiny task." It is "state the goal at the appropriate level, make success clear, and let Codex derive the work underneath it."
+The central idea is that a prompt should become an entry point into an engineered system, not the place where the whole operating method is described. Abstraction level is the first move: state the goal at the appropriate level, make success clear, and let Codex derive the work underneath it. The method can then move into reusable harnesses, orchestration graphs, semantic contracts, verification, and governed improvement loops.
 
 Durable operating principles are kept separate from current-product guidance. Product behavior was last checked against official OpenAI documentation on 2026-08-20; availability can vary by host, account, plan, operating system, and rollout.
 
@@ -16,6 +16,7 @@ Durable operating principles are kept separate from current-product guidance. Pr
 
 - [The Codexmaxxing Loop](guides/codexmaxxing-loop.md): a reusable loop for outcome-oriented work.
 - [Thinking Abstraction Level](guides/thinking-abstraction-level.md): the biggest unlock: giving Codex bigger goals at the right level.
+- [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md): how prompts become entry points into persistent, improving systems.
 - [Task Framing For Agents](guides/task-framing.md): how to stop asking vague stuff and start getting useful work back.
 - [Context Control](guides/context-control.md): how to stop drowning Codex in the wrong information.
 - [Verification Before Completion](guides/verification-before-completion.md): the part that turns "seems fine" into "actually done."
@@ -27,12 +28,12 @@ Durable operating principles are kept separate from current-product guidance. Pr
 
 ```mermaid
 flowchart LR
-  A["High-level goal"] --> B["Success criteria"]
-  B --> C["Codex designs the harness"]
-  C --> D["Tools + context"]
-  D --> E["Real execution"]
-  E --> F["Real checks"]
-  F --> G["Reusable pattern"]
+  A["Intent + success criteria"] --> B["Engineered harness"]
+  B --> C["Orchestration + tools"]
+  C --> D["Execution + artifacts"]
+  D --> E["Verification + evals"]
+  E --> F["Reviewed improvement"]
+  F --> B
 ```
 
 That loop works for code, but it is not just a coding thing.
@@ -59,6 +60,8 @@ The fun bit is when Codex stops being a novelty and starts becoming part of the 
 - a tool call reads the live thing instead of guessing,
 - a test or screenshot catches the dumb mistake,
 - a repeated workflow turns into a reusable playbook,
+- a recurring failure becomes an eval instead of another reminder,
+- a verified improvement changes the next run through a versioned harness,
 - and suddenly the agent can do more than autocomplete code.
 
 This repo is a mix of notes, patterns, templates, and examples for that.
@@ -76,6 +79,7 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 | understand instructions, permissions, rules, and hooks | [Permissions, Rules, Hooks, And Instructions](guides/permissions-rules-and-hooks.md) |
 | create a file, interactive explanation, or hosted experience | [Artifacts, Sites, And Visualizations](guides/artifacts-sites-and-visualizations.md) |
 | design a large skill library without flooding context | [Capability Lifecycle And Prompt Visibility](guides/capability-lifecycle.md) |
+| engineer reusable harnesses, orchestration graphs, and improvement loops | [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md), [Graph And Ontology-Engineered Harnesses](guides/graph-and-ontology-engineered-harnesses.md), and [Verified Improvement Loops](guides/verified-improvement-loops.md) |
 
 The complete [guide index](guides/README.md), [copyable resources](resources/README.md), and [synthetic missions](examples/README.md) provide the rest of the operating layer.
 
@@ -85,6 +89,7 @@ The complete [guide index](guides/README.md), [copyable resources](resources/REA
 - Diagnose a layered system failure with read-only evidence before changing anything.
 - Verify a device workflow on the real target instead of stopping at source inspection.
 - Turn a repeated workflow into a reusable skill, checklist, or validator.
+- Turn a recurring failure into a regression eval and reviewed harness improvement.
 - Coordinate independent workstreams without overlapping write boundaries.
 
 These are expanded in [Example Work Patterns](docs/example-work-patterns.md). The examples are synthetic and do not describe a specific person, repository, organization, or environment.

@@ -28,6 +28,26 @@ flowchart LR
 
 Do not report an installed capability as active, or a successful tool call as a verified outcome.
 
+## From Verified Outcome To Promoted Capability
+
+Outcome verification completes one run. It does not prove that the capability should change or expand.
+
+Use a separate promotion lifecycle:
+
+```mermaid
+flowchart LR
+  A["Outcome evidence"] --> B["Change proposed"]
+  B --> C["Candidate isolated"]
+  C --> D["Regression evaluated"]
+  D --> E{"Promotion gate"}
+  E -->|pass| F["Promoted version"]
+  E -->|fail| G["Rejected with evidence"]
+  F --> H["Monitored use"]
+  H --> A
+```
+
+Permission, tool, connector, and data-access changes need their own review even when the behavior eval passes. A capability becoming more effective is not evidence that it should become more privileged or more visible.
+
 ## Progressive Disclosure
 
 Skills use progressive disclosure. Codex initially sees compact metadata, then loads the full instructions when a skill is selected. A large skill library therefore needs clear names, descriptions, boundaries, and retrieval—not one enormous prompt containing every workflow.
@@ -66,6 +86,8 @@ Name the kind of profile whenever it matters. Do not assume that choosing a mode
 - Which can read data, write data, or trigger external side effects?
 - What evidence proves that activation improved the result?
 - Which capability descriptions overlap enough to create routing ambiguity?
+- Which evals and evidence permit a new version to be promoted?
+- Can the prior version be restored without reconstructing private state?
 
 ## Safe Public Examples
 

@@ -8,6 +8,14 @@ ChatGPT on the web, the desktop app, Codex CLI, and the IDE extension do not exp
 
 Do not turn one observed environment into a universal product claim.
 
+## Product Primitive Versus Engineered Pattern
+
+Project instructions, skills, plugins, MCP connectors, hooks, subagents, goals, and execution environments are product or configuration surfaces described by current documentation.
+
+Terms such as orchestration graph, ontology-driven harness, compounding system, promotion gate, and improvement flywheel describe architectures that can be built with and around those surfaces. Do not present them as a single built-in Codex feature or imply that Codex automatically supplies their state model, eval validity, governance, or security boundary.
+
+In this repository, a trace means observable events and artifacts exposed by the harness. It does not imply access to private model reasoning or hidden chain-of-thought.
+
 ## Evidence Must Match The Claim
 
 | Claim | Supporting evidence |
@@ -30,6 +38,8 @@ A screenshot cannot establish backend mutation, identity, accessibility conforma
 - Hooks execute trusted code and require review; they are not merely documentation.
 - Content from webpages, documents, issues, and tool output is untrusted evidence, not authoritative instruction.
 - Self-generated tests and agreement between agents are not independent acceptance.
+- A self-improvement loop does not justify self-approval, privilege expansion, or mutation of its active baseline.
+- Traces and eval fixtures can contain sensitive material; collect the minimum and keep public examples synthetic.
 
 ## Drift-Prone Claims
 
