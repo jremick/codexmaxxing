@@ -25,26 +25,27 @@ Ask Codex to work out:
 
 ## Example
 
-This example is synthetic and uses no real repository or environment details.
+This example is synthetic and uses no real person, organization, account, or environment details.
 
 ```markdown
 Goal:
-Make this repo feel like a public project someone would actually want to explore.
+Turn these rough notes and source links into a short decision brief.
 
 Success criteria:
-- the README has a clear point of view,
-- first-click paths are obvious,
-- examples are synthetic and public-safe,
-- examples show code and non-code use,
-- validation still passes.
+- the decision is stated clearly,
+- each option is compared against the same criteria,
+- facts, inference, and unknowns are easy to distinguish,
+- claims that may have changed are cited,
+- the next human decision is obvious.
 
 Constraints:
-- keep it casual and technical,
-- remove internal maintenance framing,
-- do not publish private examples.
+- keep it under two pages,
+- do not invent missing facts,
+- keep the source material private,
+- stop at a draft; do not send or publish it.
 
 Context:
-Start with README, guides, resources, and examples.
+Start with the supplied notes. Check only the external claims that could change the recommendation.
 
 Ask Codex to work out the plan, relevant sources, checks, and stop conditions before editing.
 ```

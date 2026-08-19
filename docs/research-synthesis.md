@@ -52,7 +52,7 @@ That does not mean vague prompts work. It means high-level goals work when the s
 
 Codex is not just a box that answers questions. The current product includes projects and tasks, goals and schedules, Local/Worktree/Cloud environments, skills and plugins, MCP connectors, Browser and Computer Use, artifacts and hosted Sites, permissions, hooks, rules, models, reasoning controls, and subagents.
 
-That means the leverage is in the setup around the model: the repo, the tools, the docs, the task shape, and the checks.
+That means the leverage is in the setup around the model: the relevant files or sources, the tools, the task shape, and the checks.
 
 ### Context Is A Design Problem
 
@@ -70,7 +70,7 @@ That is where the fun starts. It is also where bad assumptions become more expen
 
 The agent improvement loop in the OpenAI Cookbook is basically the grown-up version of what works day to day: traces, evals, checks, and iteration.
 
-In normal work, that means tests, screenshots, builds, link checks, API read-backs, simulator runs, device launches, and whatever else proves the task instead of narrating it.
+In normal work, that might mean checking a claim against its source, confirming a price or schedule is current, comparing a summary with the original notes, inspecting a rendered document, running tests, reading an API back, or trying the workflow on the real device. The check should match the claim instead of merely showing that work happened.
 
 ### A Harness Is The Setup Around The Model
 
