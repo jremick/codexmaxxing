@@ -1,6 +1,6 @@
 # Field Patterns
 
-These generalized patterns recur across software, operations, devices, documentation, research, and non-code work.
+These generalized patterns recur across research, planning, writing, operations, software, devices, documentation, and other everyday work.
 
 The examples are synthetic and do not describe a specific person, repository, organization, or environment.
 
@@ -92,17 +92,30 @@ sequenceDiagram
 
 The final report should distinguish source inspection, build evidence, simulation, and physical-device behavior.
 
-## Non-Code Work Counts
+## Everyday Work Uses The Same Loop
 
-The same operating loop can support:
+Useful agent work also includes:
 
-- shaping messy notes,
-- comparing options,
-- drafting an update,
-- turning a vague idea into a concrete task,
-- checking whether a decision is supported by evidence.
+- researching a decision from current sources,
+- comparing products, services, routes, or approaches,
+- planning around timing, location, budget, access, and preferences,
+- turning notes, transcripts, images, and links into a useful result,
+- drafting communication for a real audience,
+- producing a document, spreadsheet, presentation, diagram, or interactive explanation,
+- reviewing records, reminders, or updates on a recurring schedule.
 
-Name the outcome, load only the necessary context, do the work, and check the result.
+The check changes with the work:
+
+| Work | Useful check |
+| --- | --- |
+| research or comparison | sources are current, criteria are consistent, uncertainty is visible |
+| planning | changing constraints were checked and no booking or purchase is implied |
+| notes or transcript synthesis | names, dates, claims, and actions match the source material |
+| communication | the draft says the real thing, fits the audience, and makes no unsupported promise |
+| artifact production | the content is correct and the rendered result is usable |
+| recurring review | the source is current, the signal is useful, and the action boundary was respected |
+
+Name the outcome, load only the necessary context, do the work, and check the result. Keep external actions such as sending, publishing, booking, buying, or deleting behind explicit approval.
 
 ## The Pattern Underneath
 

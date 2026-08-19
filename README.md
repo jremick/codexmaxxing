@@ -1,14 +1,10 @@
 # Codexmaxxing
 
-A practical guide to using Codex for real work—and turning the workflows that matter into reliable, reusable systems.
+A practical guide to getting real work done with AI agents.
 
-Codexmaxxing is a field guide for getting real work done with Codex: software, devices, documentation, operations, writing, research, repository maintenance, and the occasional difficult investigation.
+Codex is the tool I prefer and the focus of this repo, but the ideas are broader: state the outcome clearly, give the agent the right context and tools, check the real result, and make useful patterns reusable.
 
 The pattern I keep coming back to is simple: say what should be true, make the important boundaries clear, and let Codex work out the path underneath. For a one-off task, that may be all you need. When the same work keeps coming back, the useful parts can move into instructions, skills, scripts, checks, and other reusable pieces so the next run starts stronger.
-
-Durable operating principles are kept separate from current-product guidance. Product behavior was last checked against official OpenAI documentation on 2026-08-20; availability can vary by host, account, plan, operating system, and rollout.
-
-> **Public alpha:** This is an independent, unofficial field guide, not an OpenAI product or a substitute for official documentation. The structure and examples are usable, but product-specific guidance may change as Codex evolves. No versioned release has been published.
 
 ![Codexmaxxing agentic operating system workbench](assets/codexmaxxing-hero.webp)
 
@@ -34,18 +30,19 @@ flowchart LR
   H --> B
 ```
 
-That loop works for code, but it is not just a coding thing.
+That loop works across all kinds of work, not just code.
 
 The same pattern applies to:
 
-- turning broad ideas into product-shaped projects,
-- debugging live systems,
-- turning messy notes into useful docs,
-- researching gear or APIs,
-- shaping open-source repos,
-- reviewing UI,
-- making small scripts that replace repeated manual work,
-- and turning recurring work into a repeatable loop.
+- researching a decision from current sources,
+- comparing products, services, routes, or other options against real constraints,
+- turning rough notes, voice input, or a meeting into a useful document and clear follow-up,
+- drafting communication for a specific audience,
+- creating documents, spreadsheets, presentations, diagrams, and interactive explanations,
+- planning work, travel, purchases, or events without making the final decision for you,
+- debugging software, devices, and live services,
+- shaping repositories and product work,
+- and turning recurring research, admin, review, or delivery work into a repeatable loop.
 
 ## The Fun Part
 
@@ -60,7 +57,7 @@ The fun bit is when Codex stops being a novelty and starts becoming part of the 
 - a repeated workflow turns into a reusable playbook,
 - a recurring failure becomes an eval instead of another reminder,
 - a tested improvement makes the next comparable run better,
-- and suddenly the agent can do more than autocomplete code.
+- and suddenly the agent can do more than answer questions or autocomplete code.
 
 This repo is a mix of notes, patterns, templates, and examples for that.
 
@@ -68,6 +65,7 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 
 | If you want to... | Start with |
 | --- | --- |
+| research, compare options, or turn rough material into a useful result | [Example Missions](examples/README.md) and [Playground Prompts](resources/playground-prompts.md) |
 | organize ongoing context, long-running work, or recurrence | [Projects, Chats, Goals, And Scheduled Tasks](guides/projects-chats-goals-and-schedules.md) |
 | choose between the current checkout, isolated Git work, and remote execution | [Local, Worktree, And Cloud Environments](guides/environments-worktrees-and-cloud.md) |
 | choose instructions, a script, skill, plugin, MCP connector, or schedule | [Skills, Plugins, MCP, And Tools](guides/skills-plugins-mcp-and-tools.md) |
@@ -83,25 +81,30 @@ The complete [guide index](guides/README.md), [copyable resources](resources/REA
 
 ## Synthetic Work Patterns
 
+- Research a decision using current sources, explicit criteria, and an honest account of uncertainty.
+- Plan a trip, purchase, or event around live constraints without treating a search result as a confirmed booking or reservation.
+- Turn rough notes, a transcript, or mixed source material into a decision, communication, or finished artifact.
+- Run a recurring review in read-only or draft-only mode until a human approves any external action.
 - Prepare an application repository so a contributor can run it without private infrastructure.
 - Diagnose a layered system failure with read-only evidence before changing anything.
-- Verify a device workflow on the real target instead of stopping at source inspection.
 - Turn a repeated workflow into a reusable skill, checklist, or validator.
 - Turn a recurring failure into a regression eval and a reviewed workflow improvement.
-- Coordinate independent workstreams without overlapping write boundaries.
 
 These are expanded in [Example Work Patterns](docs/example-work-patterns.md). The examples are synthetic and do not describe a specific person, repository, organization, or environment.
 
-## Current Status And Support
+## Status And Support
 
-Codexmaxxing is in public alpha. The durable operating patterns are intended for inspection, adaptation, and feedback; product-specific details are dated and should be checked against the cited official sources before use.
+Codexmaxxing is an independent, unofficial field guide, not an OpenAI product or a substitute for official documentation. Product-specific details are dated and should be checked against the cited official sources before use.
+
+Codex-specific product behavior was last checked against official OpenAI documentation on 2026-08-20. Availability can vary by host, account, plan, operating system, and rollout.
 
 Known limitations:
 
 - Codex features and availability can differ by host, plan, account, operating system, and rollout.
+- Other agent tools use different capabilities, permissions, and terminology; adapt the patterns rather than assuming feature parity.
 - Examples are synthetic teaching material, not evidence that a workflow will fit every environment.
 - Automated validation catches defined content and repository risks but cannot prove complete anonymity, factual completeness, accessibility, or visual quality.
-- There is no versioned release, compatibility guarantee, or support service.
+- There is no compatibility guarantee or support service.
 
 Use the repository's Issues tab for documentation defects, outdated guidance, or concrete improvement proposals. See [Contributing](CONTRIBUTING.md) for public-safe contribution expectations and [Security Policy](SECURITY.md) for private reporting guidance. No response time is guaranteed.
 
