@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "updated": "2026-06-04",
+  "version": "0.2.0",
+  "updated": "2026-08-20",
   "items": [
     {
       "title": "The Codexmaxxing Loop",
@@ -9,9 +9,9 @@
       "status": "ready"
     },
     {
-      "title": "Thinking Altitude",
+      "title": "Thinking Abstraction Level",
       "type": "guide",
-      "path": "guides/thinking-altitude.md",
+      "path": "guides/thinking-abstraction-level.md",
       "status": "ready"
     },
     {
@@ -39,9 +39,51 @@
       "status": "ready"
     },
     {
-      "title": "Tools, Skills, And MCP",
+      "title": "Skills, Plugins, MCP, And Tools",
       "type": "guide",
-      "path": "guides/tools-skills-and-mcp.md",
+      "path": "guides/skills-plugins-mcp-and-tools.md",
+      "status": "ready"
+    },
+    {
+      "title": "Capability Lifecycle And Prompt Visibility",
+      "type": "guide",
+      "path": "guides/capability-lifecycle.md",
+      "status": "ready"
+    },
+    {
+      "title": "Projects, Chats, Goals, And Scheduled Tasks",
+      "type": "guide",
+      "path": "guides/projects-chats-goals-and-schedules.md",
+      "status": "ready"
+    },
+    {
+      "title": "Local, Worktree, And Cloud Environments",
+      "type": "guide",
+      "path": "guides/environments-worktrees-and-cloud.md",
+      "status": "ready"
+    },
+    {
+      "title": "Browser, Computer Use, And Structured Connectors",
+      "type": "guide",
+      "path": "guides/browser-computer-use-and-connectors.md",
+      "status": "ready"
+    },
+    {
+      "title": "Models, Reasoning, And Delegation",
+      "type": "guide",
+      "path": "guides/models-reasoning-and-delegation.md",
+      "status": "ready"
+    },
+    {
+      "title": "Permissions, Rules, Hooks, And Instructions",
+      "type": "guide",
+      "path": "guides/permissions-rules-and-hooks.md",
+      "status": "ready"
+    },
+    {
+      "title": "Artifacts, Sites, And Visualizations",
+      "type": "guide",
+      "path": "guides/artifacts-sites-and-visualizations.md",
       "status": "ready"
     },
     {
@@ -61,6 +103,36 @@
       "type": "guide",
       "path": "guides/team-adoption.md",
       "status": "ready"
+    },
+    {
+      "title": "Example Work Patterns",
+      "type": "examples",
+      "path": "docs/example-work-patterns.md",
+      "status": "usable"
+    },
+    {
+      "title": "Field Synthesis",
+      "type": "research",
+      "path": "docs/field-synthesis.md",
+      "status": "reference"
+    },
+    {
+      "title": "Product Claim Boundaries",
+      "type": "policy",
+      "path": "docs/product-claim-boundaries.md",
+      "status": "ready"
+    },
+    {
+      "title": "Research Synthesis",
+      "type": "research",
+      "path": "docs/research-synthesis.md",
+      "status": "reference"
+    },
+    {
+      "title": "Example Prompts And Workflows",
+      "type": "examples",
+      "path": "examples/README.md",
+      "status": "usable"
     },
     {
       "title": "Codex Operating Checklist",

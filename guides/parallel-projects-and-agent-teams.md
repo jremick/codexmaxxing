@@ -1,8 +1,10 @@
 # Parallel Projects And Agent Teams
 
-The next unlock after thinking altitude is running more than one useful thread at once without turning your workspace into soup.
+Once abstraction level is clear, the next challenge is running more than one useful thread without creating coordination noise.
 
 Parallel Codex work is not "spawn as many agents as possible." It is giving each stream a harness: mission, source of truth, write boundary, status contract, and proof path.
+
+Choose the execution boundary as well as the agent topology. Use subagents for independent work inside one objective, worktrees for independent Git writers, and cloud environments for remote isolated execution. See [Local, Worktree, And Cloud Environments](environments-worktrees-and-cloud.md).
 
 ![Agentic harness topologies](../assets/agentic-harness-topologies.svg)
 
@@ -61,7 +63,7 @@ This is the part that makes parallel projects feel less like juggling tabs and m
 
 ## Automating Delegation
 
-For bigger work, I do not want to hand-design every subtask. I want Codex to propose the harness topology.
+For bigger work, Codex can propose the harness topology before execution instead of requiring every subtask to be designed manually.
 
 ```markdown
 Goal:
@@ -84,7 +86,7 @@ Before executing:
 5. identify the integration checkpoint.
 ```
 
-Codex can usually design a better work breakdown than a tired human trying to pre-chew every task at midnight.
+Codex can often propose a useful work breakdown when the goal, boundaries, and integration point are clear.
 
 ## Custom Agents And Agent Teams
 
@@ -103,7 +105,7 @@ An agent team is not automatically smarter than one good loop. It becomes useful
 
 ## Running Multiple Projects
 
-For parallel projects, keep a tiny board somewhere: Markdown, issues, Linear, Notion, GitHub Projects, a local JSON file, whatever actually survives contact with your day.
+For parallel projects, keep a small durable board in an appropriate tracker or structured local file.
 
 Track only what changes decisions:
 
@@ -115,7 +117,7 @@ Track only what changes decisions:
 - proof needed,
 - last verified date.
 
-Do not make a giant PM system for weekend side quests. The point is to keep enough state that Codex can resume, delegate, and verify without you rehydrating the whole universe every time.
+Do not create a large project-management system for a small portfolio. Keep enough state for Codex to resume, delegate, and verify without reconstructing the entire context every time.
 
 ## When To Stay Serial
 

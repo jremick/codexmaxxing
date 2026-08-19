@@ -2,22 +2,26 @@
 
 Using Codex less like a chatbot and more like an agentic operating system.
 
-Codexmaxxing is my field guide for getting real work done with Codex: apps, firmware, docs, ops, writing, research, repo cleanup, weird little side quests, and the occasional "why is this thing broken at 11pm?" investigation.
+Codexmaxxing is a field guide for getting real work done with Codex: software, devices, documentation, operations, writing, research, repository maintenance, and the occasional difficult investigation.
 
-The big unlock is altitude. With a strong enough model, the useful move is often not "write a better tiny task." It is "hold the goal at the right level, make success clear, and let Codex design the harness underneath it."
+The central idea is abstraction level. The useful move is often not "write a better tiny task." It is "state the goal at the appropriate level, make success clear, and let Codex derive the work underneath it."
+
+Durable operating principles are kept separate from current-product guidance. Product behavior was last checked against official OpenAI documentation on 2026-08-20; availability can vary by host, account, plan, operating system, and rollout.
+
+> **Public alpha:** This is an independent, unofficial field guide, not an OpenAI product or a substitute for official documentation. The structure and examples are usable, but product-specific guidance may change as Codex evolves. No versioned release has been published.
 
 ![Codexmaxxing agentic operating system workbench](assets/codexmaxxing-hero.webp)
 
 ## Start Here
 
-- [The Codexmaxxing Loop](guides/codexmaxxing-loop.md): the basic loop I keep coming back to.
-- [Thinking Altitude](guides/thinking-altitude.md): the biggest unlock: giving Codex bigger goals at the right level.
+- [The Codexmaxxing Loop](guides/codexmaxxing-loop.md): a reusable loop for outcome-oriented work.
+- [Thinking Abstraction Level](guides/thinking-abstraction-level.md): the biggest unlock: giving Codex bigger goals at the right level.
 - [Task Framing For Agents](guides/task-framing.md): how to stop asking vague stuff and start getting useful work back.
 - [Context Control](guides/context-control.md): how to stop drowning Codex in the wrong information.
-- [Parallel Projects And Agent Teams](guides/parallel-projects-and-agent-teams.md): how to run multiple threads without losing the plot.
 - [Verification Before Completion](guides/verification-before-completion.md): the part that turns "seems fine" into "actually done."
 - [Example Missions](examples/README.md): a few shapes for real work, including non-code work.
-- [Related Projects](docs/related-projects.md): real repos where these ideas show up.
+- [Example Work Patterns](docs/example-work-patterns.md): synthetic examples of the patterns in practice.
+- [Product Claim Boundaries](docs/product-claim-boundaries.md): what each kind of evidence can and cannot prove.
 
 ## The Shape Of It
 
@@ -33,16 +37,16 @@ flowchart LR
 
 That loop works for code, but it is not just a coding thing.
 
-I use the same pattern for:
+The same pattern applies to:
 
-- turning broad ideas into product-shaped side projects,
+- turning broad ideas into product-shaped projects,
 - debugging live systems,
 - turning messy notes into useful docs,
 - researching gear or APIs,
 - shaping open-source repos,
 - reviewing UI,
-- making tiny scripts that replace annoying repeated thinking,
-- and generally moving more work out of my head and into a repeatable loop.
+- making small scripts that replace repeated manual work,
+- and turning recurring work into a repeatable loop.
 
 ## The Fun Part
 
@@ -50,7 +54,7 @@ The fun bit is when Codex stops being a novelty and starts becoming part of the 
 
 - a repo has instructions that actually help,
 - a goal has success criteria,
-- Codex can derive the task contract instead of waiting for me to handwrite every field,
+- Codex can derive the task contract instead of requiring every field to be written in advance,
 - parallel projects have status contracts instead of vibes,
 - a tool call reads the live thing instead of guessing,
 - a test or screenshot catches the dumb mistake,
@@ -59,31 +63,45 @@ The fun bit is when Codex stops being a novelty and starts becoming part of the 
 
 This repo is a mix of notes, patterns, templates, and examples for that.
 
-## Grab A Thing
+## Choose The Surface
 
 | If you want to... | Start with |
 | --- | --- |
-| think bigger without going vague | [Thinking Altitude](guides/thinking-altitude.md) |
-| get better answers from Codex | [Task Framing For Agents](guides/task-framing.md) |
-| stop context chaos | [Context Control](guides/context-control.md) |
-| build a repeatable setup around a repo | [Build A Codex Operating System](guides/build-a-codex-operating-system.md) |
-| run multiple projects or agents at once | [Parallel Projects And Agent Teams](guides/parallel-projects-and-agent-teams.md) |
-| use tools, skills, and MCP without making a mess | [Tools, Skills, And MCP](guides/tools-skills-and-mcp.md) |
-| split work across agents without making it worse | [Delegation And Subagents](guides/delegation-and-subagents.md) |
-| bring this into a team | [Team Adoption](guides/team-adoption.md) |
-| copy a template and go | [Copy-Paste Bits](resources/README.md) |
-| see what this looks like in practice | [Example Missions](examples/README.md) |
+| organize ongoing context, long-running work, or recurrence | [Projects, Chats, Goals, And Scheduled Tasks](guides/projects-chats-goals-and-schedules.md) |
+| choose between the current checkout, isolated Git work, and remote execution | [Local, Worktree, And Cloud Environments](guides/environments-worktrees-and-cloud.md) |
+| choose instructions, a script, skill, plugin, MCP connector, or schedule | [Skills, Plugins, MCP, And Tools](guides/skills-plugins-mcp-and-tools.md) |
+| control a website or graphical application | [Browser, Computer Use, And Structured Connectors](guides/browser-computer-use-and-connectors.md) |
+| select reasoning depth or parallel delegation | [Models, Reasoning, And Delegation](guides/models-reasoning-and-delegation.md) |
+| split work without creating coordination debt | [Delegation And Subagents](guides/delegation-and-subagents.md) and [Parallel Projects And Agent Teams](guides/parallel-projects-and-agent-teams.md) |
+| understand instructions, permissions, rules, and hooks | [Permissions, Rules, Hooks, And Instructions](guides/permissions-rules-and-hooks.md) |
+| create a file, interactive explanation, or hosted experience | [Artifacts, Sites, And Visualizations](guides/artifacts-sites-and-visualizations.md) |
+| design a large skill library without flooding context | [Capability Lifecycle And Prompt Visibility](guides/capability-lifecycle.md) |
 
-## Real-World-ish Examples
+The complete [guide index](guides/README.md), [copyable resources](resources/README.md), and [synthetic missions](examples/README.md) provide the rest of the operating layer.
 
-- [Moodarr](https://github.com/jremick/moodarr): helps Plex + Seerr/Jellyseerr users find something to watch from moods, vibes, and loose natural-language ideas.
-- [DragyDash](https://github.com/jremick/dragy-dash): turns Dragy Pro GNSS data into a live iPhone dashboard for speed runs, GPS quality, and session telemetry.
-- [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32): puts Dragy Pro speed and GPS quality on a tiny LilyGO display so the useful telemetry is glanceable.
-- [AI Workbench](https://github.com/jremick/ai-workbench): a workbench of reusable AI skills, prompts, harnesses, memory patterns, and agent workflow bits.
-- [MySkills](https://github.com/jremick/myskills): a place to publish, review, discover, install, and use agent skills across web, API, CLI, and MCP.
+## Synthetic Work Patterns
 
-More notes on those are in [Related Projects](docs/related-projects.md).
+- Prepare an application repository so a contributor can run it without private infrastructure.
+- Diagnose a layered system failure with read-only evidence before changing anything.
+- Verify a device workflow on the real target instead of stopping at source inspection.
+- Turn a repeated workflow into a reusable skill, checklist, or validator.
+- Coordinate independent workstreams without overlapping write boundaries.
+
+These are expanded in [Example Work Patterns](docs/example-work-patterns.md). The examples are synthetic and do not describe a specific person, repository, organization, or environment.
+
+## Current Status And Support
+
+Codexmaxxing is in public alpha. The durable operating patterns are intended for inspection, adaptation, and feedback; product-specific details are dated and should be checked against the cited official sources before use.
+
+Known limitations:
+
+- Codex surfaces and availability can differ by host, plan, account, operating system, and rollout.
+- Examples are synthetic teaching material, not evidence that a workflow will fit every environment.
+- Automated validation catches defined content and repository risks but cannot prove complete anonymity, factual completeness, accessibility, or visual quality.
+- There is no versioned release, compatibility guarantee, or support service.
+
+Use the repository's Issues tab for documentation defects, outdated guidance, or concrete improvement proposals. See [Contributing](CONTRIBUTING.md) for public-safe contribution expectations and [Security Policy](SECURITY.md) for private reporting guidance. No response time is guaranteed.
 
 ## License
 
-[Apache License 2.0](LICENSE) - Copyright 2026 Jarel Remick.
+[Apache License 2.0](LICENSE)

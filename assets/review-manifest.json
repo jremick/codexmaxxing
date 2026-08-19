@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-08-20",
+  "assets": [
+    {
+      "path": "assets/agentic-harness-topologies.svg",
+      "sha256": "0c560e4cc19b56bb80386056332b12c73960a6e5e714c31adf87561042d51256",
+      "checks": ["metadata", "privacy", "visual"]
+    },
+    {
+      "path": "assets/codexmaxxing-hero.webp",
+      "sha256": "85c15076befa886c2bf7676ef28901a8d7cc22fc7caa756dd1df96951e66df49",
+      "checks": ["metadata", "privacy", "visual"]
+    },
+    {
+      "path": "assets/codexmaxxing-loop.svg",
+      "sha256": "ca66bfac49c1fc4d4ea39953f33cf3c8d3389d2b268c6749e05ae4d08d59e098",
+      "checks": ["metadata", "privacy", "visual"]
+    },
+    {
+      "path": "assets/social-preview.png",
+      "sha256": "5b619bdab66a558c175d3745ca3495fa6fa3e9ad9d6a3a0ee577d1fcda1a5a66",
+      "checks": ["metadata", "privacy", "visual"]
+    },
+    {
+      "path": "assets/thinking-abstraction-level.svg",
+      "sha256": "9d06aa9d702511392c247e1a4f00406b4ccf0f739e7209a8dff84a81204d10ee",
+      "checks": ["metadata", "privacy", "visual"]
+    }
+  ]
+}

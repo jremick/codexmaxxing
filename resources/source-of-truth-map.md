@@ -4,7 +4,7 @@ Use this when a task spans repos, docs, live systems, or memory.
 
 ```markdown
 Task:
-Thinking altitude:
+Abstraction level:
 
 Current user instruction:
 

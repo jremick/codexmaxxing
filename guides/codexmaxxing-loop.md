@@ -2,7 +2,7 @@
 
 Codex gets much more useful when the work is shaped into a loop instead of a wish.
 
-At small altitude, that loop can be a task. At higher altitude, it can be a whole project harness.
+At a low abstraction level, that loop can be a task. At a higher abstraction level, it can be a whole project harness.
 
 The loop is simple:
 
@@ -31,7 +31,7 @@ If those answers are clear enough, Codex can usually draft the task contract, pl
 
 ## Workflow
 
-Start by translating the request into an observable result. For code, that might be a passing test, a clean diff, or a browser screenshot. For writing, it might be a sharp outline, a source-backed claim list, or a draft that actually sounds like you.
+Start by translating the request into an observable result. For code, that might be a passing test, a clean diff, or a browser inspection. For writing, it might be a sharp outline, a source-backed claim list, or a draft that matches the intended voice.
 
 Then gather only the context needed to act. Read the files, docs, or live surfaces that can change the decision. Skip broad research unless the outcome depends on it.
 
@@ -47,7 +47,7 @@ Bad shape:
 Make this repo better.
 ```
 
-Better shape, but still low-ish altitude:
+Better shape, but still at a relatively low abstraction level:
 
 ```markdown
 Review this repo for the three highest-leverage changes that would make it easier for a new contributor to run locally.
@@ -55,7 +55,7 @@ Review this repo for the three highest-leverage changes that would make it easie
 Do not edit yet. Check the README, package scripts, tests, and any fixture/demo path. Return a short plan with the exact files you would change and how you would verify it.
 ```
 
-Higher altitude:
+Higher-abstraction version:
 
 ```markdown
 Make this repo easier for a new contributor to understand, run, and trust.

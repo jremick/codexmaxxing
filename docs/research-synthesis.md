@@ -2,27 +2,29 @@
 
 This is the source-backed side of Codexmaxxing: what the current docs and agent research seem to agree on.
 
+Official product sources on this page were last checked on 2026-08-20.
+
 Short version: the good stuff happens when you stop treating the model as a magic brain and start giving it a decent operating environment.
 
-The newer unlock is thinking altitude. Stronger models can often take a broad goal with clear success criteria and derive the task contract, project harness, delivery harness, and checks themselves. That changes what the human needs to be good at.
+One important shift is thinking in terms of abstraction level. Capable models can often take a broad goal with clear success criteria and derive the task contract, project harness, delivery harness, and checks. That changes where human judgment is most valuable.
 
 ## Sources Worth Reading
 
 Official OpenAI/Codex docs:
 
-- [OpenAI Codex overview](https://openai.com/codex/)
-- [Codex developer docs](https://developers.openai.com/codex/)
-- [Codex CLI docs](https://developers.openai.com/codex/cli/)
-- [Codex best practices](https://developers.openai.com/codex/learn/best-practices)
-- [Codex cloud/web docs](https://developers.openai.com/codex/cloud)
-- [Codex app review](https://developers.openai.com/codex/app/review)
-- [Codex GitHub integration](https://developers.openai.com/codex/integrations/github)
-- [AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md)
-- [Codex skills](https://developers.openai.com/codex/skills/)
-- [Codex MCP docs](https://developers.openai.com/codex/mcp/)
-- [Codex subagents](https://developers.openai.com/codex/subagents/)
-- [Codex automations](https://developers.openai.com/codex/automations/)
-- [Codex use cases](https://developers.openai.com/codex/use-cases)
+- [Current documentation index](https://learn.chatgpt.com/docs/llms.txt)
+- [Projects and chats](https://learn.chatgpt.com/docs/projects)
+- [Local, Worktree, and Cloud modes](https://learn.chatgpt.com/docs/environments/modes)
+- [Goals and long-running work](https://learn.chatgpt.com/docs/long-running-work)
+- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
+- [Skills and plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [MCP](https://learn.chatgpt.com/docs/extend/mcp)
+- [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+- [Browser](https://learn.chatgpt.com/docs/browser) and [Computer Use](https://learn.chatgpt.com/docs/computer-use)
+- [Artifacts](https://learn.chatgpt.com/docs/artifacts-viewer), [Sites](https://learn.chatgpt.com/docs/sites), and [Visualizations](https://learn.chatgpt.com/docs/visualizations)
+- [Models](https://learn.chatgpt.com/docs/models)
+- [Permissions](https://learn.chatgpt.com/docs/permission-modes), [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules), and [Hooks](https://learn.chatgpt.com/docs/hooks)
+- [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 - [OpenAI Cookbook agent improvement loop](https://cookbook.openai.com/examples/agents_sdk/agent_improvement_loop)
 
 Broader agent/workflow references:
@@ -31,7 +33,7 @@ Broader agent/workflow references:
 - [METR: Measuring AI ability to complete long tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)
 - [SWE-bench Verified](https://www.swebench.com/)
 
-## What I Take From It
+## What The Sources Suggest
 
 ### The Human Moves Up A Level
 
@@ -46,7 +48,7 @@ That does not mean vague prompts work. It means high-level goals work when the s
 
 ### Codex Is A Work Surface
 
-Codex is not just a box that answers questions. The current product surface spans local CLI work, cloud/web work, GitHub integration, code review, MCP tools, skills, automations, project instructions, and subagents.
+Codex is not just a box that answers questions. The current product surface spans projects and chats, goals and scheduled tasks, Local/Worktree/Cloud environments, skills and plugins, MCP connectors, Browser and Computer Use, artifacts and hosted Sites, permissions, hooks, rules, models, reasoning controls, and subagents.
 
 That means the leverage is in the setup around the model: the repo, the tools, the docs, the task shape, and the checks.
 
@@ -58,7 +60,7 @@ The common failure mode is feeding the agent a giant pile of "maybe relevant" in
 
 ### Tools Are Where Things Get Real
 
-MCP and connectors let Codex do real work: inspect repos, read docs, open browsers, call APIs, use GitHub, query databases, and interact with systems.
+Plugins, MCP, Browser, Computer Use, and other connectors let Codex inspect sources and interact with real systems.
 
 That is where the fun starts. It is also where bad assumptions become more expensive, so the tool story needs read-only exploration, write boundaries, and read-back.
 

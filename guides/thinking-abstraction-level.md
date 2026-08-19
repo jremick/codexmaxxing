@@ -1,6 +1,6 @@
-# Thinking Altitude
+# Thinking Abstraction Level
 
-This is the biggest Codexmaxxing unlock for me.
+Abstraction level is one of the most useful controls in agentic work.
 
 With older or weaker tooling, you had to drive close to the ground: exact prompts, exact steps, exact files, exact plan. That still works, but it leaves a lot of the value on the table.
 
@@ -15,31 +15,31 @@ flowchart TD
   E --> F["Codex executes and verifies"]
 ```
 
-The human job shifts from "write every step" to "choose the right altitude."
+The human job shifts from "write every step" to "choose the right abstraction level."
 
-## What Altitude Means
+## What Abstraction Level Means
 
-Thinking altitude is the level you hand the work over at.
+Abstraction level describes how close a task statement is to the desired outcome versus an individual implementation action.
 
-Low altitude:
+Low abstraction level:
 
 ```markdown
 Change line 42 to use `color_temp_kelvin`.
 ```
 
-Medium altitude:
+Medium abstraction level:
 
 ```markdown
-Fix the light automation schema issue. Verify Home Assistant accepts the config and the old error stops appearing.
+Fix the automation schema issue. Verify the target system accepts the configuration and the previous error stops appearing.
 ```
 
-Higher altitude:
+Higher abstraction level:
 
 ```markdown
-The home automations broke after an upgrade. Diagnose the likely failure layer, make the smallest safe fix, and verify the system is healthy again.
+The automations broke after an upgrade. Diagnose the likely failure layer, make the smallest safe fix, and verify the affected workflow is healthy again.
 ```
 
-All three can be right. The maxxing move is knowing when Codex is capable of taking the higher-altitude version and designing the harness underneath it.
+All three can be right. The useful judgment is knowing when Codex can take the higher-abstraction version and derive the work underneath it.
 
 ## The New Default
 
@@ -61,7 +61,7 @@ Context:
 <what matters, or where to look first>
 ```
 
-Then ask Codex to derive:
+Then ask Codex to derive only the artifacts the work needs, such as:
 
 - the task contract,
 - the source-of-truth map,
@@ -91,16 +91,18 @@ Stay lower when:
 - you already know the exact safe edit,
 - ambiguity would cause expensive churn.
 
-## The Altitude Ladder
+## The Abstraction Level Ladder
 
-| Altitude | You Provide | Codex Provides |
+| Abstraction Level | You Provide | Codex Provides |
 | --- | --- | --- |
 | Exact edit | File, line, change | The edit and maybe a quick check |
 | Framed task | Outcome, source, constraints | The steps and verification |
 | Mission | Goal, success criteria, context | Task contract, plan, implementation, checks |
 | System | Direction, boundaries, learning loop | Harness topology, decomposition, delegation, delivery path |
 
-More altitude does not mean less clarity. It means clarity moves from steps to success criteria.
+A higher abstraction level does not mean less clarity. It means clarity moves from steps to outcomes, boundaries, and success criteria.
+
+It also delegates more discretion. As abstraction rises, make scope, permissions, verification, and stop conditions more explicit. A broader goal never grants broader authority by itself.
 
 ## The Failure Mode
 
@@ -110,9 +112,9 @@ The bad version of this is vague delegation:
 Make this better.
 ```
 
-That is not high altitude. That is fog.
+That is not high abstraction. It is ambiguity.
 
-High altitude still has a shape:
+High-abstraction work still has a shape:
 
 ```markdown
 Make this repo feel like a public project someone would actually want to explore.
@@ -121,7 +123,7 @@ Success criteria:
 - the README has a clear point of view,
 - the first-click paths are obvious,
 - internal maintenance notes are not part of the public surface,
-- related repos are linked where useful,
+- examples are synthetic and public-safe,
 - validation still passes.
 ```
 
