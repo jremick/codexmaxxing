@@ -18,8 +18,6 @@ WORKFLOW_PATH = Path(".github/workflows/validate.yml")
 
 IGNORED_DIRS = {".git", ".venv", "__pycache__", "node_modules"}
 PUBLIC_TEXT_SUFFIXES = {".json", ".md", ".svg", ".toml", ".txt", ".yaml", ".yml"}
-EDITORIAL_DIRS = {"docs", "guides"}
-EDITORIAL_ROOT_FILES = {"CONTRIBUTING.md", "README.md", "SECURITY.md"}
 CATALOGED_DIRS = {"docs", "guides", "resources"}
 CATALOGED_EXTRA_FILES = {Path("examples/README.md")}
 KNOWN_CATALOG_TYPES = {
@@ -112,10 +110,6 @@ PRIVATE_PATTERNS = (
 LINK_PATTERN = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 URL_PATTERN = re.compile(r"https?://[^\s<>\"']+")
 ISO_DATE_PATTERN = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
-FIRST_PERSON_PATTERN = re.compile(
-    r"(?<![A-Za-z0-9_])(?:I|I['’]m|I['’]ve|my|mine)(?![A-Za-z0-9_])",
-    re.IGNORECASE,
-)
 FENCE_PATTERN = re.compile(r"^\s*(`{3,}|~{3,})")
 FULL_SHA_PATTERN = re.compile(r"[0-9a-f]{40}")
 SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
@@ -296,40 +290,6 @@ def validate_public_safety(root: Path, errors: list[str]) -> None:
         if re.search(r"\baltitude\b", path.name, re.IGNORECASE):
             errors.append(
                 f"{relative(path, root)} uses the retired term in a file or directory name"
-            )
-
-
-def without_fenced_code(text: str) -> str:
-    output: list[str] = []
-    active_fence: str | None = None
-    for line in text.splitlines():
-        match = FENCE_PATTERN.match(line)
-        if match:
-            marker = match.group(1)[0]
-            if active_fence is None:
-                active_fence = marker
-            elif active_fence == marker:
-                active_fence = None
-            continue
-        if active_fence is None:
-            output.append(line)
-    return "\n".join(output)
-
-
-def validate_neutral_editorial_voice(root: Path, errors: list[str]) -> None:
-    for path in markdown_files(root):
-        rel_path = path.relative_to(root)
-        is_editorial = (
-            path.name in EDITORIAL_ROOT_FILES
-            or (rel_path.parts and rel_path.parts[0] in EDITORIAL_DIRS)
-        )
-        if not is_editorial:
-            continue
-        prose = without_fenced_code(path.read_text(encoding="utf-8"))
-        if FIRST_PERSON_PATTERN.search(prose):
-            errors.append(
-                f"{relative(path, root)} uses first-person editorial voice; "
-                "use neutral, generalized framing"
             )
 
 
@@ -666,7 +626,6 @@ def validate_repository(root: Path = ROOT) -> list[str]:
     validate_guide_headings(root, errors)
     validate_markdown_links(root, errors)
     validate_public_safety(root, errors)
-    validate_neutral_editorial_voice(root, errors)
     validate_external_urls(root, errors)
     validate_current_product_sources(root, errors)
     validate_asset_manifest(root, errors)

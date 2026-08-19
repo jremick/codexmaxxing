@@ -1,8 +1,8 @@
-# Harness Graph Template
+# Workflow Graph Template
 
-Use this template when a workflow has meaningful dependencies, branching, state transitions, or recovery paths.
+Use this advanced template when a workflow has meaningful dependencies, branching, state changes, or recovery paths. If the work is linear, use a checklist instead.
 
-## Graph Contract
+## Workflow
 
 ```markdown
 Graph name:
@@ -10,13 +10,13 @@ Objective:
 Version:
 Entry condition:
 Completion condition:
-Global invariants:
+Rules that must always hold:
 Prohibited state or data:
-Promotion authority:
+Who can approve a new version:
 Rollback target:
 ```
 
-## Node Contract
+## Step
 
 Repeat for each node:
 
@@ -26,7 +26,7 @@ purpose: <one observable responsibility>
 owner: <agent, person, service, or deterministic process>
 reads: []
 writes: []
-authority: <read_only | bounded_write | approval_required>
+permissions: <read_only | bounded_write | approval_required>
 preconditions: []
 success_conditions: []
 evidence: []
@@ -34,7 +34,7 @@ timeout_or_budget: <bound>
 failure_route: <node_id_or_stop>
 ```
 
-## Edge Contract
+## Connection
 
 Repeat for each edge:
 
@@ -51,9 +51,9 @@ on_failure: <node_id_or_stop>
 - Does every write have one accountable owner?
 - Does every transition rely on observable evidence?
 - Can failures, errors, incomplete results, and unknowns remain visible?
-- Are authority and data exposure narrower than the union of all nodes?
+- Are permissions and data exposure narrower than the union of all steps?
 - Can the graph resume safely after interruption?
-- Can a candidate graph be evaluated without replacing the promoted graph?
+- Can a proposed graph be evaluated without replacing the current graph?
 - Is a graph actually needed, or would a linear checklist be clearer?
 
-The YAML fragments are illustrative contracts, not built-in Codex syntax.
+The YAML fragments are an illustrative format, not built-in Codex syntax.

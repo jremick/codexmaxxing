@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
-  <title id="title">Agentic harness topologies</title>
+  <title id="title">Ways to structure parallel Codex work</title>
   <desc id="desc">Four simple shapes for running Codex work: single-thread, hub-and-spoke, pipeline, and portfolio board.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -24,11 +24,11 @@
   </defs>
 
   <rect class="bg" width="1200" height="640"/>
-  <text x="48" y="58" class="title">Agentic harness topologies</text>
-  <text x="48" y="90" class="subtitle">Pick the shape first. Handoffs, proof, and integration follow the topology.</text>
+  <text x="48" y="58" class="title">Ways to structure parallel Codex work</text>
+  <text x="48" y="90" class="subtitle">Pick a shape that fits the work. Handoffs, checks, and integration follow.</text>
 
   <rect class="panel" x="48" y="124" width="532" height="194" rx="16"/>
-  <text x="78" y="160" class="label">Single-thread harness</text>
+  <text x="78" y="160" class="label">Single task</text>
   <text x="78" y="185" class="small">Best when judgment is tight or the edit is risky.</text>
   <rect class="node hub" x="104" y="226" width="116" height="46" rx="9"/>
   <text class="ink" x="162" y="249">Goal</text>
@@ -38,7 +38,7 @@
   <path class="edge" d="M 416 249 H 476"/>
   <rect class="node verify" x="484" y="226" width="72" height="46" rx="9"/>
   <text class="ink" x="520" y="249">Check</text>
-  <text x="104" y="294" class="small">One owner, one loop, clean proof.</text>
+  <text x="104" y="294" class="small">One owner, one loop, clear evidence.</text>
 
   <rect class="panel" x="620" y="124" width="532" height="194" rx="16"/>
   <text x="650" y="160" class="label">Hub-and-spoke</text>
@@ -74,7 +74,7 @@
 
   <rect class="panel" x="620" y="360" width="532" height="214" rx="16"/>
   <text x="650" y="396" class="label">Portfolio board</text>
-  <text x="650" y="421" class="small">Best for multiple projects with separate proof paths.</text>
+  <text x="650" y="421" class="small">Best for multiple projects with separate checks.</text>
   <rect class="node hub" x="662" y="472" width="120" height="46" rx="9"/>
   <text class="ink" x="722" y="495">Board</text>
   <path class="edge" d="M 788 495 H 846"/>
@@ -83,8 +83,8 @@
   <rect class="node context" x="854" y="492" width="108" height="38" rx="9"/>
   <text class="ink" x="908" y="511">Project 2</text>
   <rect class="node verify" x="1010" y="466" width="114" height="40" rx="9"/>
-  <text class="ink" x="1067" y="486">Proof queue</text>
+  <text class="ink" x="1067" y="486">Review queue</text>
   <path class="edge" d="M 962 457 C 988 457, 988 486, 1004 486"/>
   <path class="edge" d="M 962 511 C 988 511, 988 486, 1004 486"/>
-  <text x="662" y="548" class="small">State, blockers, next proof. Nothing fancier unless it earns it.</text>
+  <text x="662" y="548" class="small">State, blockers, next check. Nothing fancier unless it earns it.</text>
 </svg>

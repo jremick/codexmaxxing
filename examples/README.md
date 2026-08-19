@@ -4,31 +4,16 @@ Codexmaxxing makes more sense when it is attached to a well-defined mission.
 
 All examples are synthetic. Their names, paths, systems, and evidence are placeholders and do not describe a specific person, repository, organization, or environment.
 
-The point is not to pre-chew every task. Give Codex an appropriate abstraction level, success criteria, and the right context. Let it design the plan underneath.
+The point is not to pre-chew every task. Say what you want, make the important limits clear, and let Codex design the plan underneath. Use the amount of structure the work needs; these do not have to become forms.
 
-## 0. Broad Goal: Let Codex Build The Harness
+## 0. Broad Goal: Let Codex Work Out The Path
 
 ```markdown
-Goal:
 Turn this rough repo into a public-facing project that people can understand, explore, and reuse.
 
-Success criteria:
-- the README has a clear point of view,
-- the first-click paths are obvious,
-- examples include technical and non-technical work,
-- examples are synthetic and public-safe,
-- internal maintenance notes are not part of the public surface,
-- validation still passes.
+Start with the README, docs, guides, resources, and examples. Work out the plan before editing.
 
-Constraints:
-- keep the voice casual, practical, and technical,
-- avoid work-presentation energy,
-- keep private details out.
-
-Context:
-Start with README, docs, guides, resources, and examples.
-
-Before editing, choose the appropriate abstraction level and derive only the task contract, delivery steps, verification plan, and stop conditions that the work needs.
+The finished repo should have a clear point of view, obvious first-click paths, useful technical and non-technical examples, and passing validation. Keep the voice casual, practical, and technical. Remove internal maintenance framing and keep every example synthetic and public-safe.
 ```
 
 Good for: repo shaping, product positioning, docs overhaul, public launch prep.
@@ -120,12 +105,12 @@ Success criteria:
 - every delegated stream has a proof path,
 - the parent thread has clear integration checkpoints.
 
-Design the agentic harness topology first. Then recommend which work should stay with the parent, which should go to subagents or custom agents, and what status contract each stream should use.
+Recommend what should stay in the main task, what can safely go to subagents or separate tasks, and how each stream should report progress and evidence. Keep the setup as simple as the work allows.
 ```
 
 Good for: small portfolios, multi-repository cleanup, launch preparation, and research paired with implementation.
 
-## 6. Choose The Execution Surface
+## 6. Choose Where The Work Should Run
 
 ```markdown
 Goal:
@@ -166,7 +151,7 @@ Prefer the smallest layer that changes behavior reliably. Keep credentials, actu
 
 Good for: turning repeated work into a maintainable operating layer.
 
-## 8. Choose The Output Surface
+## 8. Choose The Output Format
 
 ```markdown
 Source material:
@@ -196,16 +181,11 @@ Recurring workflow:
 Observed recurring failure:
 <what repeatedly goes wrong and what evidence supports it>
 
-Goal:
-Turn the workflow into the smallest reliable, versioned harness that can improve through reviewed evidence.
+Help me turn this into the smallest reusable workflow that will make later runs more reliable.
 
-Before implementing:
-1. define the harness contract: instructions, tools, routing, state, outputs, and validation,
-2. model only the dependencies and shared terms that affect correctness,
-3. separate the execution, verification, and evolution loops,
-4. define one regression case for the recurring failure,
-5. define candidate, promotion, and rollback states,
-6. identify privacy, privilege-expansion, feedback-poisoning, and self-confirmation risks.
+Start simple. Tell me what should stay in the prompt, what belongs in instructions, a skill, a script, or a check, and where human approval still matters. Add a workflow graph or shared schema only if order, branching, recovery, or inconsistent language is causing real problems.
+
+Turn the recurring failure into a regression case. Test any proposed workflow change against the current version before adopting it, keep a rollback path, and check for privacy, broader permissions, bad feedback, and self-confirming tests.
 
 Keep examples synthetic. Do not expose actual environment inventories, traces, credentials, private documents, or security controls.
 ```
@@ -216,12 +196,13 @@ Good for: recurring delivery, review, documentation, operations, research, and m
 
 ```mermaid
 flowchart LR
-  A["Intent"] --> B["Versioned harness"]
-  B --> C["Execution"]
-  C --> D["Evidence"]
-  D --> E["Verification"]
-  E --> F["Reviewed improvement"]
-  F --> B
+  A["Outcome"] --> B["Work"]
+  B --> C["Check"]
+  C --> D{"Likely to repeat?"}
+  D -->|no| E["Finish"]
+  D -->|yes| F["Make the useful part reusable"]
+  F --> G["Test the next version"]
+  G --> B
 ```
 
 The domain changes. The loop mostly does not.

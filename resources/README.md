@@ -1,23 +1,23 @@
-# Copy-Paste Bits
+# Copy-Paste Resources
 
-Small reusable pieces for making Codex work less like "please vibe at this" and more like a useful operator.
+Small reusable pieces for getting clearer, more reliable work out of Codex.
 
 ## Templates And Checklists
 
 - [Codex Operating Checklist](codex-operating-checklist.md)
-- [Mission Brief Template](task-contract-template.md)
+- [Mission Brief](task-contract-template.md)
 - [AGENTS.md Template](agents-md-template.md)
 - [Source Of Truth Map](source-of-truth-map.md)
 - [Workflow Audit Template](workflow-audit-template.md)
 - [Playground Prompts](playground-prompts.md)
 - [Compounding System Canvas](compounding-system-canvas.md)
-- [Harness Graph Template](harness-graph-template.md)
+- [Workflow Graph Template](harness-graph-template.md)
 - [Improvement Loop Checklist](improvement-loop-checklist.md)
 
 ## How To Use Them
 
 Copy the smallest thing that helps. Do not turn every tiny task into a paperwork exercise.
 
-For bigger work, the move is usually: write the mission brief, then ask Codex to derive the task contract, source-of-truth map, delivery harness, and verification plan.
+For bigger work, write a short mission brief and ask Codex to work out the plan, relevant sources, checks, and stop conditions.
 
-Use the compounding-system resources only after a workflow repeats or several harnesses need shared state and meaning. A checklist is better than a graph when the work is still simple and linear.
+Use the compounding-system resources only after a workflow repeats or several parts need shared state and language. A checklist is better than a graph when the work is still simple and linear.

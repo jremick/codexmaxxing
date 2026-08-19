@@ -4,16 +4,21 @@ These generalized patterns recur across software, operations, devices, documenta
 
 The examples are synthetic and do not describe a specific person, repository, organization, or environment.
 
-The central pattern is abstraction level. As models become more capable, a well-bounded goal can delegate more of the decomposition while the operator retains responsibility for scope, permissions, and verification.
+The central pattern is choosing the right abstraction level, then checking the real result. As models become more capable, a well-bounded goal can delegate more of the path while the operator retains responsibility for scope, permissions, and verification.
 
 ```mermaid
 flowchart TD
   A["Choose abstraction level"] --> B["Goal + success criteria"]
-  B --> C["Derive work contract"]
+  B --> C["Work out the plan"]
   C --> D["Design bounded approach"]
   D --> E["Execute"]
   E --> F["Human or system verifies"]
+  F --> G{"Likely to repeat?"}
+  G -->|no| H["Finish"]
+  G -->|yes| I["Test a reusable improvement"]
 ```
+
+The improvement branch is optional. A one-off task can finish after honest verification. Repeated work is where instructions, skills, scripts, evals, and other reusable pieces start to pay off.
 
 ## Live Systems: Read First, Then Touch Things
 
@@ -51,15 +56,15 @@ That often means:
 
 When a workflow repeats, preserve the generalized method as a skill, checklist, template, or validator. Do not preserve the private source material that produced it.
 
-## Parallel Work: Topology Before Swarm
+## Parallel Work: Shape Before Swarm
 
-Parallel work becomes useful when each stream has a contract, not merely when more agents are running.
+Parallel work becomes useful when each stream has a clear job and handoff, not merely when more agents are running.
 
 The durable pattern is:
 
-- choose the topology,
+- choose the work shape,
 - split by ownership boundary,
-- give every stream a status contract,
+- give every stream a simple update format,
 - keep the parent responsible for integration,
 - verify each result before treating it as progress.
 

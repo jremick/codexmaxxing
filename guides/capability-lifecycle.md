@@ -28,25 +28,11 @@ flowchart LR
 
 Do not report an installed capability as active, or a successful tool call as a verified outcome.
 
-## From Verified Outcome To Promoted Capability
+## Improving A Capability Is A Separate Decision
 
-Outcome verification completes one run. It does not prove that the capability should change or expand.
+Verifying one outcome does not prove that a capability should change, become easier to trigger, or gain more access. Treat any reusable change as a separate proposal: isolate it, compare it with the current version, review it, and keep a rollback path.
 
-Use a separate promotion lifecycle:
-
-```mermaid
-flowchart LR
-  A["Outcome evidence"] --> B["Change proposed"]
-  B --> C["Candidate isolated"]
-  C --> D["Regression evaluated"]
-  D --> E{"Promotion gate"}
-  E -->|pass| F["Promoted version"]
-  E -->|fail| G["Rejected with evidence"]
-  F --> H["Monitored use"]
-  H --> A
-```
-
-Permission, tool, connector, and data-access changes need their own review even when the behavior eval passes. A capability becoming more effective is not evidence that it should become more privileged or more visible.
+Permission, tool, connector, and data-access changes need their own review even when the behavior eval passes. A capability becoming more effective is not evidence that it should become more privileged or more visible. See [Verified Improvement Loops](verified-improvement-loops.md) for the full change process.
 
 ## Progressive Disclosure
 
@@ -86,7 +72,7 @@ Name the kind of profile whenever it matters. Do not assume that choosing a mode
 - Which can read data, write data, or trigger external side effects?
 - What evidence proves that activation improved the result?
 - Which capability descriptions overlap enough to create routing ambiguity?
-- Which evals and evidence permit a new version to be promoted?
+- Which evals and evidence permit a new version to be adopted?
 - Can the prior version be restored without reconstructing private state?
 
 ## Safe Public Examples

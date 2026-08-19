@@ -1,71 +1,56 @@
 # Build A Codex Operating System
 
-Codex gets stronger when the surrounding setup tells it what matters, gives it room to think at the right abstraction level, and preserves verified improvements across runs.
+Codex gets stronger when the surrounding setup tells it what matters, gives it room to think at the right abstraction level, and keeps the useful parts of earlier work.
 
 That setup does not need to be heavy. Most of the time it is just a few files, a few habits, and one or two checks that stop the agent from wandering off into the bushes.
 
-## The Nine System Layers
+## Start Light
 
-### 1. Intent And Authority
+Most projects need five things.
+
+### 1. Outcome And Boundaries
 
 Start by choosing the level of the ask. Are you asking for an exact edit, a framed task, an outcome, or a system objective?
 
-Name who can request the work, what may be read or changed, and which transitions require approval. The higher the abstraction level, the more important explicit success criteria, permission boundaries, and stop conditions become.
+Name what should be true, what Codex may read or change, what is out of scope, and which actions need approval. The higher the abstraction level, the more important clear success criteria and stop conditions become.
 
-### 2. Mission brief
+### 2. Sources And Context
 
-Every non-trivial mission needs an outcome, source of truth, constraints, verification, and stop conditions. You can write these yourself, but often the better move is to ask Codex to draft them from the goal before execution.
+Point Codex at the sources that can change the decision: repository files and tests, the current instruction, official documentation, a live API or deployment, or a relevant issue or decision record.
 
-### 3. Source And Semantic Model
+Also say what does not matter. Excluding stale or adjacent context is part of the job.
 
-Name the context that matters:
+### 3. Instructions And Tools
 
-- repo files and tests,
-- current user instruction,
-- official docs,
-- live APIs or deployed surfaces,
-- issue trackers or planning docs,
-- prior memory or decisions.
+Use project instructions for durable local rules: useful commands, coding style, privacy boundaries, and release gates. If a rule applies to one workflow, keep it in that workflow instead of making it global.
 
-Also name what does not matter. Excluding stale or adjacent context is part of the job.
+Give Codex the smallest set of tools it needs. Start read-only when the state is uncertain. Allow writes only when the source of truth, approval boundary, and rollback path are clear. See [Skills, Plugins, MCP, And Tools](skills-plugins-mcp-and-tools.md).
 
-For workflows that cross multiple agents or systems, define the terms they must share: entities, states, relationships, provenance, and invariants. A small schema or vocabulary is often enough; do not introduce a large ontology without recurring semantic ambiguity.
+### 4. Shape Of The Work
 
-### 4. Instructions And Routing
+Keep the work in one task when judgment is tightly connected or edits overlap. Split it when the workstreams are genuinely independent and each has a clear owner, output, and integration point.
 
-Use project instructions for repo-level defaults: coding style, useful commands, privacy boundaries, browser routes, and release gates. Keep them practical. If a rule applies to only one workflow, make it a checklist or skill instead. Keep routing explicit enough that Codex can find the narrow capability without loading the whole library.
+If order, branching, retries, or recovery affect correctness, draw the workflow. Otherwise a short plan is enough. See [Workflow Graphs, Shared Vocabulary, And Harnesses](graph-and-ontology-engineered-harnesses.md) and [Local, Worktree, And Cloud Environments](environments-worktrees-and-cloud.md).
 
-### 5. Capability Surface
+### 5. Checks
 
-Give Codex the smallest capability surface needed for the work: project instructions, scripts, skills, plugins, MCP connectors, Browser, Computer Use, or ordinary shell and Git tools. Start read-only when the state is uncertain. Allow writes only when the source of truth and rollback boundary are clear. See [Skills, Plugins, MCP, And Tools](skills-plugins-mcp-and-tools.md).
+Define the check before claiming completion. The right check is the one most likely to catch a plausible but wrong result. Use tests for deterministic behavior, rendered or browser inspection for visible behavior, and live read-backs for live state.
 
-### 6. Orchestration Graph
+## Add Only What Repeats
 
-Name both who performs the work and how work moves. Is this one chat, a subagent workflow, separate worktree chats, a delivery pipeline, or a set of cloud tasks? Which dependencies, gates, state transitions, retries, and recovery paths connect them? See [Graph And Ontology-Engineered Harnesses](graph-and-ontology-engineered-harnesses.md) and [Local, Worktree, And Cloud Environments](environments-worktrees-and-cloud.md).
+When a workflow keeps coming back, move the stable parts out of the prompt:
 
-Do not automate a graph you cannot explain. Each node needs a source of truth, write boundary, status contract, evidence contract, and integration point.
+- repeated instructions can become project guidance or a skill;
+- exact transforms and checks can become scripts or validators;
+- useful output shapes can become templates;
+- recurring failures can become regression cases;
+- recurring handoffs can become a small workflow graph.
 
-### 7. State, Artifacts, And Evidence
+If several agents or systems keep disagreeing about terms, define a small shared vocabulary or schema. If the distinction is not causing failures, ordinary prose is enough.
 
-Decide which state is task-local, durable, external, derived, or prohibited. Define required outputs and keep unresolved questions visible. Preserve provenance without collecting unnecessary sensitive content.
+Keep only the evidence needed to understand the result and diagnose failure. Do not collect raw prompts, private documents, credentials, or unrestricted traces merely because they might be useful later.
 
-### 8. Verification And Observability
-
-Define the check before claiming completion and capture enough structured evidence to diagnose failure. The right check is the one most likely to catch the wrong plausible result. A system-level check should also cover invariants, transitions, and recovery paths.
-
-### 9. Governed Improvement
-
-Repeated lessons can become reusable artifacts:
-
-- instructions,
-- templates,
-- validators,
-- scripts,
-- skills,
-- decision records,
-- examples.
-
-Promotion needs evidence. Turn recurring failures into regression checks, evaluate candidate changes against a preserved baseline, review permission changes separately, and keep a rollback path. Do not preserve private one-off detail as a global rule. See [Verified Improvement Loops](verified-improvement-loops.md).
+Improvements should be proposed separately from the run that discovered them. Compare the current and proposed versions, review permission changes separately, and keep a rollback path. See [Verified Improvement Loops](verified-improvement-loops.md).
 
 ## Minimal Setup For A Repo
 
@@ -74,25 +59,25 @@ Start with:
 1. `README.md` that names the project and start paths.
 2. project instructions with local conventions and checks.
 3. one obvious verification command.
-4. a mission brief template.
+4. a short mission brief for bigger work.
 5. a fixture, demo, or tiny example if other people need to try it.
 
 That is enough for many projects. Add CI, skills, MCP, and subagents when they remove real friction.
 
-For a recurring workflow, add only the next useful layer: a versioned harness, a small state contract, one high-value eval, and a reviewed promotion path. A graph or ontology should earn its complexity.
+For recurring work, add only the next useful piece: a reusable workflow, one high-value check, and a reviewed way to adopt or reject changes. A graph or ontology should earn its complexity.
 
 ## Failure Modes
 
-- Treating Codex like a generic chatbot instead of an agentic operating system.
-- Staying at a tiny-task abstraction level when the model could safely derive the harness.
-- Spawning agents without an agentic harness topology.
+- Treating Codex like a generic chatbot instead of giving it a clear outcome and useful environment.
+- Staying at a tiny-task abstraction level when the model could safely derive more of the path.
+- Splitting work across agents without clear ownership and integration.
 - Adding broad instructions that never get used.
-- Giving tool access without source-of-truth clarity.
+- Giving tool access without a clear source of truth and permission boundary.
 - Verifying with a command unrelated to the change.
 - Capturing every session note as permanent memory.
 - Calling repeated automation "compounding" when no verified improvement changes future runs.
-- Letting a system modify its active harness without a separate candidate, promotion gate, and rollback path.
+- Letting a system modify its active workflow without a separate candidate, approval gate, and rollback path.
 
 ## Verification
 
-The operating system is working when a new task starts with less explanation, touches fewer unrelated files, and finishes with better proof. It is compounding when a verified lesson safely improves the next comparable run.
+The operating system is working when a new task starts with less explanation, touches fewer unrelated files, and finishes with better evidence. It is compounding when a verified lesson safely improves the next comparable run.

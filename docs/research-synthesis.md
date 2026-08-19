@@ -6,7 +6,7 @@ Official product sources on this page were last checked on 2026-08-20.
 
 Short version: the good stuff happens when you stop treating the model as a magic brain and start giving it a decent operating environment.
 
-One important shift is thinking in terms of abstraction level. Capable models can often take a broad goal with clear success criteria and derive the task contract, project harness, delivery harness, and checks. That changes where human judgment is most valuable.
+One important shift is thinking in terms of abstraction level. Capable models can often take a broad goal with clear success criteria and work out the plan and checks. When the work repeats, the stable parts can move into reusable instructions, tools, workflows, and evals. That changes where human judgment is most valuable.
 
 ## Sources Worth Reading
 
@@ -44,13 +44,13 @@ The useful human contribution is shifting upward:
 - less manual decomposition of every tiny task,
 - more clarity on goals, constraints, taste, and success criteria,
 - more attention to context, tools, safety, and verification,
-- more reuse of skills, harnesses, and operating patterns.
+- more reuse of skills, tools, checks, and working patterns.
 
 That does not mean vague prompts work. It means high-level goals work when the success criteria and operating boundaries are clear.
 
-### Codex Is A Work Surface
+### Codex Is A Workbench
 
-Codex is not just a box that answers questions. The current product surface spans projects and chats, goals and scheduled tasks, Local/Worktree/Cloud environments, skills and plugins, MCP connectors, Browser and Computer Use, artifacts and hosted Sites, permissions, hooks, rules, models, reasoning controls, and subagents.
+Codex is not just a box that answers questions. The current product includes projects and tasks, goals and schedules, Local/Worktree/Cloud environments, skills and plugins, MCP connectors, Browser and Computer Use, artifacts and hosted Sites, permissions, hooks, rules, models, reasoning controls, and subagents.
 
 That means the leverage is in the setup around the model: the repo, the tools, the docs, the task shape, and the checks.
 
@@ -72,37 +72,37 @@ The agent improvement loop in the OpenAI Cookbook is basically the grown-up vers
 
 In normal work, that means tests, screenshots, builds, link checks, API read-backs, simulator runs, device launches, and whatever else proves the task instead of narrating it.
 
-### The Harness Is The System Contract
+### A Harness Is The Setup Around The Model
 
-The OpenAI Cookbook defines the harness around the model as instructions, tools, routing, output requirements, and validation. That is a larger design surface than prompt wording.
+The OpenAI Cookbook defines the harness around the model as instructions, tools, routing, output requirements, and validation. In other words, it is the reusable setup that shapes how the model works—not just the prompt.
 
 The useful progression is:
 
 ```mermaid
 flowchart LR
-  A["Prompt"] --> B["Task contract"]
-  B --> C["Versioned harness"]
-  C --> D["Orchestration graph"]
+  A["Prompt"] --> B["Clear work plan"]
+  B --> C["Reusable harness"]
+  C --> D["Workflow graph, if needed"]
   D --> E["Verified improvement loop"]
 ```
 
-Codex primitives can support this architecture, but the graph, ontology, eval suite, promotion policy, and rollback path remain system-engineering responsibilities.
+Codex building blocks can support this architecture, but the workflow graph, shared vocabulary, eval suite, adoption policy, and rollback path remain things the system designer has to provide.
 
 ### Compounding Needs A Closed Loop
 
-Traces preserve what happened. Feedback explains what mattered. Evals make expectations reusable. Candidate harness changes can then be implemented and tested before promotion.
+Traces preserve what happened. Feedback explains what mattered. Evals make expectations reusable. Proposed harness changes can then be implemented and tested before adoption.
 
-The closure matters. Capturing a lesson is not compounding unless it changes future behavior through a versioned, reviewable, and reversible path. The evaluation claim must also remain bound to the tested model, harness, tools, budget, and environment.
+The loop has to close. Capturing a lesson is not compounding unless it changes future behavior through a versioned, reviewable, and reversible path. The evaluation claim must also remain bound to the tested model, harness, tools, budget, and environment.
 
 ### Subagents Are A Knife, Not A Lifestyle
 
-Subagents are useful when the work genuinely splits: separate files, separate research questions, separate verification surface, separate role.
+Subagents are useful when the work genuinely splits: separate files, separate research questions, separate checks, separate roles.
 
 They are not automatically better. Sometimes one focused loop beats a whole little committee.
 
-### Parallelism Needs Topology
+### Parallel Work Needs A Clear Shape
 
-The same applies one level up. Multiple agents, custom agents, automations, and parallel project threads only help when the harness topology is clear.
+The same applies one level up. Multiple agents, custom agents, automations, and parallel project tasks only help when the work has a clear shape.
 
 That means:
 
@@ -123,7 +123,7 @@ For Codex, that usually means:
 ```mermaid
 flowchart TD
   A["Broad goal"] --> B["Success criteria"]
-  B --> C["Derived harness"]
+  B --> C["Derived plan"]
   C --> D["Right context"]
   D --> E["Tool access"]
   E --> F["Execution"]
@@ -132,4 +132,4 @@ flowchart TD
 
 That is not glamorous. It just works.
 
-The same simplicity rule applies at the next level. Start with one recurring workflow, one explicit harness, and one valuable regression case. Add graph and ontology structure only when dependencies or shared meanings repeatedly cause failures.
+The same simplicity rule applies at the next level. Start with one recurring workflow, one reusable setup, and one valuable regression case. Add a graph or formal vocabulary only when dependencies or shared meanings repeatedly cause failures.

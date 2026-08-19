@@ -1,10 +1,10 @@
 # Codexmaxxing
 
-Using Codex less like a chatbot and more like a substrate for engineered, compounding systems.
+A practical guide to using Codex for real work—and turning the workflows that matter into reliable, reusable systems.
 
 Codexmaxxing is a field guide for getting real work done with Codex: software, devices, documentation, operations, writing, research, repository maintenance, and the occasional difficult investigation.
 
-The central idea is that a prompt should become an entry point into an engineered system, not the place where the whole operating method is described. Abstraction level is the first move: state the goal at the appropriate level, make success clear, and let Codex derive the work underneath it. The method can then move into reusable harnesses, orchestration graphs, semantic contracts, verification, and governed improvement loops.
+The pattern I keep coming back to is simple: say what should be true, make the important boundaries clear, and let Codex work out the path underneath. For a one-off task, that may be all you need. When the same work keeps coming back, the useful parts can move into instructions, skills, scripts, checks, and other reusable pieces so the next run starts stronger.
 
 Durable operating principles are kept separate from current-product guidance. Product behavior was last checked against official OpenAI documentation on 2026-08-20; availability can vary by host, account, plan, operating system, and rollout.
 
@@ -14,26 +14,24 @@ Durable operating principles are kept separate from current-product guidance. Pr
 
 ## Start Here
 
-- [The Codexmaxxing Loop](guides/codexmaxxing-loop.md): a reusable loop for outcome-oriented work.
-- [Thinking Abstraction Level](guides/thinking-abstraction-level.md): the biggest unlock: giving Codex bigger goals at the right level.
-- [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md): how prompts become entry points into persistent, improving systems.
-- [Task Framing For Agents](guides/task-framing.md): how to stop asking vague stuff and start getting useful work back.
-- [Context Control](guides/context-control.md): how to stop drowning Codex in the wrong information.
-- [Verification Before Completion](guides/verification-before-completion.md): the part that turns "seems fine" into "actually done."
-- [Example Missions](examples/README.md): a few shapes for real work, including non-code work.
-- [Example Work Patterns](docs/example-work-patterns.md): synthetic examples of the patterns in practice.
-- [Product Claim Boundaries](docs/product-claim-boundaries.md): what each kind of evidence can and cannot prove.
+If you want to use Codex better today, start with [The Codexmaxxing Loop](guides/codexmaxxing-loop.md), [Thinking Abstraction Level](guides/thinking-abstraction-level.md), and the [Example Missions](examples/README.md).
+
+If the same workflow or failure keeps returning, move into [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md). That is where the guide gets into reusable harnesses, workflow graphs, shared vocabularies, evals, and controlled improvement.
+
+If you are trying to understand a current Codex feature—such as projects, scheduled tasks, skills, plugins, subagents, worktrees, Browser, or Computer Use—use the [complete guide index](guides/README.md). Product-specific pages are dated and link back to current official sources.
 
 ## The Shape Of It
 
 ```mermaid
 flowchart LR
-  A["Intent + success criteria"] --> B["Engineered harness"]
-  B --> C["Orchestration + tools"]
-  C --> D["Execution + artifacts"]
-  D --> E["Verification + evals"]
-  E --> F["Reviewed improvement"]
-  F --> B
+  A["Ask for an outcome"] --> B["Inspect what matters"]
+  B --> C["Do the work"]
+  C --> D["Check the result"]
+  D --> E{"Likely to repeat?"}
+  E -->|no| F["Finish honestly"]
+  E -->|yes| G["Make the useful part reusable"]
+  G --> H["Test the next version"]
+  H --> B
 ```
 
 That loop works for code, but it is not just a coding thing.
@@ -55,18 +53,18 @@ The fun bit is when Codex stops being a novelty and starts becoming part of the 
 
 - a repo has instructions that actually help,
 - a goal has success criteria,
-- Codex can derive the task contract instead of requiring every field to be written in advance,
-- parallel projects have status contracts instead of vibes,
+- Codex can work out a sensible plan without every step being written in advance,
+- parallel work has clear owners, boundaries, and handoffs instead of vibes,
 - a tool call reads the live thing instead of guessing,
 - a test or screenshot catches the dumb mistake,
 - a repeated workflow turns into a reusable playbook,
 - a recurring failure becomes an eval instead of another reminder,
-- a verified improvement changes the next run through a versioned harness,
+- a tested improvement makes the next comparable run better,
 - and suddenly the agent can do more than autocomplete code.
 
 This repo is a mix of notes, patterns, templates, and examples for that.
 
-## Choose The Surface
+## Choose What You Need
 
 | If you want to... | Start with |
 | --- | --- |
@@ -79,9 +77,9 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 | understand instructions, permissions, rules, and hooks | [Permissions, Rules, Hooks, And Instructions](guides/permissions-rules-and-hooks.md) |
 | create a file, interactive explanation, or hosted experience | [Artifacts, Sites, And Visualizations](guides/artifacts-sites-and-visualizations.md) |
 | design a large skill library without flooding context | [Capability Lifecycle And Prompt Visibility](guides/capability-lifecycle.md) |
-| engineer reusable harnesses, orchestration graphs, and improvement loops | [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md), [Graph And Ontology-Engineered Harnesses](guides/graph-and-ontology-engineered-harnesses.md), and [Verified Improvement Loops](guides/verified-improvement-loops.md) |
+| turn repeated work into a system that can improve safely | [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md), [Workflow Graphs, Shared Vocabulary, And Harnesses](guides/graph-and-ontology-engineered-harnesses.md), and [Verified Improvement Loops](guides/verified-improvement-loops.md) |
 
-The complete [guide index](guides/README.md), [copyable resources](resources/README.md), and [synthetic missions](examples/README.md) provide the rest of the operating layer.
+The complete [guide index](guides/README.md), [copyable resources](resources/README.md), and [synthetic missions](examples/README.md) provide the rest.
 
 ## Synthetic Work Patterns
 
@@ -89,7 +87,7 @@ The complete [guide index](guides/README.md), [copyable resources](resources/REA
 - Diagnose a layered system failure with read-only evidence before changing anything.
 - Verify a device workflow on the real target instead of stopping at source inspection.
 - Turn a repeated workflow into a reusable skill, checklist, or validator.
-- Turn a recurring failure into a regression eval and reviewed harness improvement.
+- Turn a recurring failure into a regression eval and a reviewed workflow improvement.
 - Coordinate independent workstreams without overlapping write boundaries.
 
 These are expanded in [Example Work Patterns](docs/example-work-patterns.md). The examples are synthetic and do not describe a specific person, repository, organization, or environment.
@@ -100,7 +98,7 @@ Codexmaxxing is in public alpha. The durable operating patterns are intended for
 
 Known limitations:
 
-- Codex surfaces and availability can differ by host, plan, account, operating system, and rollout.
+- Codex features and availability can differ by host, plan, account, operating system, and rollout.
 - Examples are synthetic teaching material, not evidence that a workflow will fit every environment.
 - Automated validation catches defined content and repository risks but cannot prove complete anonymity, factual completeness, accessibility, or visual quality.
 - There is no versioned release, compatibility guarantee, or support service.

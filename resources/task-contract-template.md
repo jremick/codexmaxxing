@@ -1,4 +1,4 @@
-# Mission Brief Template
+# Mission Brief
 
 Use this when the goal is bigger than a single task and you want Codex to design the plan underneath it.
 
@@ -8,12 +8,11 @@ Success criteria:
 Constraints:
 Context:
 
-Ask Codex to derive:
-- task contract
-- source-of-truth map
-- delivery harness
-- verification plan
-- stop conditions
+Ask Codex to work out:
+- a short plan
+- the sources that matter
+- the checks
+- the stop conditions
 ```
 
 ## Notes
@@ -22,7 +21,7 @@ Ask Codex to derive:
 - `Success criteria` should describe what would make the result good.
 - `Constraints` should name scope, safety, privacy, compatibility, style, or time boundaries.
 - `Context` should point Codex at the first useful sources, not paste every possible thing.
-- The derived contract is Codex's first output, not something you always need to write by hand.
+- The plan is Codex's first output, not something you always need to write by hand.
 
 ## Example
 
@@ -47,5 +46,5 @@ Constraints:
 Context:
 Start with README, guides, resources, and examples.
 
-Ask Codex to derive the task contract, source-of-truth map, delivery harness, verification plan, and stop conditions before editing.
+Ask Codex to work out the plan, relevant sources, checks, and stop conditions before editing.
 ```

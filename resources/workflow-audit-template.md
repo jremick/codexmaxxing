@@ -23,13 +23,14 @@ Human approval gates:
 Current verification:
 Better verification:
 
-Candidate Codex pattern:
+Smallest useful Codex pattern:
 - assisted task
 - verified task
 - tool-connected workflow
 - repeatable playbook
 - operating redesign
 - agentic operating system
+- compounding system with a verified improvement loop
 
 Reusable artifacts to create:
 

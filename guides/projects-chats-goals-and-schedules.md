@@ -47,6 +47,8 @@ Use a scheduled task when time or recurrence is part of the requirement:
 
 Test the prompt manually first. Review the first few runs before trusting unattended behavior.
 
+Recurrence alone does not make a workflow compounding. A schedule repeats the work; the workflow compounds only when evidence leads to a reviewed, testable improvement in later runs.
+
 Local scheduled tasks need the computer and desktop app running when they depend on local files. In Git repositories, an isolated worktree can keep scheduled changes away from active work. Web scheduled tasks can use uploaded context and connected tools, but cannot directly operate on a folder on a local computer. The CLI can help prepare a workflow but does not provide the Scheduled management interface.
 
 ## Standalone Or Same-Chat Schedule

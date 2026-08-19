@@ -2,11 +2,11 @@
 
 Once abstraction level is clear, the next challenge is running more than one useful thread without creating coordination noise.
 
-Parallel Codex work is not "spawn as many agents as possible." It is giving each stream a harness: mission, source of truth, write boundary, status contract, and proof path.
+Parallel Codex work is not "spawn as many agents as possible." It is giving each stream a clear goal, source of truth, write boundary, update format, and evidence path.
 
-Choose the execution boundary as well as the agent topology. Use subagents for independent work inside one objective, worktrees for independent Git writers, and cloud environments for remote isolated execution. See [Local, Worktree, And Cloud Environments](environments-worktrees-and-cloud.md).
+Choose where the work should run as well as the team shape. Use subagents for independent work inside one objective, worktrees for independent Git writers, and cloud environments for remote isolated execution. See [Local, Worktree, And Cloud Environments](environments-worktrees-and-cloud.md).
 
-![Agentic harness topologies](../assets/agentic-harness-topologies.svg)
+![Ways to structure parallel Codex work](../assets/agentic-harness-topologies.svg)
 
 ## The Simple Rule
 
@@ -26,25 +26,25 @@ Bad splits:
 - three agents answering the same vague question,
 - one parent waiting on the delegated task that is actually the immediate blocker,
 - a swarm with no integration point,
-- background work with no status contract.
+- background work with no clear update format.
 
-## Agentic Harness Topologies
+## Useful Work Shapes
 
-Topology is just the shape of the work system: who owns what, where state lives, how handoffs happen, and where proof comes back.
+The shape is simply who owns what, where state lives, how handoffs happen, and where evidence comes back.
 
-| Topology | Use It For | Watch Out For |
+| Shape | Use It For | Watch Out For |
 | --- | --- | --- |
-| Single-thread harness | small tasks, risky edits, tight judgment loops | fake speed from premature delegation |
+| Single task | small tasks, risky edits, tight judgment loops | fake speed from premature delegation |
 | Hub-and-spoke | broad repo reviews, research plus implementation, multiple independent questions | parent must integrate and verify |
 | Pipeline | repeatable delivery flow: discover, implement, review, verify, publish | slow stages if each handoff is vague |
 | Portfolio board | multiple projects moving in parallel | stale state and invisible blockers |
 | Specialist team | recurring roles like researcher, implementer, verifier, release wrangler | role names are not enough; outputs must be concrete |
 
-The topology can be manual at first. Once it repeats, make it a prompt, template, skill, custom agent, MCP workflow, or automation.
+The setup can be manual at first. Once it repeats, make it a prompt, template, skill, custom agent, MCP workflow, or automation.
 
-## Topology Is Not The Whole Graph
+## The Team Is Not The Workflow
 
-Agent topology describes who performs the work. An orchestration graph also describes:
+The team shape describes who performs the work. A workflow graph also describes:
 
 - prerequisites and transition conditions,
 - state passed between nodes,
@@ -53,11 +53,11 @@ Agent topology describes who performs the work. An orchestration graph also desc
 - retry, recovery, escalation, and stop paths,
 - evidence required before the next transition.
 
-A hub-and-spoke team can run many different graphs. A single agent can also execute a multi-stage graph. Use [Graph And Ontology-Engineered Harnesses](graph-and-ontology-engineered-harnesses.md) when the control flow matters as much as the role split.
+A hub-and-spoke team can run many different workflows. A single agent can also execute a multi-stage workflow. Use [Workflow Graphs, Shared Vocabulary, And Harnesses](graph-and-ontology-engineered-harnesses.md) when the order and failure routes matter as much as the role split.
 
-## The Status Contract
+## A Simple Update Format
 
-Every parallel stream needs a small status shape. Otherwise you get a pile of summaries and no control surface.
+Every parallel stream needs a small update shape. Otherwise you get a pile of summaries and no idea what is actually happening.
 
 ```markdown
 Mission:
@@ -66,17 +66,17 @@ Source of truth:
 Allowed writes:
 Current state:
 Blocked on:
-Touched surfaces:
+What changed or was inspected:
 Evidence:
 Next handoff:
 Stop condition:
 ```
 
-This is the part that makes parallel projects feel less like juggling tabs and more like running a tiny operating system.
+This is the part that makes parallel work feel less like juggling tabs and more like running one coherent job.
 
 ## Automating Delegation
 
-For bigger work, Codex can propose the harness topology before execution instead of requiring every subtask to be designed manually.
+For bigger work, Codex can propose the split before execution instead of requiring every subtask to be designed manually.
 
 ```markdown
 Goal:
@@ -89,13 +89,13 @@ Constraints:
 <scope, safety, privacy, style, timing>
 
 Context:
-<repos, docs, tools, live surfaces, or examples to inspect first>
+<repositories, documents, tools, live systems, or examples to inspect first>
 
 Before executing:
-1. choose the right agentic harness topology,
+1. choose the simplest useful work shape,
 2. decide what should stay in the parent thread,
 3. define any subagents, custom agents, or agent-team roles,
-4. give each stream a source of truth, write boundary, status contract, and verification path,
+4. give each stream a source of truth, write boundary, update format, and verification path,
 5. identify the integration checkpoint.
 ```
 
@@ -112,9 +112,9 @@ Useful recurring roles:
 - implementer: owns a bounded file/module slice,
 - verifier: runs checks, screenshots, read-backs, or review passes,
 - docs/voice agent: keeps public docs clear and on-style,
-- release wrangler: checks packaging, changelog, tags, CI, and public-readiness surfaces.
+- release wrangler: checks packaging, changelog, tags, CI, and public-readiness requirements.
 
-An agent team is not automatically smarter than one good loop. It becomes useful when each agent has a stable contract and the parent has a clean integration point.
+An agent team is not automatically smarter than one good loop. It becomes useful when each agent has a clear responsibility and the parent has a clean integration point.
 
 ## Running Multiple Projects
 

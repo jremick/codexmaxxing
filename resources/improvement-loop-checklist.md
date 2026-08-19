@@ -1,46 +1,58 @@
 # Improvement Loop Checklist
 
-Use this before allowing evidence from one run to change future system behavior.
+Use this before allowing evidence from one run to change future behavior.
+
+## Quick Check
+
+For a small, low-risk workflow change, answer five questions:
+
+- [ ] What evidence shows the current workflow has a real problem?
+- [ ] Does the proposed change address that problem rather than merely rewording the prompt?
+- [ ] Was it compared with the current version using the same important checks?
+- [ ] Could it broaden permissions, collect more data, or make another result worse?
+- [ ] Can it be reviewed and rolled back?
+
+Use the full checklist below when the workflow is higher-risk, widely shared, or allowed to act with limited supervision.
 
 ## Baseline
 
 - [ ] The current harness or workflow has a versioned identity.
 - [ ] The intended outcome and evaluation claim are explicit.
 - [ ] The current eval suite and known limitations are preserved.
-- [ ] Required authority and privacy boundaries are documented.
+- [ ] Required permission and privacy boundaries are documented.
 
 ## Evidence
 
 - [ ] The failure or opportunity is supported by a trace, artifact, check, or review.
 - [ ] Sensitive inputs are excluded, minimized, or protected under an explicit retention policy.
-- [ ] Evidence provenance is retained.
+- [ ] The source of the evidence is retained.
 - [ ] `FAIL`, `ERROR`, `INCOMPLETE`, and `unknown` are not collapsed into success.
 
 ## Diagnosis
 
-- [ ] The finding is classified as contract, enforcement, capability, observability, eval, environment, or one-off failure.
+- [ ] The finding is classified as unclear expectation, enforcement, missing capability, missing evidence, invalid eval, environment, or one-off failure.
 - [ ] The proposed change addresses the evidenced cause rather than only its wording.
-- [ ] A counter-hypothesis or disconfirming check has been considered.
+- [ ] Another plausible explanation or disconfirming check has been considered.
 - [ ] A private incident has been generalized before becoming reusable guidance.
 
-## Candidate
+## Proposed Version
 
-- [ ] The candidate is isolated from the promoted harness.
+- [ ] The proposed version is isolated from the current harness.
 - [ ] The change is attributable and reviewable.
 - [ ] Existing regression cases and the new case are run comparably.
-- [ ] Counter-metrics cover quality, cost, latency, privilege, and data exposure where relevant.
+- [ ] Checks cover quality, cost, latency, permissions, and data exposure where relevant.
 - [ ] Generated tests are not treated as independent acceptance.
 
-## Promotion
+## Adoption
 
 - [ ] Required deterministic gates pass.
 - [ ] Consequential subjective claims receive human or appropriately independent review.
 - [ ] Permission, tool, and data-access changes are reviewed separately.
-- [ ] Promotion authority is explicit.
+- [ ] Permission to adopt the change is explicit.
 - [ ] A rollback path is tested or credibly available.
-- [ ] Rejected candidates and failed evidence remain visible.
+- [ ] Rejected versions and failed evidence remain visible.
 
-## After Promotion
+## After Adoption
 
 - [ ] Later runs are monitored for regression or drift.
 - [ ] The change is reusable without repasting private context.

@@ -30,13 +30,13 @@ The safe pattern is:
 2. identify evidence that distinguishes the layers,
 3. gather the least-sensitive evidence first,
 4. make the smallest reversible change,
-5. read the affected surface back.
+5. read the affected system back.
 
 ## Device Workflow
 
 An application communicates with an external device. A plausible source change is not enough to prove that the workflow works.
 
-Verification may need to cross several surfaces:
+Verification may need to cross several layers:
 
 ```mermaid
 flowchart LR
@@ -47,7 +47,7 @@ flowchart LR
   E --> F["Observed result"]
 ```
 
-The final claim should state exactly which surfaces were checked and which remain unverified.
+The final claim should state exactly which layers were checked and which remain unverified.
 
 ## Parallel Workstreams
 
@@ -64,9 +64,9 @@ Each lane should define:
 
 ## Compounding Documentation Maintenance
 
-A synthetic documentation system tracks fast-changing product claims. Its first useful harness defines required source classes, public-safety checks, output files, and a publication gate.
+A synthetic documentation system tracks fast-changing product claims. Its first useful reusable workflow defines required source types, public-safety checks, output files, and a publication gate.
 
-The orchestration graph is deliberately small:
+The workflow graph is deliberately small:
 
 ```mermaid
 flowchart LR
@@ -74,14 +74,14 @@ flowchart LR
   B --> C["Draft candidate update"]
   C --> D["Validate links + public safety"]
   D --> E["Review claim boundary"]
-  E --> F["Promote versioned change"]
+  E --> F["Approve versioned change"]
   D -->|failure| G["Return findings"]
   E -->|unsupported| G
 ```
 
 The shared vocabulary distinguishes `observed behavior`, `official claim`, `inference`, `unknown`, and `verified date`. After several runs reveal that redirects are being mistaken for stable canonical URLs, the failure becomes a regression case.
 
-A candidate harness change adds canonical-URL resolution and provenance output. The candidate runs against the prior suite plus the new case. It is promoted only if link validation improves without weakening the public-safety or claim-boundary checks. The previous harness version remains available for rollback.
+A proposed workflow change adds canonical-URL resolution and records where each result came from. It runs against the prior suite plus the new case. It is adopted only if link validation improves without weakening the public-safety or claim-boundary checks. The previous version remains available for rollback.
 
 This is compounding because evidence from one run changes later behavior through a versioned and reviewable path. The example remains synthetic: no real task IDs, traces, accounts, paths, connected systems, or private configuration are preserved.
 
@@ -89,7 +89,7 @@ This is compounding because evidence from one run changes later behavior through
 
 ```mermaid
 flowchart TD
-  A["Intent"] --> B["Harness or work plan"]
+  A["Intent"] --> B["Reusable workflow or work plan"]
   B --> C["Bounded execution"]
   C --> D["Claim-specific evidence"]
   D --> E["Reviewed generalized improvement"]

@@ -31,7 +31,7 @@ Operating-system screen and accessibility permissions are separate from ChatGPT 
 
 Prefer the built-in Browser first for a local web application. Prefer a dedicated connector for structured data access. Use Computer Use when visual state is part of the task.
 
-## Safe Operating Contract
+## Safe Operating Rules
 
 ```markdown
 Target application or site:

@@ -4,9 +4,9 @@ Good agent work starts with work that can be proven done.
 
 The goal is not to write a perfect prompt. It is to choose the right abstraction level.
 
-Sometimes that means a tight task. Sometimes it means a broad goal with sharp success criteria, then asking Codex to write the task contract and delivery plan itself.
+Sometimes that means a tight task. Sometimes it means a broad goal with sharp success criteria, then asking Codex to work out the plan itself.
 
-## The Old Useful Frame
+## A Useful Frame
 
 This is still useful for bounded tasks:
 
@@ -18,7 +18,7 @@ Verification: <commands, checks, screenshots, read-backs, review gates>
 Stop conditions: <what should pause the work>
 ```
 
-## The Higher-Abstraction Frame
+## For Bigger Work
 
 For bigger work, use a goal-shaped frame:
 
@@ -28,30 +28,30 @@ Success criteria: <what would make this good>
 Constraints: <scope, safety, style, compatibility, privacy>
 Context: <where to look first, or what matters most>
 
-First derive the task contract, source-of-truth map, delivery harness, and verification plan. Then execute.
+First work out the plan, the sources that matter, and the verification path. Then execute.
 ```
 
-That small difference matters. The operator is not doing all the decomposition for Codex. The goal supplies enough context and discretion for Codex to propose the decomposition.
+That small difference matters. The operator is not doing all the decomposition for Codex. The goal supplies enough context and discretion for Codex to propose the path.
 
-## The System-Shaped Frame
+## When A Reusable Workflow Already Exists
 
-When a mature harness already exists, the prompt can be smaller because it initializes known layers instead of restating them:
+When a mature reusable workflow already exists, the prompt can be smaller because it starts known layers instead of restating them:
 
 ```markdown
 Objective: <what should be true>
-System or harness: <versioned workflow to invoke>
+Workflow or harness: <versioned workflow to use>
 Inputs: <current sources or event>
-Authority: <allowed reads, writes, and approval gates>
+Permissions: <allowed reads, writes, and approval gates>
 Evidence required: <checks or artifacts for this run>
 
-Use the promoted contracts. Propose any reusable improvement separately from this run.
+Use the current approved version. Propose any reusable improvement separately from this run.
 ```
 
-This only works when the referenced system is real, discoverable, and versioned. Naming an imaginary harness is not a substitute for engineering one.
+This only works when the referenced workflow is real, discoverable, and versioned. Naming an imaginary system is not a substitute for building one.
 
 ## What To Include
 
-Name the real surface. If the task is about production, say production. If it is about a local branch, say that. If a doc is canonical, name it.
+Name the real target. If the task is about production, say production. If it is about a local branch, say that. If a document is authoritative, name it.
 
 Name the boundary. A good boundary prevents helpful-looking drift: no adjacent refactors, no new framework, no public release, no live write, or no auth changes.
 

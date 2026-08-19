@@ -1,8 +1,8 @@
 # The Codexmaxxing Loop
 
-Codex gets much more useful when the work is shaped into a loop instead of a wish.
+Codex gets much more useful when the work has a clear outcome and a real check at the end.
 
-At a low abstraction level, that loop can be a task. At a higher abstraction level, it can initialize a persistent harness or orchestration system.
+Most work does not need a framework. Start with the simple loop, then make parts reusable only when the work is likely to happen again.
 
 The loop is simple:
 
@@ -10,21 +10,20 @@ The loop is simple:
 2. Define what success looks like.
 3. Let Codex derive the approach.
 4. Give it the right context and tools.
-5. Check the real surface.
-6. Propose the part that should help next time.
-7. Promote it only after comparable verification.
+5. Check the actual result.
+6. Keep anything that will genuinely help next time.
 
-## Three Nested Loops
+## When The Work Repeats
 
-The simple loop contains three different control cycles:
+Recurring work adds two more questions:
 
 | Loop | Question |
 | --- | --- |
-| Execution | Was the requested result produced? |
-| Verification | Does evidence support the completion claim? |
-| Evolution | Should anything about the harness change for future runs? |
+| Do the work | Was the requested result produced? |
+| Check the work | Does the evidence support that claim? |
+| Improve the workflow | Should anything change for future runs? |
 
-Keeping them separate prevents a task-local workaround from becoming a global rule and prevents the system from treating its own confidence as independent evidence. See [Verified Improvement Loops](verified-improvement-loops.md).
+Keep those questions separate. A workaround that helped once should not quietly become a global rule, and the system's own confidence is not independent evidence. If the workflow is genuinely recurring, see [Verified Improvement Loops](verified-improvement-loops.md).
 
 ## Why It Matters
 
@@ -32,7 +31,7 @@ Agentic work fails when it looks busy but does not move the real system. The loo
 
 ## Pattern
 
-Treat every non-trivial request as an operating contract, but do not assume you have to handwrite the whole contract yourself.
+For non-trivial work, make sure these questions have answers. You do not need to turn them into a form every time.
 
 - What is the intended outcome?
 - What evidence would prove it?
@@ -40,17 +39,17 @@ Treat every non-trivial request as an operating contract, but do not assume you 
 - What would be overkill?
 - What should be remembered for next time?
 
-If those answers are clear enough, Codex can usually draft the task contract, plan, delivery slices, and verification path itself.
+If those answers are clear enough, Codex can usually work out the plan and verification path itself.
 
 ## Workflow
 
 Start by translating the request into an observable result. For code, that might be a passing test, a clean diff, or a browser inspection. For writing, it might be a sharp outline, a source-backed claim list, or a draft that matches the intended voice.
 
-Then gather only the context needed to act. Read the files, docs, or live surfaces that can change the decision. Skip broad research unless the outcome depends on it.
+Then gather only the context needed to act. Read the files, documents, APIs, or live systems that can change the decision. Skip broad research unless the outcome depends on it.
 
 Make the smallest change that can satisfy the outcome. After that, run the check that would catch the most likely failure.
 
-Close by classifying reusable learning. A one-off detail does not need to become a permanent rule. A repeated failure mode may deserve an eval and a candidate harness change, but promotion still requires review and regression evidence.
+Close by keeping only what will actually help later. A one-off detail does not need to become a permanent rule. If the same failure keeps returning, turn it into a check and test the smallest workflow change before making that change the new default.
 
 ## Tiny Example
 
@@ -80,7 +79,7 @@ Success criteria:
 - the verification path is named,
 - the README feels like a real project, not a notes folder.
 
-Derive the task contract and plan before editing.
+Work out the plan and checks before editing.
 ```
 
 ## Failure Modes
@@ -90,7 +89,7 @@ Derive the task contract and plan before editing.
 - Trusting model confidence instead of a check.
 - Turning a simple task into a framework.
 - Saving private or stale session detail as if it were reusable knowledge.
-- Editing the active harness in place while using the same run to judge the change.
+- Editing the active workflow in place while using the same run to judge the change.
 - Calling a repeated loop "self-improving" without versioning, comparable evals, or rollback.
 
 ## Verification
@@ -99,5 +98,5 @@ A good loop leaves you able to answer:
 
 - What changed?
 - Why was that the right scope?
-- What proof exists?
+- What evidence exists?
 - What remains unknown?
