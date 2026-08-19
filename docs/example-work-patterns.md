@@ -62,15 +62,38 @@ Each lane should define:
 - stop condition,
 - and parent handoff.
 
+## Compounding Documentation Maintenance
+
+A synthetic documentation system tracks fast-changing product claims. Its first useful harness defines required source classes, public-safety checks, output files, and a publication gate.
+
+The orchestration graph is deliberately small:
+
+```mermaid
+flowchart LR
+  A["Detect claim needing review"] --> B["Read current official source"]
+  B --> C["Draft candidate update"]
+  C --> D["Validate links + public safety"]
+  D --> E["Review claim boundary"]
+  E --> F["Promote versioned change"]
+  D -->|failure| G["Return findings"]
+  E -->|unsupported| G
+```
+
+The shared vocabulary distinguishes `observed behavior`, `official claim`, `inference`, `unknown`, and `verified date`. After several runs reveal that redirects are being mistaken for stable canonical URLs, the failure becomes a regression case.
+
+A candidate harness change adds canonical-URL resolution and provenance output. The candidate runs against the prior suite plus the new case. It is promoted only if link validation improves without weakening the public-safety or claim-boundary checks. The previous harness version remains available for rollback.
+
+This is compounding because evidence from one run changes later behavior through a versioned and reviewable path. The example remains synthetic: no real task IDs, traces, accounts, paths, connected systems, or private configuration are preserved.
+
 ## Common Shape
 
 ```mermaid
 flowchart TD
-  A["High-level goal"] --> B["Success criteria"]
-  B --> C["Derived work plan"]
-  C --> D["Bounded execution"]
-  D --> E["Claim-specific check"]
-  E --> F["Reusable generalized pattern"]
+  A["Intent"] --> B["Harness or work plan"]
+  B --> C["Bounded execution"]
+  C --> D["Claim-specific evidence"]
+  D --> E["Reviewed generalized improvement"]
+  E --> B
 ```
 
 The reusable pattern is the decision structure, not private detail from the work that produced it.

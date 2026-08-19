@@ -47,8 +47,10 @@ CURRENT_PRODUCT_DOCUMENTS = {
 
 ALLOWED_EXTERNAL_HOSTS = {
     "cookbook.openai.com",
+    "developers.openai.com",
     "learn.chatgpt.com",
     "metr.org",
+    "openai.com",
     "www.anthropic.com",
     "www.swebench.com",
 }

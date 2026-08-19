@@ -22,6 +22,19 @@ Use the smallest rung that proves the task:
 
 Higher is not always better. A live check can be overkill for a typo fix. A static check is too weak for a behavioral change.
 
+## Verify The System As Well As The Output
+
+For a persistent harness or orchestration graph, task completion is only one claim. Also test:
+
+- required state transitions and failure routes;
+- architecture, authority, and data-handling invariants;
+- recovery after interruption or partial failure;
+- candidate behavior against the promoted baseline;
+- regression cases derived from prior failures;
+- counter-metrics such as cost, latency, privilege growth, or data exposure.
+
+Self-generated tests and agreement among agents can provide evidence, but they are not independent acceptance. Keep deterministic gates outside the model when a hard requirement can be checked mechanically, and use appropriately independent or human review for consequential judgment.
+
 ## Completion Language
 
 Be boringly precise here:
@@ -38,6 +51,8 @@ Avoid unsupported claims like "should work" when a relevant check was available 
 - Skipping verification because the change looks simple.
 - Claiming tests pass after a partial or failed run.
 - Forgetting to mention unavailable checks.
+- Changing the harness and its evaluator together without preserving a comparable baseline.
+- Treating a generated eval as independent proof of the generator.
 
 ## Verification
 

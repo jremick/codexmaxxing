@@ -22,6 +22,7 @@ Do not include:
 - proprietary prompts or copied internal instructions
 - machine-specific paths, hostnames, network details, account identifiers, or raw task IDs
 - actual tool inventories, profiles, enabled integrations, hooks, rules, or security controls
+- private harness graphs, ontology terms, eval fixtures, traces, state stores, or one-to-one architecture maps
 
 Use explicit placeholders such as `<project-root>` and label every case study as synthetic. Generic skill categories, capability lifecycles, and safe operating principles are welcome when they do not reveal an originating environment.
 

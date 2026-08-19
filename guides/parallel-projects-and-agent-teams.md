@@ -42,6 +42,19 @@ Topology is just the shape of the work system: who owns what, where state lives,
 
 The topology can be manual at first. Once it repeats, make it a prompt, template, skill, custom agent, MCP workflow, or automation.
 
+## Topology Is Not The Whole Graph
+
+Agent topology describes who performs the work. An orchestration graph also describes:
+
+- prerequisites and transition conditions,
+- state passed between nodes,
+- allowed reads and writes,
+- deterministic and judgment-based gates,
+- retry, recovery, escalation, and stop paths,
+- evidence required before the next transition.
+
+A hub-and-spoke team can run many different graphs. A single agent can also execute a multi-stage graph. Use [Graph And Ontology-Engineered Harnesses](graph-and-ontology-engineered-harnesses.md) when the control flow matters as much as the role split.
+
 ## The Status Contract
 
 Every parallel stream needs a small status shape. Otherwise you get a pile of summaries and no control surface.

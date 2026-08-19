@@ -7,6 +7,7 @@ Use this before giving Codex a non-trivial mission.
 - The ask is at the right level: exact edit, task, outcome, or broad goal.
 - Success criteria are clearer than the step list.
 - Codex can derive the task contract when the path is not obvious.
+- Intent abstraction is not being confused with system maturity or autonomy.
 
 ## Frame
 
@@ -53,6 +54,14 @@ Use this before giving Codex a non-trivial mission.
 - Write boundaries do not overlap unless the parent owns integration.
 - Every stream has a status contract and proof path.
 
+## System Design
+
+- The harness contract names instructions, tools, routing, state, outputs, and validation.
+- Agent topology is distinguished from control flow and dependency edges.
+- Shared entities, states, and relationships are defined only as deeply as recurring ambiguity requires.
+- Failure, error, incomplete, and unknown states have explicit routes.
+- Every write and transition has an authority and evidence boundary.
+
 ## Verification
 
 - The primary check is named before completion.
@@ -71,3 +80,8 @@ Use this before giving Codex a non-trivial mission.
 
 - Repeated lessons have a destination: instructions, template, script, skill, docs, or backlog.
 - One-off details are not promoted into durable rules.
+- The execution, verification, and evolution loops are separate.
+- Candidate changes are versioned and evaluated against a preserved baseline.
+- Permission and data-access changes receive separate review.
+- Promotion and rollback authority are explicit.
+- Private evidence is generalized before becoming reusable guidance.

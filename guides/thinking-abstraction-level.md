@@ -41,6 +41,22 @@ The automations broke after an upgrade. Diagnose the likely failure layer, make 
 
 All three can be right. The useful judgment is knowing when Codex can take the higher-abstraction version and derive the work underneath it.
 
+## Abstraction Is One Axis
+
+Abstraction level describes the request, not the maturity of the system receiving it.
+
+Three independent dimensions matter:
+
+| Dimension | Question | Progression |
+| --- | --- | --- |
+| Intent abstraction | How much implementation is specified by the operator? | edit → task → outcome → system objective |
+| System embodiment | Where does the operating method live? | prompt → reusable workflow → harness → orchestration system |
+| Improvement closure | What changes future runs? | nothing → captured lesson → eval → governed promotion |
+
+A broad prompt sent to a disposable agent is high in intent abstraction but low in system embodiment. A short request can initialize a mature system when its semantics, state, tools, checks, and authority boundaries already exist.
+
+See [From Prompts To Compounding Systems](from-prompts-to-compounding-systems.md) for the complete model.
+
 ## The New Default
 
 For bigger work, do not start by writing the task contract yourself.
@@ -98,7 +114,7 @@ Stay lower when:
 | Exact edit | File, line, change | The edit and maybe a quick check |
 | Framed task | Outcome, source, constraints | The steps and verification |
 | Mission | Goal, success criteria, context | Task contract, plan, implementation, checks |
-| System | Direction, boundaries, learning loop | Harness topology, decomposition, delegation, delivery path |
+| System objective | Direction, policies, boundaries, invariants | Harness selection, orchestration, execution, evidence, change proposal |
 
 A higher abstraction level does not mean less clarity. It means clarity moves from steps to outcomes, boundaries, and success criteria.
 
@@ -142,3 +158,5 @@ You stop spending all your energy decomposing work into tiny tickets and start s
 - keeping verification honest.
 
 That is where Codex starts to feel less like autocomplete and more like a real operating layer for work.
+
+The next ceiling is not a still-higher prompt. It is an environment in which a prompt initializes a versioned harness, verified evidence can improve future behavior, and authority remains explicit throughout the loop.

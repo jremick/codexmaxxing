@@ -2,7 +2,7 @@
 
 Codex gets much more useful when the work is shaped into a loop instead of a wish.
 
-At a low abstraction level, that loop can be a task. At a higher abstraction level, it can be a whole project harness.
+At a low abstraction level, that loop can be a task. At a higher abstraction level, it can initialize a persistent harness or orchestration system.
 
 The loop is simple:
 
@@ -11,7 +11,20 @@ The loop is simple:
 3. Let Codex derive the approach.
 4. Give it the right context and tools.
 5. Check the real surface.
-6. Save the part that will help next time.
+6. Propose the part that should help next time.
+7. Promote it only after comparable verification.
+
+## Three Nested Loops
+
+The simple loop contains three different control cycles:
+
+| Loop | Question |
+| --- | --- |
+| Execution | Was the requested result produced? |
+| Verification | Does evidence support the completion claim? |
+| Evolution | Should anything about the harness change for future runs? |
+
+Keeping them separate prevents a task-local workaround from becoming a global rule and prevents the system from treating its own confidence as independent evidence. See [Verified Improvement Loops](verified-improvement-loops.md).
 
 ## Why It Matters
 
@@ -37,7 +50,7 @@ Then gather only the context needed to act. Read the files, docs, or live surfac
 
 Make the smallest change that can satisfy the outcome. After that, run the check that would catch the most likely failure.
 
-Close by capturing only reusable learning. A one-off detail does not need to become a permanent rule. A repeated failure mode probably does.
+Close by classifying reusable learning. A one-off detail does not need to become a permanent rule. A repeated failure mode may deserve an eval and a candidate harness change, but promotion still requires review and regression evidence.
 
 ## Tiny Example
 
@@ -77,6 +90,8 @@ Derive the task contract and plan before editing.
 - Trusting model confidence instead of a check.
 - Turning a simple task into a framework.
 - Saving private or stale session detail as if it were reusable knowledge.
+- Editing the active harness in place while using the same run to judge the change.
+- Calling a repeated loop "self-improving" without versioning, comparable evals, or rollback.
 
 ## Verification
 

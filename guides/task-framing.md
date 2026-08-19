@@ -33,6 +33,22 @@ First derive the task contract, source-of-truth map, delivery harness, and verif
 
 That small difference matters. The operator is not doing all the decomposition for Codex. The goal supplies enough context and discretion for Codex to propose the decomposition.
 
+## The System-Shaped Frame
+
+When a mature harness already exists, the prompt can be smaller because it initializes known layers instead of restating them:
+
+```markdown
+Objective: <what should be true>
+System or harness: <versioned workflow to invoke>
+Inputs: <current sources or event>
+Authority: <allowed reads, writes, and approval gates>
+Evidence required: <checks or artifacts for this run>
+
+Use the promoted contracts. Propose any reusable improvement separately from this run.
+```
+
+This only works when the referenced system is real, discoverable, and versioned. Naming an imaginary harness is not a substitute for engineering one.
+
 ## What To Include
 
 Name the real surface. If the task is about production, say production. If it is about a local branch, say that. If a doc is canonical, name it.
