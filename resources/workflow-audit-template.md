@@ -8,7 +8,7 @@ Current owner:
 Current trigger:
 Current inputs:
 Current output:
-Thinking altitude:
+Abstraction level:
 
 Pain:
 Frequency:

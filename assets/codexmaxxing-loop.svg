@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">Codexmaxxing operating loop</title>
-  <desc id="desc">A six-step Codexmaxxing workflow: set altitude, derive the harness, load tools and context, execute, verify, and capture the reusable pattern.</desc>
+  <desc id="desc">A six-step Codexmaxxing workflow: set abstraction level, derive the harness, load tools and context, execute, verify, and capture the reusable pattern.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2933"/>
@@ -30,7 +30,7 @@
 
   <g>
     <text x="66" y="76" class="title">Codexmaxxing</text>
-    <text x="66" y="110" class="subtitle">Use Codex like an agentic operating system: clear altitude in, verified work out.</text>
+    <text x="66" y="110" class="subtitle">Use Codex like an agentic operating system: clear goals in, verified work out.</text>
     <rect x="855" y="54" width="278" height="52" rx="26" fill="#171717"/>
     <text x="994" y="86" fill="#fffdf7" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="850" text-anchor="middle">goal -> harness -> proof</text>
   </g>
@@ -52,11 +52,11 @@
     <rect class="card" x="66" y="196" width="304" height="148" rx="12" stroke="#2f6f73"/>
     <circle cx="104" cy="236" r="22" fill="#2f6f73"/>
     <text x="104" y="236" class="stage">01</text>
-    <text x="136" y="229" class="small-label">HUMAN ALTITUDE</text>
+    <text x="136" y="229" class="small-label">HUMAN ABSTRACTION LEVEL</text>
     <text x="104" y="272" class="card-title">Set the mission</text>
     <text x="104" y="303" class="card-copy">
       <tspan x="104" dy="0">Goal, success criteria, constraints,</tspan>
-      <tspan x="104" dy="22">and the altitude Codex should own.</tspan>
+      <tspan x="104" dy="22">and the abstraction level Codex should own.</tspan>
     </text>
   </g>
 

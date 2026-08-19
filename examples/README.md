@@ -1,8 +1,10 @@
 # Example Missions
 
-Codexmaxxing makes more sense when it is attached to a real mission.
+Codexmaxxing makes more sense when it is attached to a well-defined mission.
 
-The point is not to pre-chew every task. Give Codex altitude, success criteria, and the right context. Let it design the plan underneath.
+All examples are synthetic. Their names, paths, systems, and evidence are placeholders and do not describe a specific person, repository, organization, or environment.
+
+The point is not to pre-chew every task. Give Codex an appropriate abstraction level, success criteria, and the right context. Let it design the plan underneath.
 
 ## 0. Broad Goal: Let Codex Build The Harness
 
@@ -14,7 +16,7 @@ Success criteria:
 - the README has a clear point of view,
 - the first-click paths are obvious,
 - examples include technical and non-technical work,
-- related repos are linked,
+- examples are synthetic and public-safe,
 - internal maintenance notes are not part of the public surface,
 - validation still passes.
 
@@ -24,9 +26,9 @@ Constraints:
 - keep private details out.
 
 Context:
-Start with README, docs, guides, resources, examples, and the related repos.
+Start with README, docs, guides, resources, and examples.
 
-Before editing, choose the right thinking altitude and derive the task contract, delivery harness, verification plan, and stop conditions.
+Before editing, choose the appropriate abstraction level and derive only the task contract, delivery steps, verification plan, and stop conditions that the work needs.
 ```
 
 Good for: repo shaping, product positioning, docs overhaul, public launch prep.
@@ -34,7 +36,8 @@ Good for: repo shaping, product positioning, docs overhaul, public launch prep.
 ## 1. Product Repo: Make It Runnable
 
 ```markdown
-This repo is nearly useful, but I want someone else to be able to run it without my private setup.
+Goal:
+Make this repository runnable by a new contributor without access to private infrastructure.
 
 Review the README, env examples, scripts, tests, and demo/fixture path.
 Find the smallest set of changes that would make the repo contributor-friendly.
@@ -62,7 +65,7 @@ Start read-only. Separate possible causes by layer:
 Tell me what evidence would distinguish them, then gather the safe evidence first.
 ```
 
-Good for: homelab ops, deployed apps, integrations, "it worked yesterday" problems.
+Good for: local services, deployed applications, integrations, and intermittent failures.
 
 ## 3. Hardware Loop: The Device Decides
 
@@ -80,12 +83,12 @@ Verification path:
 5. report exactly what was proven
 ```
 
-Good for: iOS, firmware, BLE, devices, dashboards, anything where the real target has opinions.
+Good for: mobile applications, firmware, peripherals, devices, dashboards, and any workflow where the real target matters.
 
 ## 4. Non-Code Work: Make The Mess Useful
 
 ```markdown
-I have messy notes and a rough goal:
+Source notes and rough goal:
 <paste notes>
 
 Turn this into:
@@ -102,7 +105,7 @@ Good for: writing, research, trip planning, comparison shopping, strategy notes,
 ## 5. Parallel Portfolio: Keep Multiple Threads Moving
 
 ```markdown
-I have these active projects:
+Active workstreams:
 - <project 1>
 - <project 2>
 - <project 3>
@@ -120,7 +123,69 @@ Success criteria:
 Design the agentic harness topology first. Then recommend which work should stay with the parent, which should go to subagents or custom agents, and what status contract each stream should use.
 ```
 
-Good for: side-project portfolios, multi-repo cleanup, launch prep, research plus implementation, and "I have five things open and somehow none of them are done."
+Good for: small portfolios, multi-repository cleanup, launch preparation, and research paired with implementation.
+
+## 6. Choose The Execution Surface
+
+```markdown
+Goal:
+Complete these independent workstreams without overlapping writes:
+- <read-heavy investigation>
+- <bounded repository change>
+- <recurring follow-up>
+
+Before executing, decide which work belongs in:
+- the parent chat,
+- subagents,
+- a separate worktree chat,
+- a cloud task,
+- a scheduled task.
+
+Explain the ownership, permission, integration, and verification boundary for each choice. Do not create parallel writers against the same files.
+```
+
+Good for: work that appears parallel but needs different execution environments.
+
+## 7. Choose The Capability Layer
+
+```markdown
+Recurring workflow:
+<synthetic workflow description>
+
+Decide whether the smallest durable solution is:
+- project instructions,
+- a checklist or template,
+- a deterministic script,
+- a skill,
+- a plugin,
+- an MCP connector,
+- a scheduled task.
+
+Prefer the smallest layer that changes behavior reliably. Keep credentials, actual environment inventories, and private examples out of the artifact.
+```
+
+Good for: turning repeated work into a maintainable operating layer.
+
+## 8. Choose The Output Surface
+
+```markdown
+Source material:
+<synthetic inputs>
+
+Desired use:
+<how the result will be reviewed or explored>
+
+Choose between:
+- a document, spreadsheet, presentation, or PDF,
+- a static chart or diagram,
+- an interactive visualization,
+- a hosted Site,
+- repository-native code.
+
+State the visual checks, deterministic checks, privacy boundary, and whether deployment is authorized. Do not deploy merely because creation is authorized.
+```
+
+Good for: artifact production, interactive explanations, dashboards, and hosted experiences.
 
 ## The Common Shape
 

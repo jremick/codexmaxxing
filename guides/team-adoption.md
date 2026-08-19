@@ -4,7 +4,7 @@ Codex adoption is not a tool rollout. It is work redesign.
 
 Teams get value when they turn recurring work into clearer inputs, better tool access, reviewable outputs, and feedback loops that actually show whether anything improved.
 
-The altitude shift matters for teams too. The goal is not to train everyone to write tiny perfect prompts. The goal is to help people state outcomes, constraints, and success criteria so Codex can design a good path.
+The abstraction level shift matters for teams too. The goal is not to train everyone to write tiny perfect prompts. The goal is to help people state outcomes, constraints, and success criteria so Codex can design a good path.
 
 ## Start With Workflows
 
@@ -26,7 +26,7 @@ Then wrap the Codex loop around that workflow.
 Ask:
 
 - Can people frame the task as an outcome with proof?
-- Can people choose the right thinking altitude?
+- Can people choose the appropriate abstraction level?
 - Does Codex have access to the right source of truth?
 - Are writes gated at the right points?
 - Is there a deterministic check?

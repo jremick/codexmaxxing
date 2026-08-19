@@ -26,6 +26,8 @@ Ask Codex to derive:
 
 ## Example
 
+This example is synthetic and uses no real repository or environment details.
+
 ```markdown
 Goal:
 Make this repo feel like a public project someone would actually want to explore.
@@ -33,7 +35,7 @@ Make this repo feel like a public project someone would actually want to explore
 Success criteria:
 - the README has a clear point of view,
 - first-click paths are obvious,
-- related repos are linked,
+- examples are synthetic and public-safe,
 - examples show code and non-code use,
 - validation still passes.
 
@@ -43,7 +45,7 @@ Constraints:
 - do not publish private examples.
 
 Context:
-Start with README, guides, resources, examples, and related-project docs.
+Start with README, guides, resources, and examples.
 
 Ask Codex to derive the task contract, source-of-truth map, delivery harness, verification plan, and stop conditions before editing.
 ```

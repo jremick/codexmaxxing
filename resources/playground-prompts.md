@@ -11,7 +11,7 @@ What I want:
 <messy version>
 
 Ask me only the questions that would materially change the work. Otherwise make reasonable assumptions and give me:
-- thinking altitude
+- abstraction level
 - goal
 - success criteria
 - constraints
@@ -36,7 +36,7 @@ Constraints:
 Context:
 <where to look first>
 
-Before editing, choose the right thinking altitude and derive:
+Before editing, choose the appropriate abstraction level and derive only what the work needs:
 - task contract
 - source-of-truth map
 - project harness
@@ -83,7 +83,7 @@ Look for:
 - missing fixture/demo path
 - places where deterministic checks should replace manual judgment
 
-Do not edit yet. First decide whether this should be handled as a narrow task or a higher-altitude repo improvement mission. Then return the smallest useful improvement plan.
+Do not edit yet. First decide whether this should be handled as a narrow task or a higher-abstraction repository improvement mission. Then return the smallest useful improvement plan.
 ```
 
 ## Debug A Real Thing Without Guessing

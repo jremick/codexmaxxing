@@ -1,117 +1,113 @@
-# Field Notes
+# Field Patterns
 
-These are the patterns that keep showing up when I use Codex on actual work instead of toy prompts.
+These generalized patterns recur across software, operations, devices, documentation, research, and non-code work.
 
-The examples are generalized, but the shape is real: product repos, live systems, hardware, docs, research, and work that is not code at all.
+The examples are synthetic and do not describe a specific person, repository, organization, or environment.
 
-The biggest pattern is altitude. The more capable the model, the less I need to drive every step myself. I can give Codex a goal, success criteria, constraints, and context, then let it derive the project harness and delivery path.
+The central pattern is abstraction level. As models become more capable, a well-bounded goal can delegate more of the decomposition while the operator retains responsibility for scope, permissions, and verification.
 
 ```mermaid
 flowchart TD
-  A["Human chooses altitude"] --> B["Goal + success criteria"]
-  B --> C["Codex derives contract"]
-  C --> D["Codex designs harness"]
-  D --> E["Codex executes"]
+  A["Choose abstraction level"] --> B["Goal + success criteria"]
+  B --> C["Derive work contract"]
+  C --> D["Design bounded approach"]
+  D --> E["Execute"]
   E --> F["Human or system verifies"]
 ```
 
 ## Live Systems: Read First, Then Touch Things
 
-The most useful Codex loop for ops work is boring in the best way:
+A reliable operations loop is deliberately conservative:
 
 1. prove which layer is failing,
-2. avoid making random changes,
+2. avoid unrelated changes,
 3. make the smallest reversible move,
-4. read the system back after.
+4. read the system back afterward.
 
 ```mermaid
 flowchart LR
-  A["Symptom"] --> B["Network?"]
+  A["Symptom"] --> B["Access?"]
   B --> C["Host/runtime?"]
-  C --> D["App integration?"]
-  D --> E["Config/schema?"]
-  E --> F["Data or UI?"]
+  C --> D["Application integration?"]
+  D --> E["Configuration/schema?"]
+  E --> F["Data or presentation?"]
   F --> G["Small fix"]
   G --> H["Read-back"]
 ```
 
-This works for homelab stuff, production-ish apps, local containers, routers, media services, and all the little systems that lie to you in slightly different ways.
+The pattern applies to deployed applications, local services, containers, devices, and other layered systems. Actual infrastructure details do not belong in a public example.
 
-## Product Repos: Give People A Way To Play
+## Product Repositories: Provide A Safe Trial Path
 
-The best Codex-shaped product repos have a way to run without private infrastructure.
+A contributor-ready repository should have a way to run without private infrastructure.
 
-That usually means:
+That often means:
 
-- fixture mode,
-- fake data,
-- a local demo path,
-- a single verification command,
-- secrets that never leave the backend,
-- and docs that explain the happy path before the architecture tour.
+- fixture or demonstration data,
+- a local run path,
+- one clear verification command,
+- secrets that remain outside the client and repository,
+- and documentation that explains the happy path before the architecture tour.
 
-[Moodarr](https://github.com/jremick/moodarr) is the cleanest example of this pattern right now.
-
-[AI Workbench](https://github.com/jremick/ai-workbench) and [MySkills](https://github.com/jremick/myskills) are the higher-altitude version of the same instinct: once useful workflows repeat, turn them into skills, harnesses, registries, and installation paths instead of treating them as one-off prompts.
+When a workflow repeats, preserve the generalized method as a skill, checklist, template, or validator. Do not preserve the private source material that produced it.
 
 ## Parallel Work: Topology Before Swarm
 
-Running multiple Codex threads gets useful when each stream has a harness, not when everything becomes a background tab.
+Parallel work becomes useful when each stream has a contract, not merely when more agents are running.
 
-The pattern that holds up is:
+The durable pattern is:
 
 - choose the topology,
 - split by ownership boundary,
 - give every stream a status contract,
 - keep the parent responsible for integration,
-- verify each result before treating it as real progress.
+- verify each result before treating it as progress.
 
-That can be subagents inside one task, custom agents for recurring roles, or whole projects moving in parallel. The useful part is not the number of agents. It is the shape of the handoffs.
+The useful part is not the number of agents. It is the shape of the handoffs.
 
-## Hardware: The Board Gets A Vote
+## Devices: The Real Target Gets A Vote
 
-Firmware and device work is a useful antidote to agent overconfidence.
+Device work is a useful antidote to agent overconfidence.
 
-If the app talks to a phone, a BLE device, a display, or a board, then "the code looks right" is not enough. The loop has to reach the actual thing:
+If software communicates with a phone, peripheral, display, or board, then "the code looks right" is not enough. Verification may need to reach the actual target:
 
 ```mermaid
 sequenceDiagram
   participant Codex
-  participant Repo
+  participant Repository
   participant Simulator
   participant Device
 
-  Codex->>Repo: make the smallest change
-  Repo->>Simulator: build and inspect
+  Codex->>Repository: make the smallest change
+  Repository->>Simulator: build and inspect
   Simulator-->>Codex: layout or test evidence
   Codex->>Device: install, flash, or launch
-  Device-->>Codex: runtime proof
+  Device-->>Codex: observed runtime evidence
 ```
 
-[DragyDash](https://github.com/jremick/dragy-dash) and [DragyDash ESP32](https://github.com/jremick/dragy-dash-esp32) are both examples of that loop.
+The final report should distinguish source inspection, build evidence, simulation, and physical-device behavior.
 
 ## Non-Code Work Counts
 
-Codex is also useful for things like:
+The same operating loop can support:
 
 - shaping messy notes,
 - comparing options,
-- planning a trip,
-- writing a better update,
+- drafting an update,
 - turning a vague idea into a concrete task,
-- checking whether a decision is actually supported by evidence.
+- checking whether a decision is supported by evidence.
 
-The same rules apply. Name the outcome, load the right context, do the work, check the result.
+Name the outcome, load only the necessary context, do the work, and check the result.
 
 ## The Pattern Underneath
 
-Most Codex wins look like this:
+Strong Codex workflows usually combine:
 
-- right thinking altitude,
-- better task shape,
-- narrower context,
-- real tool access,
-- deterministic checks,
-- reusable learning.
+- an appropriate abstraction level,
+- a clear task shape,
+- narrow authoritative context,
+- bounded tool access,
+- claim-specific checks,
+- reusable generalized learning.
 
-When those pieces are missing, Codex is still impressive, but it is much more likely to produce confident sludge.
+When those pieces are missing, fluent output can be mistaken for verified progress.

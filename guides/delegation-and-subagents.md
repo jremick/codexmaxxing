@@ -4,9 +4,11 @@ Subagents are great when the split is real.
 
 They are annoying when they create three summaries of the same problem and now you have to manage a tiny meeting.
 
-Thinking altitude changes delegation. At high altitude, Codex may first design the work breakdown, then decide whether subagents are useful. You do not always need to specify the subagent plan up front.
+Abstraction level changes delegation. At a high abstraction level, Codex may first design the work breakdown, then decide whether subagents are useful. The subagent plan does not always need to be specified in advance.
 
 For larger parallel setups, treat this as an [agentic harness topology](parallel-projects-and-agent-teams.md) problem: choose the shape, define the status contracts, then delegate.
+
+Model choice, reasoning effort, and delegation are separate decisions. See [Models, Reasoning, And Delegation](models-reasoning-and-delegation.md).
 
 ## Delegate When
 

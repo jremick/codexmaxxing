@@ -4,9 +4,7 @@ Codexmaxxing is a public guide and resource repo for Codex operating patterns. M
 
 ## Reporting
 
-Use GitHub private vulnerability reporting when available:
-
-<https://github.com/jremick/codexmaxxing/security/advisories/new>
+Use the repository's **Security** tab and select **Report a vulnerability** when private vulnerability reporting is available.
 
 If that path is unavailable, open a minimal public issue asking for a private reporting channel. Do not include exploit details, credentials, tokens, private logs, customer data, or sensitive reproduction steps in public issues.
 

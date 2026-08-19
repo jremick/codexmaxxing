@@ -2,7 +2,7 @@
 
 Good agent work starts with work that can be proven done.
 
-The goal is not to write a perfect prompt. It is to choose the right altitude.
+The goal is not to write a perfect prompt. It is to choose the right abstraction level.
 
 Sometimes that means a tight task. Sometimes it means a broad goal with sharp success criteria, then asking Codex to write the task contract and delivery plan itself.
 
@@ -18,9 +18,9 @@ Verification: <commands, checks, screenshots, read-backs, review gates>
 Stop conditions: <what should pause the work>
 ```
 
-## The Higher-Altitude Frame
+## The Higher-Abstraction Frame
 
-For bigger work, I prefer this:
+For bigger work, use a goal-shaped frame:
 
 ```markdown
 Goal: <what should be true>
@@ -31,7 +31,7 @@ Context: <where to look first, or what matters most>
 First derive the task contract, source-of-truth map, delivery harness, and verification plan. Then execute.
 ```
 
-That tiny difference matters. You are not doing all the decomposition for Codex. You are giving it enough altitude and enough runway to design the decomposition.
+That small difference matters. The operator is not doing all the decomposition for Codex. The goal supplies enough context and discretion for Codex to propose the decomposition.
 
 ## What To Include
 
@@ -39,7 +39,7 @@ Name the real surface. If the task is about production, say production. If it is
 
 Name the boundary. A good boundary prevents helpful-looking drift: no adjacent refactors, no new framework, no public release, no live write, or no auth changes.
 
-Name the proof. The strongest proof is deterministic: a test, diff, validator, API read-back, screenshot, or command output. When the work is subjective, state the taste or quality bar clearly enough that Codex can review against it.
+Name the proof. Evidence must match the claim: tests and validators can check deterministic behavior, API read-backs can confirm service state, and browser inspection or screenshots can support rendered-state claims. None proves a different layer by itself. When the work is subjective, state the quality bar clearly enough for deliberate review.
 
 ## What To Avoid
 
