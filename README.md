@@ -14,6 +14,8 @@ If you want to use Codex better today, start with [The Codexmaxxing Loop](guides
 
 If the same workflow or failure keeps returning, move into [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md). That is where the guide gets into reusable harnesses, workflow graphs, shared vocabularies, evals, and controlled improvement.
 
+If you are already designing systems around whole classes of work, use [Advanced Work Patterns](docs/advanced-work-patterns.md). It works through meta-harness factories, ontology-driven decision systems, graph-governed artifact systems, portfolio control planes, and harness evolution.
+
 If you are trying to understand a current Codex feature—such as projects, scheduled tasks, skills, plugins, subagents, worktrees, Browser, or Computer Use—use the [complete guide index](guides/README.md). Product-specific pages are dated and link back to current official sources.
 
 ## The Shape Of It
@@ -76,6 +78,7 @@ This repo is a mix of notes, patterns, templates, and examples for that.
 | create a file, interactive explanation, or hosted experience | [Artifacts, Sites, And Visualizations](guides/artifacts-sites-and-visualizations.md) |
 | design a large skill library without flooding context | [Capability Lifecycle And Prompt Visibility](guides/capability-lifecycle.md) |
 | turn repeated work into a system that can improve safely | [From Prompts To Compounding Systems](guides/from-prompts-to-compounding-systems.md), [Workflow Graphs, Shared Vocabulary, And Harnesses](guides/graph-and-ontology-engineered-harnesses.md), and [Verified Improvement Loops](guides/verified-improvement-loops.md) |
+| design systems that create, coordinate, evaluate, or improve other harnesses | [Advanced Work Patterns](docs/advanced-work-patterns.md) and [Compounding System Canvas](resources/compounding-system-canvas.md) |
 
 The complete [guide index](guides/README.md), [copyable resources](resources/README.md), and [synthetic missions](examples/README.md) provide the rest.
 
@@ -89,8 +92,11 @@ The complete [guide index](guides/README.md), [copyable resources](resources/REA
 - Diagnose a layered system failure with read-only evidence before changing anything.
 - Turn a repeated workflow into a reusable skill, checklist, or validator.
 - Turn a recurring failure into a regression eval and a reviewed workflow improvement.
+- Use a shared ontology to keep claims, sources, decisions, and artifacts consistent across several workflows.
+- Build a target-neutral meta-harness that generates candidates but cannot approve its own output.
+- Coordinate a portfolio through explicit dependencies, evidence, budgets, and integration gates instead of an uncontrolled agent swarm.
 
-These are expanded in [Example Work Patterns](docs/example-work-patterns.md). The examples are synthetic and do not describe a specific person, repository, organization, or environment.
+These are expanded in [Example Work Patterns](docs/example-work-patterns.md) and [Advanced Work Patterns](docs/advanced-work-patterns.md). The examples are synthetic and do not describe a specific person, repository, organization, or environment.
 
 ## Status And Support
 

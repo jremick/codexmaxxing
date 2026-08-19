@@ -51,6 +51,26 @@ flowchart LR
 
 The model is only one part. The surrounding setup determines what it can see and change, how work moves, what counts as success, and whether a useful lesson changes later runs.
 
+## Harnesses And Meta-Harnesses
+
+A harness surrounds a repeatable capability. A meta-harness operates on harness definitions: it can help design, validate, compile, compare, package, or govern other harnesses.
+
+```mermaid
+flowchart LR
+  A["Intent + assurance policy"] --> B["Meta-harness"]
+  B --> C["Target-neutral harness definition"]
+  C --> D["Agent-environment binding"]
+  D --> E["Candidate harness"]
+  E --> F["Evaluation outside candidate boundary"]
+  F --> G{"Approve, reject, or preserve unknown"}
+```
+
+This is a change in what the system operates on, not a mandatory maturity stage. One carefully built harness is better than a harness factory with no real repeated need. A meta-harness becomes useful when several harnesses need a common contract, target adapters, assurance policy, evidence format, or promotion path.
+
+The same boundaries still apply: hard gates should be deterministic where possible, unknowns must remain visible, the evaluator must not simply trust the candidate's own status, and broader permissions require separate approval.
+
+See [Advanced Work Patterns](../docs/advanced-work-patterns.md) for worked examples of meta-harness factories, ontology-driven decision systems, graph-governed artifact systems, portfolio control planes, and harness evolution systems.
+
 ## What Compounding Means
 
 A workflow compounds only when useful improvements survive the run and improve later work.

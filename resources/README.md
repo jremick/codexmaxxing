@@ -21,3 +21,5 @@ Copy the smallest thing that helps. Do not turn every tiny task into a paperwork
 For bigger work, write a short mission brief and ask Codex to work out the plan, relevant sources, checks, and stop conditions.
 
 Use the compounding-system resources only after a workflow repeats or several parts need shared state and language. A checklist is better than a graph when the work is still simple and linear.
+
+If the system will create, coordinate, evaluate, or improve other harnesses, read [Advanced Work Patterns](../docs/advanced-work-patterns.md) before using the meta-harness extension in the canvas.

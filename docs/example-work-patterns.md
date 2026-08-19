@@ -2,6 +2,8 @@
 
 The examples on this page are synthetic. Their names, systems, paths, and evidence are fictional and do not describe a specific person, repository, organization, or environment.
 
+For systems that create, coordinate, evaluate, or improve other harnesses, continue to [Advanced Work Patterns](advanced-work-patterns.md).
+
 ## Source-Backed Decision
 
 Someone needs to choose between several products, services, routes, or approaches. The useful outcome is not a long search summary. It is a recommendation that can be checked.

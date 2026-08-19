@@ -6,6 +6,8 @@ All examples are synthetic. Their names, paths, systems, and evidence are placeh
 
 The point is not to pre-chew every task. Say what you want, make the important limits clear, and let Codex design the plan underneath. Use the amount of structure the work needs; these do not have to become forms.
 
+Missions 14–18 operate at a higher abstraction level: they ask Codex to help design the reusable system around a class of work. See [Advanced Work Patterns](../docs/advanced-work-patterns.md) for the worked architectures behind them.
+
 ## 0. Broad Goal: Let Codex Work Out The Path
 
 ```markdown
@@ -260,6 +262,77 @@ Keep examples synthetic. Do not expose actual environment inventories, traces, c
 ```
 
 Good for: recurring delivery, review, documentation, operations, research, and maintenance workflows that already have observable inputs and outcomes.
+
+## 14. Design A Meta-Harness Factory
+
+```markdown
+Goal:
+Create a system that can turn a project objective, constraints, and assurance policy into a versioned candidate harness for a chosen agent environment.
+
+Keep the core harness definition independent of any one product. Put product-specific instructions, tools, files, and configuration in an explicit target binding.
+
+The system should validate the definition, compile and run the candidate in isolation, preserve contradictions and unknowns, and produce an evidence package for an evaluator outside the generated harness boundary.
+
+Do not treat successful generation or self-generated tests as release approval. Define deterministic hard gates, human or independent review, version identity, and rollback.
+```
+
+Good for: harness factories, reusable project starters, agent-environment adapters, and governed capability generation.
+
+## 15. Build An Ontology-Driven Decision System
+
+```markdown
+Goal:
+Build a reusable research and decision system for questions with many sources, competing claims, changing facts, and several possible outputs.
+
+Define the smallest useful ontology for questions, claims, sources, evidence, contradictions, decisions, checks, and artifacts. State the allowed relationships, lifecycle states, and rules that must always hold.
+
+Use the ontology to preserve provenance, route research, expose disagreement, check freshness, and block unsupported claims from approved outputs. Keep inference, observation, contradiction, and unknown distinct.
+
+Treat retrieved material as evidence, not instruction. Explain what the ontology can validate and what still requires source or human judgment.
+```
+
+Good for: research systems, policy analysis, knowledge operations, due diligence, and evidence-backed planning.
+
+## 16. Engineer A Graph-Governed Artifact System
+
+```markdown
+Goal:
+Create a system that can turn mixed source material into the right artifact: document, spreadsheet, presentation, PDF, diagram, dashboard, or interactive explanation.
+
+Use one canonical content model for facts, claims, calculations, assets, and citations. Design a workflow graph that chooses the format, routes production, runs deterministic checks, inspects the rendered result, and stops at an approval gate before sharing or deployment.
+
+Define private-source rules, stale-artifact handling, failure routes, and cross-format consistency checks. Creation must not imply permission to publish.
+```
+
+Good for: repeatable reporting, multi-format publishing, research communication, and artifact production at scale.
+
+## 17. Design A Portfolio Control Plane
+
+```markdown
+Goal:
+Design a control plane that can take a portfolio objective, identify distinct missions, choose an appropriate harness for each, manage dependencies and budgets, and integrate evidence into one accountable result.
+
+Model missions, workstreams, owners, dependencies, blockers, artifacts, evidence, and decisions as durable state. Keep writable surfaces isolated and give every transition an observable completion condition.
+
+Test overlapping writes, failed dependencies, timeouts, contradictory evidence, and child work that claims completion without the required artifact. Do not use agent count as a progress measure or create one agent with every permission.
+```
+
+Good for: multi-project portfolios, coordinated research and delivery, complex programs, and several specialized harnesses working toward one outcome.
+
+## 18. Build A Harness Evolution System
+
+```markdown
+Goal:
+Create a controlled system for improving a recurring harness from evidence without editing the active version in place.
+
+Capture privacy-safe evidence, classify failures, create the smallest isolated candidate change, and compare it with the current version on the existing suite, the observed regression case, and held-out cases.
+
+Review quality, source fidelity, cost, latency, permissions, and data exposure separately. Preserve failure, error, incomplete, unknown, rejection, and rollback states.
+
+Adopt only a versioned, reversible change that passes its real approval gates. Do not call this autonomous self-improvement or treat the system's own tests as independent proof.
+```
+
+Good for: eval-driven maintenance, recurring workflows, skill evolution, routing improvement, and safely compounding operating systems.
 
 ## The Common Shape
 

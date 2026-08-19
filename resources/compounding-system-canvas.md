@@ -68,4 +68,41 @@ Smallest useful next improvement:
 Evidence that would disconfirm it:
 ```
 
+## Meta-Harness Extension
+
+Use this only when the system will create, adapt, evaluate, or govern more than one harness.
+
+```markdown
+What the meta-harness operates on:
+Target-neutral harness definition:
+Supported target bindings:
+Meaning that every binding must preserve:
+
+Generation boundary:
+- What the generator may decide:
+- What must be declared by policy or a human:
+- What remains prohibited or unknown:
+
+Evaluation boundary:
+- Deterministic structural and policy checks:
+- Runtime or end-to-end checks:
+- Independent or human review:
+- Private or held-out cases:
+- Evidence the candidate cannot rewrite:
+
+Version and registry model:
+- Definition identity:
+- Binding identity:
+- Candidate harness identity:
+- Evaluator and fixture identity:
+- Evidence package identity:
+
+Promotion:
+- Required gates:
+- Who can approve adoption:
+- Rollout boundary:
+- Rollback target:
+- Reasons to preserve rejection or incomplete state:
+```
+
 The canvas describes an engineered pattern, not a native Codex configuration file. Start with one workflow and expand only when the pieces are genuinely reused.
