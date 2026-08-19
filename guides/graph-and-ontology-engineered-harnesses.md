@@ -93,6 +93,14 @@ flowchart LR
 
 The shared vocabulary distinguishes an observed product behavior from an official product claim. The graph prevents publication until required evidence and public-safety checks pass. The harness connects those definitions and transitions to tools, artifacts, and checks.
 
+## From One Harness To A System Of Harnesses
+
+The same pieces can operate one level higher. A meta-harness can accept a target-neutral definition, apply a product-specific binding, produce a candidate harness, and send it through an evaluator and promotion gate. A portfolio control plane can route several missions to different harnesses while preserving their dependencies, permissions, evidence, and integration state.
+
+That extra layer should not erase the contracts underneath it. Each generated or selected harness still needs its own purpose, inputs, states, permissions, outputs, verification, and failure routes. The outer system also needs rules for version identity, evaluator independence, adoption, and rollback.
+
+See [Advanced Work Patterns](../docs/advanced-work-patterns.md) for concrete system shapes across research, artifact production, portfolio coordination, harness generation, and controlled improvement.
+
 ## Safety Envelope
 
 - Use least privilege per node instead of granting every agent the union of all permissions.

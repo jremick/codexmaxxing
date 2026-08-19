@@ -14,6 +14,7 @@ These are practical operating notes, not a course or a framework that every task
 - [From Prompts To Compounding Systems](from-prompts-to-compounding-systems.md)
 - [Workflow Graphs, Shared Vocabulary, And Harnesses](graph-and-ontology-engineered-harnesses.md)
 - [Verified Improvement Loops](verified-improvement-loops.md)
+- [Advanced Work Patterns](../docs/advanced-work-patterns.md)
 
 ## Build A Reusable Codex Setup
 

@@ -129,6 +129,12 @@
       "status": "usable"
     },
     {
+      "title": "Advanced Work Patterns",
+      "type": "examples",
+      "path": "docs/advanced-work-patterns.md",
+      "status": "usable"
+    },
+    {
       "title": "Field Synthesis",
       "type": "research",
       "path": "docs/field-synthesis.md",
